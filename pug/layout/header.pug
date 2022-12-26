@@ -1,25 +1,69 @@
 header.header
-    .header__content
-        .header__logo
-            a.logo(href="/")
-                img(src="/img/logo.svg", alt="alt")
+    .container_center
+        .header__row
+            .header__col
+                a.logo(href="/")
+                    img(src="/img/logo.svg", alt="alt")
 
-        .header__toggle
+            .header__col.header__col_switch
+                .switch
+                    label.switch__label
+                        input(type="checkbox" id="themeCheckbox" name="themeCheckbox")
+                        span
+                            i
+            .header__col
 
-        .header__nav
-            nav.navbar#navbar
-                ul.menu
-                    li.menu-item.current-menu-item
-                        a(href="#") Новости
-                    li.menu-item
-                        a(href="#") Объявления
-                    li.menu-item
-                        a(href="#") F.A.Q.
-                    li.menu-item
-                        a(href="#") Контакты
-                    li.menu-item.menu-item-has-children
-                        a(href="#") Важное
-                        ul.sub-menu
-                            each item in [1, 2, 3, 4]
-                                li.menu-item
-                                    a(href="#") Важный пункт меню
+                .search
+                    .search-form__inner
+                        form.search-form
+                            input(type="text" placeholder="Введите для поиска").search-form__input
+                            button.btn_search
+                                i.icon_loop
+                .header__action
+                    .header__button
+                        i.icon_phone
+                    .header__content
+                        a.header__close(href="#")
+                        .header__title
+                            span Наши контакты
+                        .header__list
+                            .header__item
+                                .header__icon
+                                    i.icon_location
+                                span Россия г. Санкт-Петербург ул.Парковая, д. 4А оф 325
+                            .header__item
+                                .header__icon
+                                    i.icon_phone
+                                span +7 (800) 51 11 202
+                            .header__item
+                                .header__icon
+                                    i.icon_mail
+                                span info@robiclab.ru
+
+
+
+            .header__toggle
+                .toggle
+                    .toggle__button
+                        .toggle__toggle
+                    .toggle__label
+                        span меню
+
+
+        //- .header__nav
+        //-     nav.navbar#navbar
+        //-         ul.menu
+        //-             li.menu-item.current-menu-item
+        //-                 a(href="#") Новости
+        //-             li.menu-item
+        //-                 a(href="#") Объявления
+        //-             li.menu-item
+        //-                 a(href="#") F.A.Q.
+        //-             li.menu-item
+        //-                 a(href="#") Контакты
+        //-             li.menu-item.menu-item-has-children
+        //-                 a(href="#") Важное
+        //-                 ul.sub-menu
+        //-                     each item in [1, 2, 3, 4]
+        //-                         li.menu-item
+        //-                             a(href="#") Важный пункт меню

@@ -6,7 +6,17 @@
 @import 'core/reset';
 @import 'core/template';
 
+@import 'core/toggle';
+@import 'core/switch';
+@import 'core/search';
+
 @import 'core/header';
+
+@import 'sections/firstscreen';
+@import 'sections/digitalLab';
+@import 'sections/neuro';
+@import 'sections/practical';
+@import 'sections/robotics';
 
 @import 'core/footer';
 

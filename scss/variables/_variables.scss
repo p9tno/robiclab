@@ -2,7 +2,7 @@
 /* ======================================================================== */
 $main_font_family: "Inter";
 $second_font_family: "Roboto Slab";
-$main_color: #000;
+$main_color: #08203A;
 $main_line_height: 1.2;
 $main_font_size: 1em;
 
@@ -13,12 +13,14 @@ $container_width: 111.375em;
 $footer_height: auto;
 
 // Color collection for elements
+$color_black: #000000;
+$color_white: #ffffff;
+$color_info: #0659FB;
+$color_danger: #FF5353;
+
 $color_primary: #7b8287;
 $color_success: #36a566;
-$color_info: #03a9f4;
 $color_warning: #fca33e;
-$color_danger: #ff1a1a;
-$color_white: #ffffff;
 
 /* Grid */
 /* ======================================================================== */

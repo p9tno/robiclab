@@ -5,42 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/onepage-scroll.css"/>
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header__content">
-          <div class="header__logo"><a class="logo" href="/"><img src="/img/logo.svg" alt="alt"/></a></div>
-          <div class="header__toggle"></div>
-          <div class="header__nav">
-            <nav class="navbar" id="navbar">
-              <ul class="menu">
-                <li class="menu-item current-menu-item"><a href="#">Новости</a></li>
-                <li class="menu-item"><a href="#">Объявления</a></li>
-                <li class="menu-item"><a href="#">F.A.Q.</a></li>
-                <li class="menu-item"><a href="#">Контакты</a></li>
-                <li class="menu-item menu-item-has-children"><a href="#">Важное</a>
-                  <ul class="sub-menu">
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
+        <div class="container_center">
+          <div class="header__row">
+            <div class="header__col"><a class="logo" href="/"><img src="/img/logo.svg" alt="alt"/></a></div>
+            <div class="header__col header__col_switch">
+              <div class="switch">
+                <label class="switch__label">
+                  <input type="checkbox" id="themeCheckbox" name="themeCheckbox"/><span><i></i></span>
+                </label>
+              </div>
+            </div>
+            <div class="header__col">
+              <div class="search">
+                <div class="search-form__inner">
+                  <form class="search-form">
+                    <input class="search-form__input" type="text" placeholder="Введите для поиска"/>
+                    <button class="btn_search"><i class="icon_loop"></i></button>
+                  </form>
+                </div>
+              </div>
+              <div class="header__action">
+                <div class="header__button"><i class="icon_phone"></i></div>
+                <div class="header__content"><a class="header__close" href="#"></a>
+                  <div class="header__title"><span>Наши контакты</span></div>
+                  <div class="header__list">
+                    <div class="header__item">
+                      <div class="header__icon"><i class="icon_location"></i></div><span>Россия г. Санкт-Петербург ул.Парковая, д. 4А оф 325</span>
+                    </div>
+                    <div class="header__item">
+                      <div class="header__icon"><i class="icon_phone"></i></div><span>+7 (800) 51 11 202</span>
+                    </div>
+                    <div class="header__item">
+                      <div class="header__icon"><i class="icon_mail"></i></div><span>info@robiclab.ru</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header__toggle">
+              <div class="toggle">
+                <div class="toggle__button">
+                  <div class="toggle__toggle"></div>
+                </div>
+                <div class="toggle__label"><span>меню</span></div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
-      <main class="main_content">
+      <main class="main_content main_scroll">
+        <!-- begin firstscreen-->
+        <section class="firstscreen bg section section_scrool" id="firstscreen">
+          <div class="container_center">
+            <h2 class="section__title"><span>firstscreen</span></h2>
+            <div class="firstscreen__content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. LOLUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. LOLDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <div class="firstscreen__left"></div>
+              <div class="firstscreen__right"></div>
+            </div>
+          </div>
+        </section>
+        <!-- end firstscreen-->
+        <!-- begin digitalLab-->
+        <section class="digitalLab section bg section_scrool" id="digitalLab">
+          <div class="container_center">
+            <h2 class="section__title"><span>digitalLab</span></h2>
+            <div class="digitalLab__content">
+              <div class="digitalLab__left"></div>
+              <div class="digitalLab__right"></div>
+            </div>
+          </div>
+        </section>
+        <!-- end digitalLab-->
+        <!-- begin neuro-->
+        <section class="neuro section bg section_scrool" id="neuro">
+          <div class="container_center">
+            <h2 class="section__title"><span>neuro</span></h2>
+            <div class="neuro__content">
+              <div class="neuro__left"></div>
+              <div class="neuro__right"></div>
+            </div>
+          </div>
+        </section>
+        <!-- end neuro-->
+        <!-- begin practical-->
+        <section class="practical section bg section_scrool" id="practical">
+          <div class="container_center">
+            <h2 class="section__title"><span>Практикум</span></h2>
+            <div class="practical__content">
+              <div class="practical__left"></div>
+              <div class="practical__right"></div>
+            </div>
+          </div>
+        </section>
+        <!-- end practical-->
+        <!-- begin robotics-->
+        <section class="robotics section bg section_scrool" id="robotics">
+          <div class="container_center">
+            <h2 class="section__title"><span>robotics</span></h2>
+            <div class="robotics__content">
+              <div class="robotics__left"></div>
+              <div class="robotics__right"></div>
+            </div>
+          </div>
+        </section>
+        <!-- end robotics-->
+        <!-- begin footerScroll-->
+        <section class="footerScroll section bg section_scrool" id="footerScroll">
+          <div class="container_center">
+            <h2 class="section__title"><span>footerScroll</span></h2>
+            <div class="footerScroll__content">
+              <div class="footerScroll__left"></div>
+              <div class="footerScroll__right"></div>
+            </div>
+          </div>
+        </section>
+        <!-- end footerScroll-->
       </main>
-      <footer class="footer">
-        <div class="footer__content">
-          <p></p>&copy; 2016 |<i class="fa fa-github" aria-hidden="true">&nbsp;</i><a href="#">View Source</a>
-        </div>
-      </footer>
       <script src="../js/jquery.js"></script>
+      <script src="../js/jquery.onepage-scroll.min.js"></script>
+      <script src="../js/swiper-bundle.min.js"></script>
+      <script src="../js/slider.js"></script>
+      <script src="../js/jquery.maskedinput.min.js"></script>
       <script src="../js/function.js"></script>
     </div>
   </body>

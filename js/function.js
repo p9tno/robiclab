@@ -33,76 +33,119 @@ function isTouch() {
 
 
 
-
-
-
 $(document).ready(function() {
+
+    $(".main_scroll").onepage_scroll({
+        sectionContainer: ".section_scrool",     // sectionContainer accepts any kind of selector in case you don't want to use section
+        easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+        // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+        animationTime: 800,             // AnimationTime let you define how long each section takes to animate
+        pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+        updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+        beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+        afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+        loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+        keyboard: true,                  // You can activate the keyboard controls
+        responsiveFallback: 768,        // You can fallback to normal page scroll by defining the width of the browser in which
+        // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+        // the browser's width is less than 600, the fallback will kick in.
+        direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
+    });
+
+
+    function toggleContent() {
+        $('.header__button').click(function() {
+            // $(this).toggleClass('active');
+
+            let wrap = $(this).closest('.header__action');
+            let toggle = wrap.find('.header__button');
+            let content = wrap.find('.header__content');
+            let close = wrap.find('.header__close');
+
+            content.toggleClass('active');
+            toggle.toggleClass('active');
+
+            close.click(function () {
+                content.removeClass('active');
+                toggle.removeClass('active');
+            })
+
+        });
+
+        // $('.feedback__close').click(function(event) {
+        //         // event.preventDefault();
+        //         // $('.search__content').removeClass('search__content_open');
+        //     });
+        //
+        //     $(document).mouseup(function (e) {
+        //         let div = $(".header__content");
+        //         // если клик был не по нашему блоку и не по его дочерним элементам
+        //         if (!div.is(e.target) && div.has(e.target).length === 0) {
+        //             div.removeClass('active');
+        //             // console.log('click');
+        //     }
+        // });
+
+
+
+    };
+    toggleContent();
+
+    function preloader() {
+        $(()=>{
+
+            setTimeout( () => {
+                let p = $('#preloader');
+                p.addClass('hide');
+
+                setTimeout( () => {
+                    p.remove()
+                },1000);
+
+            },1000);
+        });
+    }
+    // preloader();
+    // setTimeout( ()=> preloader(),15000 )
 
 
     function openMobileNav() {
-        $('.header__toggle').click(function(event) {
-            // console.log('Показ меню');
-            $('.navbar').toggleClass('navbar_open');
-            $('.header__toggle').toggleClass('header__toggle_open');
-            $('.nav_open_bg').toggleClass('nav_open_bg_open');
-            $( 'body' ).toggleClass( 'nav-open' );
+        $('.toggle').click(function(event) {
+            console.log('Показ меню');
+            $('.toggle__toggle').toggleClass('active');
+            // $('.header__nav').toggleClass('active');
+            // $('.toggle__icon').toggleClass('active');
+            // $( 'body' ).toggleClass( 'nav-open' );
         });
     };
     openMobileNav();
 
-    $('.modal').on('show.bs.modal', () => {
-        let openedModal = $('.modal.in:not(.popapCalc)');
-        if (openedModal.length > 0) {
-            openedModal.modal('hide');
-        }
-    });
+    function showModal() {
+        $('.show_js').on('click', function (e) {
+            e.preventDefault();
+            let id  = $(this).attr('href');
 
-    function activeNav() {
-        $('.menu-item').on('click', function() {
-            $('.menu-item').removeClass('current-menu-item');
-            $(this).addClass('current-menu-item');
-        })
-    };
-    activeNav();
-
-    function showMore(classItem, btn) {
-
-    // let classItem = '.vacancies__item';
-    // let classItem = class;
-    let item = $(''+ classItem +'');
-    let count = item.length;
-    let start = 1;
-    let show = 1;
-
-    item.addClass('d-none');
-    $('' + classItem + ':lt(' + start + ')').removeClass('d-none');
-
-    $(btn).click(function(e) {
-        e.preventDefault();
-        $(this).addClass('loading');
-
-        let load = $(this).data('load');
-        let more = $(this).data('more');
-
-        start = (start + show <= count) ? start + show : count;
-
-        $(this).text(load);
-
-        setTimeout(() => {
-            $(''+ classItem +':lt(' + start + ')').removeClass('d-none');
-            if ($(''+ classItem +':not(.d-none)').length == count) {
-                $(this).parent().remove();
-            }
-            $(this).removeClass('loading');
-            $(this).text(more);
-        }, 500);
-
-
-    });
-
+            $(id).modal('show');
+        });
     }
-    // showMore('.vacancies__item', '.show_more_v_js');
+    showModal();
 
+
+
+    // $('.modal').on('show.bs.modal', () => {
+    //     let openedModal = $('.modal.in:not(.popapCalc)');
+    //     if (openedModal.length > 0) {
+    //         openedModal.modal('hide');
+    //     }
+    // });
+
+    // function activeNav() {
+    //     $('.menu-item').on('click', function() {
+    //         $('.menu-item').removeClass('current-menu-item');
+    //         $(this).addClass('current-menu-item');
+    //     })
+    // };
+    // activeNav();
 
     function collapsed() {
         let toggle = $('[data-collapse]');
@@ -133,17 +176,6 @@ $(document).ready(function() {
     collapsed();
 
 
-    function doTabs() {
-        $('.tabs__item').on('click', function() {
-            $('.tabs__item').removeClass('active');
-            $(this).addClass('active');
-
-            $('.tabContent__item').removeClass('active');
-            $($(this).data('tab')).addClass('active');
-        });
-    };
-    doTabs();
-
     // <div class="tabs-wrapper">
     //     <div class="tabs">
     //         <span class="tab">Вкладка 1</span>
@@ -168,95 +200,20 @@ $(document).ready(function() {
     // });
 
 
-    function doDrop() {
-        $('.drop__toggle').on('click', function() {
-            // $('.drop__list').toggleClass('open');
-            $(this).toggleClass('active');
-            $(this).closest('.drop').find('.drop__list').toggleClass('open');
-        });
-    };
-    doDrop();
 
-    $('.js-slider').slick({
-        dots: true,
-        // prevArrow: '<i class="icon-left"></i>',
-        // nextArrow: '<i class="icon-right"></i>',
-        speed: 1000,
-        adaptiveHeight: true,
-        responsive: [
-            {
-                breakpoint: 576,
-                settings: {
-                    arrows:false,
-                }
-            },
-        ]
-    })
 
-    $('.select').select2({
-        placeholder: $(this).data('placeholder'),
-        minimumResultsForSearch: Infinity
-    });
+    function uploadYoutubeVideoForModal() {
+        if ( $( ".youtubeModal-js" ) ) {
 
-    // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
-    function stikyMenu() {
-        let HeaderTop = $( 'header' ).offset().top;
-        // let HeaderTop = $( 'header' ).offset().top + $( '.home' ).innerHeight();
-        let currentTop = $( window ).scrollTop();
+            $( '.youtubeModal-js' ).on( 'click', function () {
+                $('#modalVideo').modal('show');
 
-        setNavbarPosition();
+                let wrapp = $( this ).closest( '.youtubeModal-js' );
+                let videoId = wrapp.attr( 'id' );
+                let iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
 
-        $( window ).scroll( function () {
-            setNavbarPosition();
-        } );
-
-        function setNavbarPosition() {
-            currentTop = $( window ).scrollTop();
-
-            if ( currentTop > HeaderTop ) {
-                $( 'header' ).addClass( 'stiky' );
-            } else {
-                $( 'header' ).removeClass( 'stiky' );
-            }
-
-            // $( '.navbar__link' ).each( function () {
-            //     let section = $( this ).attr( 'href' );
-            //
-            //     if ( $( 'section' ).is( section ) ) {
-            //         let offset = $( section ).offset().top;
-            //
-            //         if ( offset <= currentTop && offset + $( section ).innerHeight() > currentTop ) {
-            //             $( this ).addClass( 'active' );
-            //         } else {
-            //             $( this ).removeClass( 'active' );
-            //         }
-            //     }
-            // } );
-        }
-    stikyMenu();
-
-    }
-
-    // Видео youtube для страницы
-    function uploadYoutubeVideo() {
-        if ( $( ".js-youtube" ) ) {
-
-            $( ".js-youtube" ).each( function () {
-                // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
-                $( this ).css( 'background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)' );
-
-                // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
-                $( this ).append( $( '<img src="../wp-content/themes/gymn/assets/img/play.png" alt="Play" class="video__play">' ) );
-
-            } );
-
-            $( '.video__play, .video__prev' ).on( 'click', function () {
-                // создаем iframe со включенной опцией autoplay
-                let wrapp = $( this ).closest( '.js-youtube' ),
-                    videoId = wrapp.attr( 'id' ),
-                    iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
-
-                if ( $( this ).data( 'params' ) ) iframe_url += '&' + $( this ).data( 'params' );
+                // доп параметры для видоса
+                // if ( $( this ).data( 'params' ) ) iframe_url += '&' + $( this ).data( 'params' );
 
                 // Высота и ширина iframe должны быть такими же, как и у родительского блока
                 let iframe = $( '<iframe/>', {
@@ -264,83 +221,136 @@ $(document).ready(function() {
                     'src': iframe_url,
                     'allow': "autoplay"
                 } )
+                $(".modalVideo__wraper").append(iframe);
 
-                // Заменяем миниатюру HTML5 плеером с YouTube
-                $( this ).closest( '.video__wrapper' ).append( iframe );
+                $("#modalVideo").on('hide.bs.modal', function () {
+                    $(".modalVideo__wraper").html('');
+                });
 
             } );
         }
     };
-
-    uploadYoutubeVideo();
-    // start animate numbers
-
-    function onVisible( selector, callback, repeat = false ) {
-
-    let options = {
-        threshold: [ 0.5 ]
-    };
-    let observer = new IntersectionObserver( onEntry, options );
-    let elements = document.querySelectorAll( selector );
-
-    for ( let elm of elements ) {
-        observer.observe( elm );
-    }
-
-    function onEntry( entry ) {
-        entry.forEach( change => {
-            let elem = change.target;
-            // console.log(change);
-            // console.log(elem.innerHTML);
-            if ( change.isIntersecting ) {
-                if ( !elem.classList.contains( 'show' ) || repeat ) {
-                    elem.classList.add( 'show' );
-                    callback( elem );
-                }
-            }
-        } );
-    }
-    }
-
-    onVisible( '.programsInfo__number', function ( e ) {
-        animateNumber( e, e.innerHTML );
-    } );
-
-    function animateNumber( elem, final, duration = 1000 ) {
-        let start = 0;
-        // console.log('init');
-        setInterval( function () {
-            if ( final > start ) {
-                elem.innerHTML = start++;
-            }
-        }, duration / final );
-    }
+    uploadYoutubeVideoForModal();
 
 
-    // Деление чисел на разряды Например из строки 10000 получаем 10 000
-    // Использование: thousandSeparator(1000) или используем переменную.
-    // function thousandSeparator(str) {
-    //     var parts = (str + '').split('.'),
-    //         main = parts[0],
-    //         len = main.length,
-    //         output = '',
-    //         i = len - 1;
+    $(function(){
+        $(".tel").mask("+ 7 (999) 999-99-99");
+    });
+
+    // scrollTop
+    // $(document).ready(function(){
+    //     //отменяем стандартную обработку нажатия по ссылке
+    //     $(".toTop").on("click","a", function (event) {
+    //         event.preventDefault();
+    //         //забираем идентификатор блока с атрибута href
+    //         let id  = $(this).attr('href'),
+    //         //узнаем высоту от начала страницы до блока на который ссылается якорь
+    //         top = $(id).offset().top;
+    //         //анимируем переход на расстояние - top за 1500 мс
+    //         $('body,html').animate({scrollTop: top}, 1500);
+    //     });
+    // });
     //
-    //     while(i >= 0) {
-    //         output = main.charAt(i) + output;
-    //         if ((len - i) % 3 === 0 && i > 0) {
-    //             output = ' ' + output;
+    // $(document).ready(function(){
+    //     $(window).scroll(function(){
+    //         if($(window).scrollTop()>500){
+    //             $('.toTop').fadeIn(900)
+    //         }else{
+    //             $('.toTop').fadeOut(700)
     //         }
-    //         --i;
-    //     }
+    //     });
+    // });
+
+    // end scrollTop
+
+    function addDataFancybox() {
+        let item = $('.itemForDataFancybox_js');
+        let num = 0;
+
+        item.each(function(index, el) {
+            $(this).find('a').attr('data-fancybox', num);
+            num++;
+        });
+    }
+    // addDataFancybox();
+
+    // $('[data-fancybox]').fancybox({
+    //     loop: true,
+    //     // autoFocus: false,
+    //     infobar: false,
+    //     toolbar: false,
+    //     smallBtn: true,
     //
-    //     if (parts.length > 1) {
-    //         output += '.' + parts[1];
+    // });
+
+    // $('[data-fancybox]').fancybox({
+    //     beforeLoad: function () {
+    //         /* код */
     //     }
-    //     return output;
-    // };
-    //
-    // console.log(thousandSeparator(700));
+    // });
+
+
+    // https://github.com/michalsnik/aos
+    // AOS.init({
+    //     disable: 'mobile',
+    //     // anchorPlacement: 'bottom-bottom',
+    //     duration: 1000, // values from 0 to 3000, with step 50ms
+    //     // offset: 20,
+    //     once: true,
+    // });
+
+    // AOS.init({
+    //     disable: function () {
+    //         var maxWidth = 768;
+    //         return window.innerWidth < maxWidth;
+    //     }
+    // });
+
+
+    function showMore(classItem, btn) {
+        let start = 4;
+        let show = 2;
+
+        let item = $(''+ classItem +'');
+        let count = item.length;
+
+        item.addClass('d-none');
+
+        $('' + classItem + ':lt(' + start + ')').removeClass('d-none');
+        $('' + classItem + ':nth-child('+start+')').addClass('bd_none');
+
+        $(btn).click(function(e) {
+            e.preventDefault();
+            $(this).addClass('loading');
+
+            let load = $(this).data('load');
+            let more = $(this).data('more');
+
+            start = (start + show <= count) ? start + show : count;
+
+            $(this).text(load);
+
+            setTimeout(() => {
+                $(''+ classItem +':lt(' + start + ')').removeClass('d-none bd_none');
+
+
+                if ($(''+ classItem +':not(.d-none)').length == count) {
+                    $(this).parent().remove();
+                }
+
+                $(this).removeClass('loading');
+                $(this).text(more);
+            }, 500);
+        });
+    }
+    // showMore('.cost__item', '.show_more_js');
+    // showMore('.reviews__item', '.show_reviews_js');
+
+
+
+
+
+
+
 
 })
-// end animate numbers
