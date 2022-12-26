@@ -1,0 +1,155 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vau9wj');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vau9wj#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?vau9wj') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?vau9wj') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?vau9wj##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon_"], [class*=" icon_"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_physics {
+  &:before {
+    content: $icon_physics; 
+  }
+}
+.icon_maths {
+  &:before {
+    content: $icon_maths; 
+  }
+}
+.icon_chemistry {
+  &:before {
+    content: $icon_chemistry; 
+  }
+}
+.icon_biology {
+  &:before {
+    content: $icon_biology; 
+  }
+}
+.icon_geography {
+  &:before {
+    content: $icon_geography; 
+  }
+}
+.icon_natural_science {
+  &:before {
+    content: $icon_natural_science; 
+  }
+}
+.icon_ecology {
+  &:before {
+    content: $icon_ecology; 
+  }
+}
+.icon_obj {
+  &:before {
+    content: $icon_obj; 
+  }
+}
+.icon_world {
+  &:before {
+    content: $icon_world; 
+  }
+}
+.icon_nanotechnology {
+  &:before {
+    content: $icon_nanotechnology; 
+  }
+}
+.icon_baby {
+  &:before {
+    content: $icon_baby; 
+  }
+}
+.icon_engineering {
+  &:before {
+    content: $icon_engineering; 
+  }
+}
+.icon_astronomy {
+  &:before {
+    content: $icon_astronomy; 
+  }
+}
+.icon_history {
+  &:before {
+    content: $icon_history; 
+  }
+}
+.icon_physical {
+  &:before {
+    content: $icon_physical; 
+  }
+}
+.icon_clock {
+  &:before {
+    content: $icon_clock; 
+  }
+}
+.icon_certification {
+  &:before {
+    content: $icon_certification; 
+  }
+}
+.icon_location {
+  &:before {
+    content: $icon_location; 
+  }
+}
+.icon_mouse {
+  &:before {
+    content: $icon_mouse; 
+  }
+}
+.icon_phone {
+  &:before {
+    content: $icon_phone; 
+  }
+}
+.icon_loop {
+  &:before {
+    content: $icon_loop; 
+  }
+}
+.icon_mail {
+  &:before {
+    content: $icon_mail; 
+  }
+}
+.icon_moon {
+  &:before {
+    content: $icon_moon; 
+  }
+}
+.icon_arrow_right {
+  &:before {
+    content: $icon_arrow_right; 
+  }
+}
+.icon_sun {
+  &:before {
+    content: $icon_sun; 
+  }
+}
+

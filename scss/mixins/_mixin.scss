@@ -1,0 +1,86 @@
+// Mixin =======================================================================
+
+// Placeholder for input
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content
+	};
+
+	&:-moz-placeholder {
+		@content
+	};
+
+	&::-moz-placeholder {
+		@content
+	};
+
+	&:-ms-input-placeholder {
+		@content
+	};
+}
+
+// Ширина колонок сетки
+// Использование
+// @include grid(2, .5em); две колонки
+@mixin grid($size: 1, $gup: 20px) {
+	margin-left: -$gup;
+	display: flex;
+	flex-wrap: wrap;
+
+	> div,
+	> a {
+		display: flex;
+		padding-left: $gup;
+		width: 100% / $size;
+		// margin-bottom: $gup / 2;
+	}
+}
+// Ширина колонок сетки при смене ширины окна
+// @include xs-size(2); две колонки при меньше 767 пикселей
+@mixin xs-grid($size, $gup: 20px) {
+	@media (min-width: 768px) {
+		@include grid($size, $gup);
+	}
+}
+@mixin sm-grid($size, $gup: 20px) {
+	@media (min-width: 992px) {
+		@include grid($size, $gup);
+	}
+}
+@mixin md-grid($size, $gup: 20px) {
+	@media (min-width: 1200px) {
+		@include grid($size, $gup);
+	}
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+		font-display: swap;
+	}
+}

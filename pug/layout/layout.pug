@@ -1,0 +1,35 @@
+block variable
+    -var path = '';
+    -var page = true;
+    -var headerOpasity = '';
+    -var bodyBgColor = '';
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+
+        //- link(rel="stylesheet", type="text/css", href="css/select2.min.css")
+        link(rel="stylesheet", type="text/css", href=path +"css/style.css")
+    body
+        .wrapper
+            include header.pug
+
+            main.main_content
+                block content
+
+            include footer.pug
+
+            script(src=path +"js/jquery.js")
+            //- script(src=path +"js/jquery.maskedinput.min.js")
+            //- script(src=path +"js/modal.js")
+            //- script(src=path +"js/swiper-bundle.min.js")
+            //- script(src=path +"js/slider.js")
+            //- script(src=path +"js/aos.js")
+            //- script(src=path +"js/fancybox.min.js")
+            //- script(src=path +"js/form.js")
+
+            script(src=path +"js/function.js")
