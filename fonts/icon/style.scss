@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ykqzg8');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ykqzg8#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?ykqzg8') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?ykqzg8') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?ykqzg8##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4mokej');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4mokej#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?4mokej') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?4mokej') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?4mokej##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -140,6 +140,11 @@
 .icon_moon {
   &:before {
     content: $icon_moon; 
+  }
+}
+.icon_arrow_circle {
+  &:before {
+    content: $icon_arrow_circle; 
   }
 }
 .icon_arrow_right {

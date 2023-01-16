@@ -52,18 +52,20 @@ $(document).ready(function() {
         direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
     });
 
-
     function toggleContent() {
         $('.header__button').click(function() {
-            // $(this).toggleClass('active');
 
             let wrap = $(this).closest('.header__action');
+
+
             let toggle = wrap.find('.header__button');
             let content = wrap.find('.header__content');
             let close = wrap.find('.header__close');
 
             content.toggleClass('active');
             toggle.toggleClass('active');
+
+            // $('.header__button').removeClass('active');
 
             close.click(function () {
                 content.removeClass('active');
@@ -72,24 +74,17 @@ $(document).ready(function() {
 
         });
 
-        // $('.feedback__close').click(function(event) {
-        //         // event.preventDefault();
-        //         // $('.search__content').removeClass('search__content_open');
-        //     });
-        //
-        //     $(document).mouseup(function (e) {
-        //         let div = $(".header__content");
-        //         // если клик был не по нашему блоку и не по его дочерним элементам
-        //         if (!div.is(e.target) && div.has(e.target).length === 0) {
-        //             div.removeClass('active');
-        //             // console.log('click');
-        //     }
-        // });
-
-
-
     };
     toggleContent();
+
+    $(document).mouseup(function (e) {
+        let div = $(".header__content");
+        // если клик был не по нашему блоку и не по его дочерним элементам
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            div.removeClass('active');
+            $('.header__button').removeClass('active');
+        }
+    });
 
     function preloader() {
         $(()=>{
@@ -113,7 +108,7 @@ $(document).ready(function() {
         $('.toggle').click(function(event) {
             console.log('Показ меню');
             $('.toggle__toggle').toggleClass('active');
-            // $('.header__nav').toggleClass('active');
+            $('.header__nav').toggleClass('active');
             // $('.toggle__icon').toggleClass('active');
             // $( 'body' ).toggleClass( 'nav-open' );
         });
@@ -190,14 +185,14 @@ $(document).ready(function() {
     // </div>
 
     // jQuery
-    // $('.tabs-wrapper').each(function() {
-    //     let ths = $(this);
-    //     ths.find('.tab-item').not(':first').hide();
-    //     ths.find('.tab').click(function() {
-    //         ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-    //         ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
-    //     }).eq(0).addClass('active');
-    // });
+    $('.tabs-wrapper').each(function() {
+        let ths = $(this);
+        ths.find('.tab-item').not(':first').hide();
+        ths.find('.tab').click(function() {
+            ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+            ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+        }).eq(0).addClass('active');
+    });
 
 
 
@@ -346,11 +341,6 @@ $(document).ready(function() {
     // showMore('.cost__item', '.show_more_js');
     // showMore('.reviews__item', '.show_reviews_js');
 
-
-
-
-
-
-
+    
 
 })

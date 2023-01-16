@@ -23,7 +23,7 @@
               </div>
             </div>
             <div class="header__col">
-              <div class="search">
+              <div class="search desktop">
                 <div class="search-form__inner">
                   <form class="search-form">
                     <input class="search-form__input" type="text" placeholder="Введите для поиска"/>
@@ -32,18 +32,36 @@
                 </div>
               </div>
               <div class="header__action">
-                <div class="header__button"><i class="icon_phone"></i></div>
+                <div class="header__button feedback-toggle-js"><i class="icon_phone"></i></div>
                 <div class="header__content"><a class="header__close" href="#"></a>
-                  <div class="header__title"><span>Наши контакты</span></div>
+                  <div class="header__title"><span class="desktop">Наши контакты</span><span class="mobile">Наш телефон</span></div>
                   <div class="header__list">
-                    <div class="header__item">
+                    <div class="header__item desktop">
                       <div class="header__icon"><i class="icon_location"></i></div><span>Россия г. Санкт-Петербург ул.Парковая, д. 4А оф 325</span>
                     </div>
                     <div class="header__item">
-                      <div class="header__icon"><i class="icon_phone"></i></div><span>+7 (800) 51 11 202</span>
+                      <div class="header__icon"><i class="icon_phone"></i></div><span class="desktop">+7 (800) 51 11 202</span><a class="mobile" href="tel:+7 (800) 51 11 202">+7 (800) 51 11 202</a>
                     </div>
-                    <div class="header__item">
+                    <div class="header__label mobile"><span>Вы можете позвонить нам в любое время</span></div>
+                    <div class="header__btn mobile"><a class="btn" href="#">Позвонить</a></div>
+                    <div class="header__item desktop">
                       <div class="header__icon"><i class="icon_mail"></i></div><span>info@robiclab.ru</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header__col mobile">
+              <div class="header__action">
+                <div class="header__button search-toggle-js"><i class="icon_loop"></i></div>
+                <div class="header__content header__content_search"><a class="header__close" href="#"></a>
+                  <div class="header__title"><span>Поиск</span></div>
+                  <div class="search">
+                    <div class="search-form__inner">
+                      <form class="search-form">
+                        <input class="search-form__input" type="text" placeholder="Введите для поиска"/>
+                        <button class="btn_search"><i class="icon_loop"></i></button>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -54,9 +72,40 @@
                 <div class="toggle__button">
                   <div class="toggle__toggle"></div>
                 </div>
-                <div class="toggle__label"><span>меню</span></div>
+                <div class="toggle__label desktop"><span>меню</span></div>
               </div>
             </div>
+          </div>
+          <div class="header__nav"><div class="area" >
+<ul class="circles">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div >
+            <nav class="navbar" id="navbar">
+              <ul class="menu">
+                <li class="menu-item current-menu-item"><a href="#">Новости</a></li>
+                <li class="menu-item"><a href="#">Объявления</a></li>
+                <li class="menu-item"><a href="#">F.A.Q.</a></li>
+                <li class="menu-item"><a href="#">Контакты</a></li>
+                <li class="menu-item menu-item-has-children"><a href="#">Важное</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
+                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
+                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
+                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </header>
@@ -71,6 +120,14 @@
           </div>
         </section>
         <!-- end testNav-->
+        <!-- begin testButton-->
+        <section class="testButton section" id="testButton" style="background-color: #ddd;">
+          <div class="container_center">
+            <h2 class="section__title"><span>Кнопки</span></h2>
+            <div class="testButton__content"><a class="btn" href="#"> <span>Оформить покупку</span></a><br/><br/><a class="btn btn_transparent" href="#"> <span>Инструкция</span></a><br/><br/><a class="btn" href="#"> <span>WEB-версия</span><i class="icon_arrow_right"></i></a><br/><br/><a class="btn btn_transparent" href="#"> <span>Подробнее о продукте</span><i class="icon_arrow_right"></i></a><br/><br/><a class="btn btn_circle" href="#"> <span>Смотреть все предметы</span><i class="icon_arrow_circle"></i></a><br/><br/><a class="btn btn_circle btn_transform" href="#"> <span>Скачать инструкцию</span><i class="icon_arrow_circle"></i></a></div>
+          </div>
+        </section>
+        <!-- end testButton-->
       </main>
       <footer class="footer">
         <div class="footer__content">
