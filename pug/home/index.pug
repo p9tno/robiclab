@@ -27,7 +27,19 @@ block content
     // end firstscreen
 
     // begin digitalLab
-    section#digitalLab.digitalLab.section.bg.section_scrool
+    section#digitalLab.digitalLab.section.bg.section_scrool.figure
+        ul.figure__list.desktop
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+
         .container_center
             h2.section__title
                 span digitalLab
@@ -38,7 +50,18 @@ block content
     // end digitalLab
 
     // begin neuro
-    section#neuro.neuro.section.bg.section_scrool
+    section#neuro.neuro.section.bg.section_scrool.figure
+        ul.figure__list.desktop
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
         .container_center
             h2.section__title
                 span neuro
@@ -49,7 +72,18 @@ block content
     // end neuro
 
     // begin practical
-    section#practical.practical.section.bg.section_scrool
+    section#practical.practical.section.bg.section_scrool.figure
+        ul.figure__list.desktop
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
         .container_center
             h2.section__title
                 span Практикум
@@ -67,7 +101,18 @@ block content
     // end practical
 
     // begin robotics
-    section#robotics.robotics.section.bg.section_scrool
+    section#robotics.robotics.section.bg.section_scrool.figure
+        ul.figure__list.desktop
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
         .container_center
             h2.section__title
                 span robotics
@@ -78,12 +123,130 @@ block content
     // end robotics
 
     // begin footerScroll
-    section#footerScroll.footerScroll.section.bg.section_scrool
-        .container_center
-            h2.section__title
-                span footerScroll
-            .footerScroll__content
-                .footerScroll__left
-                .footerScroll__right
+    section#footerScroll.footerScroll.section.bg.section_scrool.figure
+        ul.figure__list.desktop
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+            li
+        .navbar__content
+            .navbar__main
+                .container_center
+                    nav.navbar#navbar
+                        .navbar__row
+                            .navbar__col.navbar__col_nav_sm.navbar__col_icon
+                                .navbar__label
+                                    span Цифровые лаборатории
+                                .navbar__row
+                                    ul.menu
+                                        li.menu-item
+                                            a(href="#") Физика
+                                                i.icon_physics
+                                        li.menu-item
+                                            a(href="#") Математика
+                                                i.icon_maths
+                                        li.menu-item
+                                            a(href="#") Химия
+                                                i.icon_chemistry
+                                        li.menu-item
+                                            a(href="#") Биология
+                                                i.icon_biology
+                                        li.menu-item
+                                            a(href="#") География
+                                                i.icon_geography
+                                        li.menu-item
+                                            a(href="#") Естествознание
+                                                i.icon_natural_science
+                                        li.menu-item
+                                            a(href="#") Экология
+                                                i.icon_ecology
+                                        li.menu-item
+                                            a(href="#") ОБЖ
+                                                i.icon_obj
+
+                                    ul.menu
+                                        li.menu-item
+                                            a(href="#") Окружающий мир
+                                                i.icon_world
+                                        li.menu-item
+                                            a(href="#") Нанотехнологии
+                                                i.icon_nanotechnology
+                                        li.menu-item
+                                            a(href="#") Для дошкольного образования и начальной школы
+                                                i.icon_baby
+                                        li.menu-item
+                                            a(href="#") Основы технологии и инженерии
+                                                i.icon_engineering
+                                        li.menu-item
+                                            a(href="#") Астрономия
+                                                i.icon_astronomy
+                                        li.menu-item
+                                            a(href="#") История и Археология
+                                                i.icon_history
+                                        li.menu-item
+                                            a(href="#") Физическая культура
+                                                i.icon_physical
+
+                            .navbar__col.navbar__col_nav_sm
+                                .navbar__label
+                                    span Справочный центр
+                                ul.menu
+                                    each item in ['Цифровая лаборатория', 'РобикЛаб Нейро', 'Практикум', 'Робототехника',]
+                                        li.menu-item
+                                            a(href="#")=item
+
+
+                            .navbar__col
+                                .navbar__label
+                                    span Контакты
+                                .navbar__contacts
+                                    .contacts
+                                        .contacts__list
+                                            .contacts__item
+                                                i.icon_phone
+                                                span.desktop 8 (800) 51 11 202
+                                                a.mobile(href="tel:+8 (800) 51 11 202") 8 (800) 51 11 202
+
+                                            .contacts__item
+                                                i.icon_clock
+                                                span пн-пт, 10:00 – 18:00
+
+                                            .contacts__item
+                                                i.icon_mail
+                                                span.desktop info@robiclab.ru
+                                                a.mobile(href="mailto:info@robiclab.ru") info@robiclab.ru
+
+                                            .contacts__item
+                                                i.icon_location
+                                                span Россия г. Санкт-Петербург,<br> ул. Парковая, 4 оф 325
+
+                                            .contacts__item
+                                                i.icon_certification
+                                                span ИНН: 7810697745
+
+            .navbar__bottom
+                .container_center
+                    .navbar__row
+                        .navbar__links
+                            span © ООО"робиклаб" 2011 - <script type="text/javascript">document.write(new Date().getFullYear());</script> Все права защищены.
+                            a(href="#") Политика конфендициальности
+                            a(href="#") Карта сайта
+                            a(href="#") Сообщить об ошибке
+
+            .footerScroll__hand.bg.desktop
+
+
+
+
+
+
+
+
 
     // end footerScroll

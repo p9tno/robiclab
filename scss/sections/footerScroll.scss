@@ -1,0 +1,19 @@
+.footerScroll {
+    background-image: url("../img/footerScroll_bg.svg");
+    padding-bottom: 0;
+
+    padding-top: 12.5em;
+
+    &__hand {
+        @media (min-width: 768px) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 61.875em;
+            height: 26.75em;
+            background-image: url("../img/footerScroll_hand_bg.svg");
+        }
+
+    }
+
+}

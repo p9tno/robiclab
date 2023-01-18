@@ -32,7 +32,7 @@ function isTouch() {
 } // for touch device
 
 
-
+// https://github.com/peachananr/onepage-scroll/blob/master/README.md
 $(document).ready(function() {
 
     $(".main_scroll").onepage_scroll({
@@ -41,9 +41,15 @@ $(document).ready(function() {
         // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
         animationTime: 800,             // AnimationTime let you define how long each section takes to animate
         pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-        updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+        // updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
         beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
-        afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+        afterMove: function(index) {
+            if (index > 2) {
+                $('.toTop').fadeIn(900);
+            } else {
+                $('.toTop').fadeOut(700);
+            }
+        },   // This option accepts a callback function. The function will be called after the page moves.
         loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
         keyboard: true,                  // You can activate the keyboard controls
         responsiveFallback: 768,        // You can fallback to normal page scroll by defining the width of the browser in which
@@ -51,6 +57,15 @@ $(document).ready(function() {
         // the browser's width is less than 600, the fallback will kick in.
         direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
     });
+
+    function toTopScroll() {
+        $(".toTopSlide-js").on("click","a", function (event) {
+            event.preventDefault();
+            console.log('click');
+            $(".main").moveTo(1);
+        })
+    }
+    toTopScroll();
 
     function toggleContent() {
         $('.header__button').click(function() {
@@ -109,8 +124,11 @@ $(document).ready(function() {
             console.log('Показ меню');
             $('.toggle__toggle').toggleClass('active');
             $('.header__nav').toggleClass('active');
-            // $('.toggle__icon').toggleClass('active');
+            $('.header').toggleClass('nav-active');
             // $( 'body' ).toggleClass( 'nav-open' );
+
+            $('.close_nav_js').toggleClass('active');
+            $('.open_nav_js').toggleClass('active');
         });
     };
     openMobileNav();
@@ -124,6 +142,33 @@ $(document).ready(function() {
         });
     }
     showModal();
+
+
+    // scrollTop
+    // $(document).ready(function(){
+    //     //отменяем стандартную обработку нажатия по ссылке
+    //     $(".toTop").on("click","a", function (event) {
+    //         event.preventDefault();
+    //         console.log('click');
+    //         //забираем идентификатор блока с атрибута href
+    //         let id  = $(this).attr('href'),
+    //         //узнаем высоту от начала страницы до блока на который ссылается якорь
+    //         top = $(id).offset().top;
+    //         //анимируем переход на расстояние - top за 1500 мс
+    //         $('body,html').animate({scrollTop: top}, 1500);
+    //     });
+    // });
+    //
+    // $(document).ready(function(){
+    //     $(window).scroll(function(){
+    //         if($(window).scrollTop()>500){
+    //             $('.toTop').fadeIn(900)
+    //         }else{
+    //             $('.toTop').fadeOut(700)
+    //         }
+    //     });
+    // });
+    // end scrollTop
 
 
 
@@ -341,6 +386,6 @@ $(document).ready(function() {
     // showMore('.cost__item', '.show_more_js');
     // showMore('.reviews__item', '.show_reviews_js');
 
-    
+
 
 })

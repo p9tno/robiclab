@@ -3,7 +3,8 @@ header.header
         .header__row
             .header__col
                 a.logo(href="/")
-                    img(src="/img/logo.svg", alt="alt")
+                    img.close_nav_js.active(src="/img/logo.svg", alt="logo")
+                    img.open_nav_js(src="/img/logo_w.svg", alt="logo")
 
             .header__col.header__col_switch
                 .switch
@@ -77,34 +78,114 @@ header.header
                         span меню
 
 
-        .header__nav
-            <div class="area" >
-                <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div >
-            nav.navbar#navbar
-                ul.menu
-                    li.menu-item.current-menu-item
-                        a(href="#") Новости
-                    li.menu-item
-                        a(href="#") Объявления
-                    li.menu-item
-                        a(href="#") F.A.Q.
-                    li.menu-item
-                        a(href="#") Контакты
-                    li.menu-item.menu-item-has-children
-                        a(href="#") Важное
-                        ul.sub-menu
-                            each item in [1, 2, 3, 4]
-                                li.menu-item
-                                    a(href="#") Важный пункт меню
+        .header__nav.figure
+
+            ul.figure__list
+                li
+                li
+                li
+                li
+                li
+                li
+                li
+                li
+                li
+                li
+
+            .navbar__content
+                //- .navbar__header
+                //-     .container_center
+                .navbar__main
+                    .container_center
+                        nav.navbar#navbar
+                            .navbar__row
+                                .navbar__col.navbar__col_nav_sm.navbar__col_icon
+                                    .navbar__label
+                                        span Цифровые лаборатории
+                                    .navbar__row
+                                        ul.menu
+                                            li.menu-item
+                                                a(href="#") Физика
+                                                    i.icon_physics
+                                            li.menu-item
+                                                a(href="#") Математика
+                                                    i.icon_maths
+                                            li.menu-item
+                                                a(href="#") Химия
+                                                    i.icon_chemistry
+                                            li.menu-item
+                                                a(href="#") Биология
+                                                    i.icon_biology
+                                            li.menu-item
+                                                a(href="#") География
+                                                    i.icon_geography
+                                            li.menu-item
+                                                a(href="#") Естествознание
+                                                    i.icon_natural_science
+                                            li.menu-item
+                                                a(href="#") Экология
+                                                    i.icon_ecology
+                                            li.menu-item
+                                                a(href="#") ОБЖ
+                                                    i.icon_obj
+
+                                        ul.menu
+                                            li.menu-item
+                                                a(href="#") Окружающий мир
+                                                    i.icon_world
+                                            li.menu-item
+                                                a(href="#") Нанотехнологии
+                                                    i.icon_nanotechnology
+                                            li.menu-item
+                                                a(href="#") Для дошкольного образования и начальной школы
+                                                    i.icon_baby
+                                            li.menu-item
+                                                a(href="#") Основы технологии и инженерии
+                                                    i.icon_engineering
+                                            li.menu-item
+                                                a(href="#") Астрономия
+                                                    i.icon_astronomy
+                                            li.menu-item
+                                                a(href="#") История и Археология
+                                                    i.icon_history
+                                            li.menu-item
+                                                a(href="#") Физическая культура
+                                                    i.icon_physical
+
+                                .navbar__col.navbar__col_nav_sm
+                                    .navbar__label
+                                        span Справочный центр
+                                    ul.menu
+                                        each item in ['Цифровая лаборатория', 'РобикЛаб Нейро', 'Практикум', 'Робототехника',]
+                                            li.menu-item
+                                                a(href="#")=item
+
+
+                                .navbar__col
+                                    ul.menu
+                                        each item in ['Главная', 'Цифровые лаборатории', 'Нейролаб', 'Робототехника', 'Практикум', 'Видео экспериментов', 'Доставка и заказ', 'Контакты' ]
+                                            li.menu-item
+                                                a(href="#")=item
+
+
+                .navbar__bottom
+                    .container_center
+                        .navbar__row
+                            .navbar__col
+                                ul.navbar__download
+                                    li
+                                        i.icon_windows
+                                        a(href="#") Скачать программу на Windows
+                                    li
+                                        i.icon_linux
+                                        a(href="#") Скачать программу на Linux
+                                    li
+                                        i.icon_mac
+                                        a(href="#") Скачать программу на Mac
+
+
+                            .navbar__col
+                                .navbar__button
+                                    a.btn.btn_transparent(href="#")
+                                        span Попробовать WEB-версию
+                                        i.icon_arrow_right

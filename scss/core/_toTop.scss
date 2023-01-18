@@ -1,0 +1,60 @@
+.toTop {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    bottom: 2em;
+    right: 1em;
+
+    transition: 0.3s;
+    @media (min-width: 768px) {
+        bottom: 10.625em;
+        /* 170/16 */
+        right: 6.25em;
+        /* 100/16 */
+
+    }
+
+    a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5em;
+        height: 5em;
+        border-radius: 100%;
+        color: $color_white;
+        background-color: rgba(49, 151, 216, 0.25);
+
+        cursor: pointer;
+
+        transition: 0.3s;
+
+        @media (min-width: 768px) {
+            font-size: 1em;
+
+        }
+
+        // &:hover {
+        //     background: linear-gradient(223.85deg, rgba(255, 255, 255, 0.156) -1.93%, rgba(255, 255, 255, 0) 35.96%), #5EC3D7;
+        //
+        // }
+
+    }
+
+    i {
+        font-size: 1.25em;
+        -webkit-animation: action 0.5s linear alternate infinite;
+        animation: action 0.5s linear alternate infinite;
+    }
+
+}
+
+@keyframes action {
+    0% {
+        transform: translateY(-0.0625em);
+    }
+
+    100% {
+        transform: translateY(0.0625em);
+    }
+}

@@ -7,14 +7,13 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/onepage-scroll.css"/>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper" id="wrapper">
       <header class="header">
         <div class="container_center">
           <div class="header__row">
-            <div class="header__col"><a class="logo" href="/"><img src="/img/logo.svg" alt="alt"/></a></div>
+            <div class="header__col"><a class="logo" href="/"><img class="close_nav_js active" src="/img/logo.svg" alt="logo"/><img class="open_nav_js" src="/img/logo_w.svg" alt="logo"/></a></div>
             <div class="header__col header__col_switch">
               <div class="switch">
                 <label class="switch__label">
@@ -76,36 +75,90 @@
               </div>
             </div>
           </div>
-          <div class="header__nav"><div class="area" >
-<ul class="circles">
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-</div >
-            <nav class="navbar" id="navbar">
-              <ul class="menu">
-                <li class="menu-item current-menu-item"><a href="#">Новости</a></li>
-                <li class="menu-item"><a href="#">Объявления</a></li>
-                <li class="menu-item"><a href="#">F.A.Q.</a></li>
-                <li class="menu-item"><a href="#">Контакты</a></li>
-                <li class="menu-item menu-item-has-children"><a href="#">Важное</a>
-                  <ul class="sub-menu">
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
+          <div class="header__nav figure">
+            <ul class="figure__list">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <div class="navbar__content">
+              <div class="navbar__main">
+                <div class="container_center">
+                  <nav class="navbar" id="navbar">
+                    <div class="navbar__row">
+                      <div class="navbar__col navbar__col_nav_sm navbar__col_icon">
+                        <div class="navbar__label"><span>Цифровые лаборатории</span></div>
+                        <div class="navbar__row">
+                          <ul class="menu">
+                            <li class="menu-item"><a href="#">Физика<i class="icon_physics"></i></a></li>
+                            <li class="menu-item"><a href="#">Математика<i class="icon_maths"></i></a></li>
+                            <li class="menu-item"><a href="#">Химия<i class="icon_chemistry"></i></a></li>
+                            <li class="menu-item"><a href="#">Биология<i class="icon_biology"></i></a></li>
+                            <li class="menu-item"><a href="#">География<i class="icon_geography"></i></a></li>
+                            <li class="menu-item"><a href="#">Естествознание<i class="icon_natural_science"></i></a></li>
+                            <li class="menu-item"><a href="#">Экология<i class="icon_ecology"></i></a></li>
+                            <li class="menu-item"><a href="#">ОБЖ<i class="icon_obj"></i></a></li>
+                          </ul>
+                          <ul class="menu">
+                            <li class="menu-item"><a href="#">Окружающий мир<i class="icon_world"></i></a></li>
+                            <li class="menu-item"><a href="#">Нанотехнологии<i class="icon_nanotechnology"></i></a></li>
+                            <li class="menu-item"><a href="#">Для дошкольного образования и начальной школы<i class="icon_baby"></i></a></li>
+                            <li class="menu-item"><a href="#">Основы технологии и инженерии<i class="icon_engineering"></i></a></li>
+                            <li class="menu-item"><a href="#">Астрономия<i class="icon_astronomy"></i></a></li>
+                            <li class="menu-item"><a href="#">История и Археология<i class="icon_history"></i></a></li>
+                            <li class="menu-item"><a href="#">Физическая культура<i class="icon_physical"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="navbar__col navbar__col_nav_sm">
+                        <div class="navbar__label"><span>Справочный центр</span></div>
+                        <ul class="menu">
+                          <li class="menu-item"><a href="#">Цифровая лаборатория</a></li>
+                          <li class="menu-item"><a href="#">РобикЛаб Нейро</a></li>
+                          <li class="menu-item"><a href="#">Практикум</a></li>
+                          <li class="menu-item"><a href="#">Робототехника</a></li>
+                        </ul>
+                      </div>
+                      <div class="navbar__col">
+                        <ul class="menu">
+                          <li class="menu-item"><a href="#">Главная</a></li>
+                          <li class="menu-item"><a href="#">Цифровые лаборатории</a></li>
+                          <li class="menu-item"><a href="#">Нейролаб</a></li>
+                          <li class="menu-item"><a href="#">Робототехника</a></li>
+                          <li class="menu-item"><a href="#">Практикум</a></li>
+                          <li class="menu-item"><a href="#">Видео экспериментов</a></li>
+                          <li class="menu-item"><a href="#">Доставка и заказ</a></li>
+                          <li class="menu-item"><a href="#">Контакты</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div class="navbar__bottom">
+                <div class="container_center">
+                  <div class="navbar__row">
+                    <div class="navbar__col">
+                      <ul class="navbar__download">
+                        <li><i class="icon_windows"></i><a href="#">Скачать программу на Windows</a></li>
+                        <li><i class="icon_linux"></i><a href="#">Скачать программу на Linux</a></li>
+                        <li><i class="icon_mac"></i><a href="#">Скачать программу на Mac</a></li>
+                      </ul>
+                    </div>
+                    <div class="navbar__col">
+                      <div class="navbar__button"><a class="btn btn_transparent" href="#"><span>Попробовать WEB-версию</span><i class="icon_arrow_right"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -123,7 +176,19 @@
         </section>
         <!-- end firstscreen-->
         <!-- begin digitalLab-->
-        <section class="digitalLab section bg section_scrool" id="digitalLab">
+        <section class="digitalLab section bg section_scrool figure" id="digitalLab">
+          <ul class="figure__list desktop">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
           <div class="container_center">
             <h2 class="section__title"><span>digitalLab</span></h2>
             <div class="digitalLab__content">
@@ -134,7 +199,19 @@
         </section>
         <!-- end digitalLab-->
         <!-- begin neuro-->
-        <section class="neuro section bg section_scrool" id="neuro">
+        <section class="neuro section bg section_scrool figure" id="neuro">
+          <ul class="figure__list desktop">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
           <div class="container_center">
             <h2 class="section__title"><span>neuro</span></h2>
             <div class="neuro__content">
@@ -145,7 +222,19 @@
         </section>
         <!-- end neuro-->
         <!-- begin practical-->
-        <section class="practical section bg section_scrool" id="practical">
+        <section class="practical section bg section_scrool figure" id="practical">
+          <ul class="figure__list desktop">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
           <div class="container_center">
             <h2 class="section__title"><span>Практикум</span></h2>
             <div class="practical__content">
@@ -156,7 +245,19 @@
         </section>
         <!-- end practical-->
         <!-- begin robotics-->
-        <section class="robotics section bg section_scrool" id="robotics">
+        <section class="robotics section bg section_scrool figure" id="robotics">
+          <ul class="figure__list desktop">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
           <div class="container_center">
             <h2 class="section__title"><span>robotics</span></h2>
             <div class="robotics__content">
@@ -167,17 +268,88 @@
         </section>
         <!-- end robotics-->
         <!-- begin footerScroll-->
-        <section class="footerScroll section bg section_scrool" id="footerScroll">
-          <div class="container_center">
-            <h2 class="section__title"><span>footerScroll</span></h2>
-            <div class="footerScroll__content">
-              <div class="footerScroll__left"></div>
-              <div class="footerScroll__right"></div>
+        <section class="footerScroll section bg section_scrool figure" id="footerScroll">
+          <ul class="figure__list desktop">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div class="navbar__content">
+            <div class="navbar__main">
+              <div class="container_center">
+                <nav class="navbar" id="navbar">
+                  <div class="navbar__row">
+                    <div class="navbar__col navbar__col_nav_sm navbar__col_icon">
+                      <div class="navbar__label"><span>Цифровые лаборатории</span></div>
+                      <div class="navbar__row">
+                        <ul class="menu">
+                          <li class="menu-item"><a href="#">Физика<i class="icon_physics"></i></a></li>
+                          <li class="menu-item"><a href="#">Математика<i class="icon_maths"></i></a></li>
+                          <li class="menu-item"><a href="#">Химия<i class="icon_chemistry"></i></a></li>
+                          <li class="menu-item"><a href="#">Биология<i class="icon_biology"></i></a></li>
+                          <li class="menu-item"><a href="#">География<i class="icon_geography"></i></a></li>
+                          <li class="menu-item"><a href="#">Естествознание<i class="icon_natural_science"></i></a></li>
+                          <li class="menu-item"><a href="#">Экология<i class="icon_ecology"></i></a></li>
+                          <li class="menu-item"><a href="#">ОБЖ<i class="icon_obj"></i></a></li>
+                        </ul>
+                        <ul class="menu">
+                          <li class="menu-item"><a href="#">Окружающий мир<i class="icon_world"></i></a></li>
+                          <li class="menu-item"><a href="#">Нанотехнологии<i class="icon_nanotechnology"></i></a></li>
+                          <li class="menu-item"><a href="#">Для дошкольного образования и начальной школы<i class="icon_baby"></i></a></li>
+                          <li class="menu-item"><a href="#">Основы технологии и инженерии<i class="icon_engineering"></i></a></li>
+                          <li class="menu-item"><a href="#">Астрономия<i class="icon_astronomy"></i></a></li>
+                          <li class="menu-item"><a href="#">История и Археология<i class="icon_history"></i></a></li>
+                          <li class="menu-item"><a href="#">Физическая культура<i class="icon_physical"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="navbar__col navbar__col_nav_sm">
+                      <div class="navbar__label"><span>Справочный центр</span></div>
+                      <ul class="menu">
+                        <li class="menu-item"><a href="#">Цифровая лаборатория</a></li>
+                        <li class="menu-item"><a href="#">РобикЛаб Нейро</a></li>
+                        <li class="menu-item"><a href="#">Практикум</a></li>
+                        <li class="menu-item"><a href="#">Робототехника</a></li>
+                      </ul>
+                    </div>
+                    <div class="navbar__col">
+                      <div class="navbar__label"><span>Контакты</span></div>
+                      <div class="navbar__contacts">
+                        <div class="contacts">
+                          <div class="contacts__list">
+                            <div class="contacts__item"><i class="icon_phone"></i><span class="desktop">8 (800) 51 11 202</span><a class="mobile" href="tel:+8 (800) 51 11 202">8 (800) 51 11 202</a></div>
+                            <div class="contacts__item"><i class="icon_clock"></i><span>пн-пт, 10:00 – 18:00</span></div>
+                            <div class="contacts__item"><i class="icon_mail"></i><span class="desktop">info@robiclab.ru</span><a class="mobile" href="mailto:info@robiclab.ru">info@robiclab.ru</a></div>
+                            <div class="contacts__item"><i class="icon_location"></i><span>Россия г. Санкт-Петербург,<br> ул. Парковая, 4 оф 325</span></div>
+                            <div class="contacts__item"><i class="icon_certification"></i><span>ИНН: 7810697745</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
             </div>
+            <div class="navbar__bottom">
+              <div class="container_center">
+                <div class="navbar__row">
+                  <div class="navbar__links"><span>© ООО"робиклаб" 2011 - <script type="text/javascript">document.write(new Date().getFullYear());</script> Все права защищены.</span><a href="#">Политика конфендициальности</a><a href="#">Карта сайта</a><a href="#">Сообщить об ошибке</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="footerScroll__hand bg desktop"></div>
           </div>
         </section>
         <!-- end footerScroll-->
       </main>
+      <div class="toTop toTopSlide-js"><a href="test"> <i class="icon_to_Top"></i></a></div>
       <script src="../js/jquery.js"></script>
       <script src="../js/jquery.onepage-scroll.min.js"></script>
       <script src="../js/swiper-bundle.min.js"></script>

@@ -17,13 +17,22 @@ html(lang="en")
         //- link(rel="stylesheet", type="text/css", href=path +"css/fancybox.min.css")
 
         link(rel="stylesheet", type="text/css", href=path +"css/style.css")
-        link(rel="stylesheet", type="text/css", href=path +"css/onepage-scroll.css")
+        //- link(rel="stylesheet", type="text/css", href=path +"css/onepage-scroll.css")
     body
-        .wrapper
+        .wrapper#wrapper
             include header.pug
 
             main.main_content(class=classScroll)
                 block content
+
+            //- begin toTop
+            //- .toTop
+            //-     a(href="#wrapper") 
+            //-         i.icon_arrow_top
+            .toTop.toTopSlide-js
+                a(href="test") 
+                    i.icon_to_Top
+            //- end toTop
 
             if !pageScroll
                 include footer.pug

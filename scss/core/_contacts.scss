@@ -1,0 +1,50 @@
+.contacts {
+    &__list {}
+
+    &__item {
+
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.0625em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        i {
+            flex: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 2.875em;
+            /* 46/16 */
+            height: 2.875em;
+            /* 46/16 */
+
+            border-radius: 100%;
+
+            background-color: rgba(49, 151, 216, 0.25);
+            color: $color_white;
+            margin-right: 1.25em;
+            /* 20/16 */
+
+            &:before {
+                font-size: 1.25em;
+
+            }
+        }
+
+        .icon_mail {
+            &:before {
+                font-size: 1em;
+            }
+        }
+
+        span {
+            font-size: 22px;
+            color: $color_white;
+        }
+    }
+
+}
