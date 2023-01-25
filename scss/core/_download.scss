@@ -1,0 +1,42 @@
+.download {
+    @media (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 0.5625em;
+
+        margin-bottom: 1em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+            margin-right: 1.875em;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__icon {
+        i {
+            font-size: 1.875em;
+            color: $color_white;
+        }
+    }
+
+    &__link {
+        a {
+            font-size: 1em;
+            font-weight: 500;
+            color: $color_white;
+
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+            }
+        }
+    }
+}

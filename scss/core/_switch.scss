@@ -18,6 +18,7 @@
 
             &:checked ~ span i {
                 left: 1.4375em;
+                background-color: #01B5FE;
 
                 &:before {
                     opacity: 0;
@@ -25,8 +26,11 @@
 
                 &:after {
                     opacity: 1;
+                    color: $color_white;
                 }
             }
+
+            &:checked ~ span {}
         }
 
         span {

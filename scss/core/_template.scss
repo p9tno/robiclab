@@ -35,6 +35,7 @@ body {
 	flex-direction: column;
 	height: auto;
 	min-height: 100%;
+	// overflow: hidden;
 
 	font-size: $main_font_size;
 	// margin: 0 auto (-$footer_height); // отрицательный нижний отступ на высоту футера
@@ -59,16 +60,70 @@ body {
 	padding: 2em 0;
 
 	&__title {
-		font-family: $second_font_family;
-		font-weight: 400;
+		font-size: 1em;
+		margin: 0;
+		font-weight: 600;
+		margin-bottom: 3.375em;
+
+		span {
+			color: $color_white;
+			font-size: 3.375em;
+			/* 54/16 */
+		}
+	}
+
+	&__content {
+		line-height: 1.5;
+		margin-bottom: 3.75em;
+		/* 60/16 */
+
+		p {
+			font-size: 1.125em;
+			margin: 2.25em 0;
+			color: $color_white;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__download {
+		margin-top: 3.75em;
+		margin-bottom: 5em;
+	}
+
+	&__button {
+		margin-top: 3.75em;
+
+		&_buttons {
+			display: flex;
+			align-items: center;
+
+			> * {
+				margin-right: 2.1875em;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+			}
+
+		}
+
 	}
 }
 
 .section_scrool {
-	padding: 15em 0;
-	margin: 0;
 
 	@media (min-width: 768px) {
+		padding: 16em 0 5em;
+		/* 256/16 */
+		margin: 0;
 		position: relative;
 
 		&:after {
@@ -148,3 +203,7 @@ body {
 	}
 
 }
+
+// * {
+// 	border: 1px solid #000;
+// }

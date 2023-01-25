@@ -1,8 +1,12 @@
 .footerScroll {
     background-image: url("../img/footerScroll_bg.svg");
     padding-bottom: 0;
+    padding-top: 1em;
 
-    padding-top: 12.5em;
+    @media (min-width: 768px) {
+        padding-top: 12.5em;
+
+    }
 
     &__hand {
         @media (min-width: 768px) {

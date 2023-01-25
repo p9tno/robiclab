@@ -1,3 +1,19 @@
 .neuro {
     background-image: url("../img/neuro_bg.svg");
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {}
+
+    &__macbook {
+        width: 50.3125em;
+        height: 40em;
+        background-image: url("../img/macbook.png");
+    }
+
+    &__right {}
+
 }

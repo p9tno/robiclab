@@ -80,7 +80,7 @@ header.header
 
         .header__nav.figure
 
-            ul.figure__list
+            ul.figure__list.desktop
                 li
                 li
                 li
@@ -161,7 +161,7 @@ header.header
                                                 a(href="#")=item
 
 
-                                .navbar__col
+                                .navbar__col.navbar__col_nav_lg
                                     ul.menu
                                         each item in ['Главная', 'Цифровые лаборатории', 'Нейролаб', 'Робототехника', 'Практикум', 'Видео экспериментов', 'Доставка и заказ', 'Контакты' ]
                                             li.menu-item
@@ -172,16 +172,29 @@ header.header
                     .container_center
                         .navbar__row
                             .navbar__col
-                                ul.navbar__download
-                                    li
-                                        i.icon_windows
-                                        a(href="#") Скачать программу на Windows
-                                    li
-                                        i.icon_linux
-                                        a(href="#") Скачать программу на Linux
-                                    li
-                                        i.icon_mac
-                                        a(href="#") Скачать программу на Mac
+                                .navbar__download
+                                    .download
+                                        .download__item
+                                            .download__icon
+                                                i.icon_windows
+                                            .download__link
+                                                a.mobile(href="#") Скачать на Windows
+                                                a.desktop(href="#") Скачать программу на Windows
+
+                                        .download__item
+                                            .download__icon
+                                                i.icon_linux
+                                            .download__link
+                                                a.mobile(href="#") Скачать на Linux
+                                                a.desktop(href="#") Скачать программу на Linux
+
+                                        .download__item
+                                            .download__icon
+                                                i.icon_mac
+                                            .download__link
+                                                a.mobile(href="#") Скачать на Mac
+                                                a.desktop(href="#") Скачать программу на Mac
+
 
 
                             .navbar__col

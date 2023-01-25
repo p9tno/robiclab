@@ -1,4 +1,9 @@
 .contacts {
+    font-size: 0.83em;
+    @media (min-width: 768px) {
+        font-size: 1em;
+    }
+
     &__list {}
 
     &__item {
@@ -18,16 +23,13 @@
             justify-content: center;
 
             width: 2.875em;
-            /* 46/16 */
             height: 2.875em;
-            /* 46/16 */
 
             border-radius: 100%;
 
             background-color: rgba(49, 151, 216, 0.25);
             color: $color_white;
             margin-right: 1.25em;
-            /* 20/16 */
 
             &:before {
                 font-size: 1.25em;
@@ -42,8 +44,14 @@
         }
 
         span {
-            font-size: 22px;
+            font-size: 1.375em;
             color: $color_white;
+        }
+
+        a {
+            font-size: 1.375em;
+            color: $color_white;
+            text-decoration: none;
         }
     }
 

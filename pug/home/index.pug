@@ -41,11 +41,70 @@ block content
             li
 
         .container_center
-            h2.section__title
-                span digitalLab
             .digitalLab__content
                 .digitalLab__left
+                    .digitalLab__row
+                        .digitalLab__macbook.bg
+                            .video__wrap
+                                //- video.video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                                //- source(src="../media/desctop.json" type="video/mp4")
+                                //- source(src="media/main-video.webm" type="video/webm")
+                                //- source(src="media/main-video.m4v" type="video/mp4")
+                                //- source(src="media/main-video.ogv" type="video/ogg")
+
+
+
+                        .digitalLab__col
+                            .digitalLab__pwa.bg    
+                            .digitalLab__iphone.bg
+                                .video__wrap
+                                    video.video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                                        source(src="../media/mobile.mp4" type="video/mp4")
+                                        //- source(src="media/main-video.webm" type="video/webm")
+                                        //- source(src="media/main-video.m4v" type="video/mp4")
+                                        //- source(src="media/main-video.ogv" type="video/ogg")
+
+
                 .digitalLab__right
+                    h2.section__title
+                        span Цифровая лаборатория
+                    .section__content
+                        p Современный инструмент обучения, позволяющий проводить  эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.
+
+                        p Датчики не требуют дополнительных согласующих устройств (регистраторов данных) и напрямую подключаются к компьютеру или ноутбуку.
+
+                    .section__download
+                        .download
+                            .download__item
+                                .download__icon
+                                    i.icon_windows
+                                .download__link
+                                    a(href="#") Скачать на Windows
+
+                            .download__item
+                                .download__icon
+                                    i.icon_linux
+                                .download__link
+                                    a(href="#") Скачать на Linux
+
+                            .download__item
+                                .download__icon
+                                    i.icon_mac
+                                .download__link
+                                    a(href="#") Скачать на Mac
+
+                    .section__button.section__button_buttons
+                        a.btn.btn_transparent(href="#") 
+                            span Подробнее о продукте
+                            i.icon_arrow_right
+
+                        a.btn(href="#") 
+                            span WEB-версия
+                            i.icon_arrow_right
+
+
+                //- .digitalLab__label
+                //-     span * - PWA является способность трансформировать сайт в приложение. При этом выглядит оно как полноценный <br> mobile app, но имеет совсем небольшой размер, тратит меньше ресурсов, а загружается быстрее.
 
     // end digitalLab
 
@@ -63,11 +122,34 @@ block content
             li
             li
         .container_center
-            h2.section__title
-                span neuro
             .neuro__content
                 .neuro__left
+                    .neuro__macbook.bg
                 .neuro__right
+                    h2.section__title
+                        span РобикЛаб Нейро
+                    .section__content
+                        p Современный инструмент обучения, позволяющий проводить эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.
+                        p Датчики не требуют дополнительных согласующих устройств (регистраторов данных) и напрямую подключаются к компьютеру или ноутбуку.
+
+                    .section__download
+                        .download
+                            .download__item
+                                .download__icon
+                                    i.icon_windows
+                                .download__link
+                                    a(href="#") Скачать на Windows
+
+                            .download__item
+                                .download__icon
+                                    i.icon_linux
+                                .download__link
+                                    a(href="#") Скачать на Linux
+
+                    .section__button
+                        a.btn.btn_transparent(href="#") 
+                            span Подробнее о продукте
+                            i.icon_arrow_right
 
     // end neuro
 
@@ -138,9 +220,9 @@ block content
         .navbar__content
             .navbar__main
                 .container_center
-                    nav.navbar#navbar
+                    nav.navbar
                         .navbar__row
-                            .navbar__col.navbar__col_nav_sm.navbar__col_icon
+                            .navbar__col.navbar__col_nav_sm.navbar__col_icon.desktop
                                 .navbar__label
                                     span Цифровые лаборатории
                                 .navbar__row
@@ -193,7 +275,7 @@ block content
                                             a(href="#") Физическая культура
                                                 i.icon_physical
 
-                            .navbar__col.navbar__col_nav_sm
+                            .navbar__col.navbar__col_nav_sm.desktop
                                 .navbar__label
                                     span Справочный центр
                                 ul.menu

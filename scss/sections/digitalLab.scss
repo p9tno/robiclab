@@ -1,3 +1,88 @@
 .digitalLab {
     background-image: url("../img/digitalLab_bg.svg");
+
+    &__content {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    &__left {}
+
+    &__row {
+        display: flex;
+    }
+
+    &__macbook {
+        width: 50.3125em;
+        height: 40em;
+        background-image: url("../img/macbook.png");
+
+        margin-top: 4em;
+        margin-right: -2em;
+
+        position: relative;
+
+        .video__wrap {
+            border: 1px solid red;
+            width: 612px;
+            height: 384px;
+
+            top: 28px;
+            left: 1px;
+        }
+
+    }
+
+    &__col {}
+
+    &__pwa {
+        width: 9.1875em;
+        height: 9.1875em;
+        background-image: url("../img/pwa.png");
+
+        margin-bottom: 3em;
+        margin-left: 4em;
+        margin-top: -1.5em;
+    }
+
+    &__iphone {
+        width: 19em;
+        height: 33.75em;
+        background-image: url("../img/iphone.png");
+
+        position: relative;
+
+        .video__wrap {
+            border: 1px solid green;
+            width: 9.5em;
+            /* 152/16 */
+            height: 22.375em;
+            /* 358/16 */
+            // height: 20.375em;
+            /* 326/16 */
+
+            top: 0.75em;
+            /* 12/16 */
+            left: 4.5625em;
+            /* 73/16 */
+            // border-radius: 1em;
+            // overflow: hidden;
+        }
+    }
+
+    &__right {
+        width: 40.875em;
+    }
+
+    &__label {
+        position: absolute;
+        right: 1em;
+        bottom: 1em;
+    }
+
+    .bg {
+        border: 1px solid #000;
+    }
+
 }

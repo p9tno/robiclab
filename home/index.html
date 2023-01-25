@@ -76,7 +76,7 @@
             </div>
           </div>
           <div class="header__nav figure">
-            <ul class="figure__list">
+            <ul class="figure__list desktop">
               <li></li>
               <li></li>
               <li></li>
@@ -126,7 +126,7 @@
                           <li class="menu-item"><a href="#">Робототехника</a></li>
                         </ul>
                       </div>
-                      <div class="navbar__col">
+                      <div class="navbar__col navbar__col_nav_lg">
                         <ul class="menu">
                           <li class="menu-item"><a href="#">Главная</a></li>
                           <li class="menu-item"><a href="#">Цифровые лаборатории</a></li>
@@ -146,11 +146,22 @@
                 <div class="container_center">
                   <div class="navbar__row">
                     <div class="navbar__col">
-                      <ul class="navbar__download">
-                        <li><i class="icon_windows"></i><a href="#">Скачать программу на Windows</a></li>
-                        <li><i class="icon_linux"></i><a href="#">Скачать программу на Linux</a></li>
-                        <li><i class="icon_mac"></i><a href="#">Скачать программу на Mac</a></li>
-                      </ul>
+                      <div class="navbar__download">
+                        <div class="download">
+                          <div class="download__item">
+                            <div class="download__icon"><i class="icon_windows"></i></div>
+                            <div class="download__link"><a class="mobile" href="#">Скачать на Windows</a><a class="desktop" href="#">Скачать программу на Windows</a></div>
+                          </div>
+                          <div class="download__item">
+                            <div class="download__icon"><i class="icon_linux"></i></div>
+                            <div class="download__link"><a class="mobile" href="#">Скачать на Linux</a><a class="desktop" href="#">Скачать программу на Linux</a></div>
+                          </div>
+                          <div class="download__item">
+                            <div class="download__icon"><i class="icon_mac"></i></div>
+                            <div class="download__link"><a class="mobile" href="#">Скачать на Mac</a><a class="desktop" href="#">Скачать программу на Mac</a></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="navbar__col">
                       <div class="navbar__button"><a class="btn btn_transparent" href="#"><span>Попробовать WEB-версию</span><i class="icon_arrow_right"></i></a></div>
@@ -190,10 +201,48 @@
             <li></li>
           </ul>
           <div class="container_center">
-            <h2 class="section__title"><span>digitalLab</span></h2>
             <div class="digitalLab__content">
-              <div class="digitalLab__left"></div>
-              <div class="digitalLab__right"></div>
+              <div class="digitalLab__left">
+                <div class="digitalLab__row">
+                  <div class="digitalLab__macbook bg">
+                    <div class="video__wrap"></div>
+                  </div>
+                  <div class="digitalLab__col">
+                    <div class="digitalLab__pwa bg">   </div>
+                    <div class="digitalLab__iphone bg">
+                      <div class="video__wrap">
+                        <video class="video" width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+                          <source src="../media/mobile.mp4" type="video/mp4"/>
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="digitalLab__right">
+                <h2 class="section__title"><span>Цифровая лаборатория</span></h2>
+                <div class="section__content">
+                  <p>Современный инструмент обучения, позволяющий проводить  эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.</p>
+                  <p>Датчики не требуют дополнительных согласующих устройств (регистраторов данных) и напрямую подключаются к компьютеру или ноутбуку.</p>
+                </div>
+                <div class="section__download">
+                  <div class="download">
+                    <div class="download__item">
+                      <div class="download__icon"><i class="icon_windows"></i></div>
+                      <div class="download__link"><a href="#">Скачать на Windows</a></div>
+                    </div>
+                    <div class="download__item">
+                      <div class="download__icon"><i class="icon_linux"></i></div>
+                      <div class="download__link"><a href="#">Скачать на Linux</a></div>
+                    </div>
+                    <div class="download__item">
+                      <div class="download__icon"><i class="icon_mac"></i></div>
+                      <div class="download__link"><a href="#">Скачать на Mac</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section__button section__button_buttons"><a class="btn btn_transparent" href="#"> <span>Подробнее о продукте</span><i class="icon_arrow_right"></i></a><a class="btn" href="#"> <span>WEB-версия</span><i class="icon_arrow_right"></i></a></div>
+              </div>
             </div>
           </div>
         </section>
@@ -213,10 +262,30 @@
             <li></li>
           </ul>
           <div class="container_center">
-            <h2 class="section__title"><span>neuro</span></h2>
             <div class="neuro__content">
-              <div class="neuro__left"></div>
-              <div class="neuro__right"></div>
+              <div class="neuro__left">
+                <div class="neuro__macbook bg"></div>
+              </div>
+              <div class="neuro__right">
+                <h2 class="section__title"><span>РобикЛаб Нейро</span></h2>
+                <div class="section__content">
+                  <p>Современный инструмент обучения, позволяющий проводить эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.</p>
+                  <p>Датчики не требуют дополнительных согласующих устройств (регистраторов данных) и напрямую подключаются к компьютеру или ноутбуку.</p>
+                </div>
+                <div class="section__download">
+                  <div class="download">
+                    <div class="download__item">
+                      <div class="download__icon"><i class="icon_windows"></i></div>
+                      <div class="download__link"><a href="#">Скачать на Windows</a></div>
+                    </div>
+                    <div class="download__item">
+                      <div class="download__icon"><i class="icon_linux"></i></div>
+                      <div class="download__link"><a href="#">Скачать на Linux</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section__button"><a class="btn btn_transparent" href="#"> <span>Подробнее о продукте</span><i class="icon_arrow_right"></i></a></div>
+              </div>
             </div>
           </div>
         </section>
@@ -284,9 +353,9 @@
           <div class="navbar__content">
             <div class="navbar__main">
               <div class="container_center">
-                <nav class="navbar" id="navbar">
+                <nav class="navbar">
                   <div class="navbar__row">
-                    <div class="navbar__col navbar__col_nav_sm navbar__col_icon">
+                    <div class="navbar__col navbar__col_nav_sm navbar__col_icon desktop">
                       <div class="navbar__label"><span>Цифровые лаборатории</span></div>
                       <div class="navbar__row">
                         <ul class="menu">
@@ -310,7 +379,7 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="navbar__col navbar__col_nav_sm">
+                    <div class="navbar__col navbar__col_nav_sm desktop">
                       <div class="navbar__label"><span>Справочный центр</span></div>
                       <ul class="menu">
                         <li class="menu-item"><a href="#">Цифровая лаборатория</a></li>
