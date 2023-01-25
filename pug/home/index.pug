@@ -17,13 +17,6 @@ block content
                 .firstscreen__left
                 .firstscreen__right
 
-        //- .scroolInfo
-        //-     .scroolInfo__icon
-        //-         i.icon_mouse
-        //-     .scroolInfo__label
-        //-         span Scroll
-        //-     .scroolInfo__mask.bg
-
     // end firstscreen
 
     // begin digitalLab
@@ -45,7 +38,8 @@ block content
                 .digitalLab__left
                     .digitalLab__row
                         .digitalLab__macbook.bg
-                            .video__wrap
+                            //- .video__wrap
+                                img(src="../media/desctop.json", alt="alt")
                                 //- video.video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
                                 //- source(src="../media/desctop.json" type="video/mp4")
                                 //- source(src="media/main-video.webm" type="video/webm")
@@ -57,7 +51,7 @@ block content
                         .digitalLab__col
                             .digitalLab__pwa.bg    
                             .digitalLab__iphone.bg
-                                .video__wrap
+                                //- .video__wrap
                                     video.video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
                                         source(src="../media/mobile.mp4" type="video/mp4")
                                         //- source(src="media/main-video.webm" type="video/webm")
@@ -66,7 +60,7 @@ block content
 
 
                 .digitalLab__right
-                    h2.section__title
+                    h2.section__title.animate-js(data-aos="fade-right")
                         span Цифровая лаборатория
                     .section__content
                         p Современный инструмент обучения, позволяющий проводить  эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.
@@ -103,8 +97,8 @@ block content
                             i.icon_arrow_right
 
 
-                //- .digitalLab__label
-                //-     span * - PWA является способность трансформировать сайт в приложение. При этом выглядит оно как полноценный <br> mobile app, но имеет совсем небольшой размер, тратит меньше ресурсов, а загружается быстрее.
+                .digitalLab__label.desktop
+                    span * - PWA является способность трансформировать сайт в приложение. При этом выглядит оно как полноценный <br> mobile app, но имеет совсем небольшой размер, тратит меньше ресурсов, а загружается быстрее.
 
     // end digitalLab
 
@@ -126,7 +120,7 @@ block content
                 .neuro__left
                     .neuro__macbook.bg
                 .neuro__right
-                    h2.section__title
+                    h2.section__title.animate-js(data-aos="fade-left")
                         span РобикЛаб Нейро
                     .section__content
                         p Современный инструмент обучения, позволяющий проводить эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.
@@ -167,18 +161,23 @@ block content
             li
             li
         .container_center
-            h2.section__title
-                span Практикум
             .practical__content
                 .practical__left
-                .practical__right
+                    .practical__hand.bg
+                    .practical__flach.bg.animate-js(data-aos="zoom-in-up" data-aos-delay="300")
 
-        //- .scroolInfo
-        //-     .scroolInfo__icon
-        //-         i.icon_mouse
-        //-     .scroolInfo__label
-        //-         span Scroll
-        //-     .scroolInfo__mask.bg
+                .practical__right
+                    h2.section__title.animate-js(data-aos="fade-left")
+                        span Практикум
+
+                    .section__content
+                        p Современный инструмент обучения, позволяющий проводить эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.
+                        p Датчики не требуют дополнительных согласующих устройств (регистраторов данных) и напрямую подключаются к компьютеру или ноутбуку.
+
+                    .section__button
+                        a.btn.btn_transparent(href="#") 
+                            span Подробнее о продукте
+                            i.icon_arrow_right
 
     // end practical
 
@@ -196,11 +195,65 @@ block content
             li
             li
         .container_center
-            h2.section__title
-                span robotics
+
             .robotics__content
                 .robotics__left
+                    .robotics__list
+                        // robotics__item 1
+                        .robotics__item.animate-js(data-aos="fade-down-right" data-aos-delay="200")
+                            .robotics__icon
+                                i.icon_geography
+                            .robotics__label
+                                span География
+
+                        // robotics__item 2
+                        .robotics__item.animate-js(data-aos="fade-down-left" data-aos-delay="400")
+                            .robotics__icon
+                                i.icon_chemistry
+                            .robotics__label
+                                span Химия
+
+                        // robotics__item 6
+                        .robotics__item.animate-js(data-aos="fade-right" data-aos-delay="1200")
+                            .robotics__icon
+                                i.icon_physics
+                            .robotics__label
+                                span Физика
+
+                        // robotics__item 3    
+                        .robotics__item.animate-js(data-aos="fade-left" data-aos-delay="600")
+                            .robotics__icon
+                                i.icon_biology
+                            .robotics__label
+                                span Естествознание
+
+                        // robotics__item 5
+                        .robotics__item.animate-js(data-aos="fade-up-right" data-aos-delay="1000")
+                            .robotics__icon
+                                i.icon_maths
+                            .robotics__label
+                                span Математика
+
+                        // robotics__item 4
+                        .robotics__item.animate-js(data-aos="fade-up-left" data-aos-delay="800")
+                            .robotics__icon
+                                i.icon_chemistry
+                            .robotics__label
+                                span Экология
+                    .robotics__hand.bg
+
                 .robotics__right
+                    h2.section__title.animate-js(data-aos="fade-right")
+                        span Робототехника
+
+                    .section__content
+                        p Современный инструмент обучения, позволяющий проводить эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.
+                        p Датчики не требуют дополнительных согласующих устройств (регистраторов данных) и напрямую подключаются к компьютеру или ноутбуку.
+
+                    .section__button
+                        a.btn.btn_transparent(href="#") 
+                            span Подробнее о продукте
+                            i.icon_arrow_right
 
     // end robotics
 
@@ -322,13 +375,6 @@ block content
                             a(href="#") Сообщить об ошибке
 
             .footerScroll__hand.bg.desktop
-
-
-
-
-
-
-
 
 
     // end footerScroll

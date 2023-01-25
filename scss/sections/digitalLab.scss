@@ -1,88 +1,141 @@
 .digitalLab {
-    background-image: url("../img/digitalLab_bg.svg");
+
+    @media (max-width: 767px) {
+        padding-top: 3.75em;
+    }
+
+    @media (min-width: 768px) {
+        background-image: url("../img/digitalLab_bg.svg");
+    }
 
     &__content {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
     }
 
     &__left {}
 
     &__row {
-        display: flex;
+        @media (min-width: 768px) {
+            display: flex;
+        }
+
     }
 
     &__macbook {
-        width: 50.3125em;
-        height: 40em;
         background-image: url("../img/macbook.png");
 
-        margin-top: 4em;
-        margin-right: -2em;
+        width: 50.3125em;
+        height: 40em;
 
-        position: relative;
+        font-size: 0.425em;
+        margin: 0 auto;
 
-        .video__wrap {
-            border: 1px solid red;
-            width: 612px;
-            height: 384px;
+        @media (min-width: 768px) {
+            font-size: 1em;
+            margin: 4em -2em 0 0;
 
-            top: 28px;
-            left: 1px;
+            position: relative;
+
         }
+
+        // .video__wrap {
+        //     border: 1px solid red;
+        //     width: 612px;
+        //     height: 384px;
+        //
+        //     top: 28px;
+        //     left: 1px;
+        // }
 
     }
 
-    &__col {}
+    &__col {
+        margin-top: -2.5em;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            display: block;
+        }
+    }
 
     &__pwa {
+        background-image: url("../img/pwa.png");
         width: 9.1875em;
         height: 9.1875em;
-        background-image: url("../img/pwa.png");
 
-        margin-bottom: 3em;
-        margin-left: 4em;
-        margin-top: -1.5em;
+        font-size: 1em;
+
+        margin-top: 2em;
+
+        @media (min-width: 768px) {
+
+            // font-size: 1em;
+            margin-top: -1.5em;
+            margin-bottom: 3em;
+            margin-left: 4em;
+        }
+
     }
 
     &__iphone {
+        background-image: url("../img/iphone.png");
         width: 19em;
         height: 33.75em;
-        background-image: url("../img/iphone.png");
 
-        position: relative;
+        font-size: 0.52em;
 
-        .video__wrap {
-            border: 1px solid green;
-            width: 9.5em;
-            /* 152/16 */
-            height: 22.375em;
-            /* 358/16 */
-            // height: 20.375em;
-            /* 326/16 */
+        @media (min-width: 768px) {
+            font-size: 1em;
 
-            top: 0.75em;
-            /* 12/16 */
-            left: 4.5625em;
-            /* 73/16 */
-            // border-radius: 1em;
-            // overflow: hidden;
+            position: relative;
+
+            // .video__wrap {
+            //     border: 1px solid green;
+            //     width: 9.5em;
+            //     height: 22.375em;
+            //
+            //
+            //     top: 0.75em;
+            //     left: 4.5625em;
+            //     border-radius: 1em;
+            //     overflow: hidden;
+            // }
         }
+
     }
 
     &__right {
-        width: 40.875em;
+        margin-top: -4em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            width: 40.875em;
+        }
     }
 
     &__label {
-        position: absolute;
-        right: 1em;
-        bottom: 1em;
+
+        @media (min-width: 768px) {
+            position: absolute;
+            right: 1em;
+            bottom: -3.6em;
+
+            span {
+                font-size: 0.75em;
+                /* 12/16 */
+                color: rgba($color_white, 0.7);
+            }
+
+        }
     }
 
-    .bg {
-        border: 1px solid #000;
-    }
+    // .bg {
+    //     border: 1px solid #000;
+    // }
 
 }

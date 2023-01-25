@@ -57,30 +57,43 @@ body {
 }
 
 .section {
-	padding: 2em 0;
+	padding: 2.5em 0;
 
 	&__title {
 		font-size: 1em;
 		margin: 0;
 		font-weight: 600;
-		margin-bottom: 3.375em;
+		margin-bottom: 1.25em;
+		@media (min-width: 768px) {
+			margin-bottom: 3.375em;
+
+		}
 
 		span {
 			color: $color_white;
-			font-size: 3.375em;
-			/* 54/16 */
+			font-size: 2.625em;
+			@media (min-width: 768px) {
+				font-size: 3.375em;
+			}
 		}
 	}
 
 	&__content {
 		line-height: 1.5;
-		margin-bottom: 3.75em;
-		/* 60/16 */
+		margin-bottom: 1.25em;
+		@media (min-width: 768px) {
+			margin-bottom: 3.75em;
+
+		}
 
 		p {
-			font-size: 1.125em;
 			margin: 2.25em 0;
 			color: $color_white;
+			font-size: 1em;
+			@media (min-width: 768px) {
+				font-size: 1.125em;
+
+			}
 
 			&:first-child {
 				margin-top: 0;
@@ -93,24 +106,44 @@ body {
 	}
 
 	&__download {
-		margin-top: 3.75em;
-		margin-bottom: 5em;
+		margin-top: 1.25em;
+		margin-bottom: 1.5em;
+		@media (min-width: 768px) {
+			margin-top: 3.75em;
+			margin-bottom: 5em;
+
+		}
 	}
 
 	&__button {
-		margin-top: 3.75em;
+		margin-top: 1.5em;
+		@media (min-width: 768px) {
+			margin-top: 3.75em;
+
+		}
 
 		&_buttons {
-			display: flex;
-			align-items: center;
-
 			> * {
-				margin-right: 2.1875em;
+				margin-bottom: 0.9375em;
 
 				&:last-child {
-					margin-right: 0;
+					margin-bottom: 0;
 				}
 
+			}
+
+			@media (min-width: 768px) {
+				> * {
+					margin-bottom: 0;
+					margin-right: 2.1875em;
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+				}
+				display: flex;
+				align-items: center;
 			}
 
 		}
@@ -118,10 +151,23 @@ body {
 	}
 }
 
+.main_scroll {
+	@media (max-width: 767px) {
+		background-image: url("../img/main_scroll_bg_m.svg");
+		background-position-y: 60%;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+	}
+}
+
 .section_scrool {
+	overflow: hidden;
+
+	padding: 1em 0;
 
 	@media (min-width: 768px) {
-		padding: 16em 0 5em;
+		padding: 14em 0 5em;
 		/* 256/16 */
 		margin: 0;
 		position: relative;
@@ -133,7 +179,7 @@ body {
 			left: 50%;
 			transform: translateX(-50%);
 			width: 23.4375em;
-			height: 6.5625em;
+			height: 3.75em;
 
 			background-image: url("../img/mask.svg");
 			background-size: cover;
@@ -142,14 +188,48 @@ body {
 
 		}
 
+		&:before {
+			content: '';
+
+			position: absolute;
+			bottom: 4em;
+			left: 50%;
+			transform: translateX(-50%)translateY(0);
+			width: 2.375em;
+			height: 2.375em;
+
+			background-image: url("../img/mouse_mask.svg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+
+			-webkit-animation: actionMouse 0.5s linear alternate infinite;
+			animation: actionMouse 0.5s linear alternate infinite;
+
+		}
+
 		&:last-child {
-			&:after {
+			&:after,
+			&:before {
 				content: none;
 
 			}
 		}
 	}
 
+}
+
+@media (min-width: 768px) {
+
+	@keyframes actionMouse {
+		0% {
+			transform: translateX(-50%)translateY(-0.0725em);
+		}
+
+		100% {
+			transform: translateX(-50%)translateY(0.0725em);
+		}
+	}
 }
 
 .desktop {

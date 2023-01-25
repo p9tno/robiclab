@@ -11,11 +11,12 @@
     &__hand {
         @media (min-width: 768px) {
             position: absolute;
-            bottom: 0;
+            bottom: 8.75em;
             right: 0;
-            width: 61.875em;
-            height: 26.75em;
-            background-image: url("../img/footerScroll_hand_bg.svg");
+
+            width: 57.5em;
+            height: 17.75em;
+            background-image: url("../img/footerScroll_hand_bg.png");
         }
 
     }

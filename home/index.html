@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aos.css"/>
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
   </head>
   <body>
@@ -204,23 +205,15 @@
             <div class="digitalLab__content">
               <div class="digitalLab__left">
                 <div class="digitalLab__row">
-                  <div class="digitalLab__macbook bg">
-                    <div class="video__wrap"></div>
-                  </div>
+                  <div class="digitalLab__macbook bg"></div>
                   <div class="digitalLab__col">
                     <div class="digitalLab__pwa bg">   </div>
-                    <div class="digitalLab__iphone bg">
-                      <div class="video__wrap">
-                        <video class="video" width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
-                          <source src="../media/mobile.mp4" type="video/mp4"/>
-                        </video>
-                      </div>
-                    </div>
+                    <div class="digitalLab__iphone bg"></div>
                   </div>
                 </div>
               </div>
               <div class="digitalLab__right">
-                <h2 class="section__title"><span>Цифровая лаборатория</span></h2>
+                <h2 class="section__title animate-js" data-aos="fade-right"><span>Цифровая лаборатория</span></h2>
                 <div class="section__content">
                   <p>Современный инструмент обучения, позволяющий проводить  эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.</p>
                   <p>Датчики не требуют дополнительных согласующих устройств (регистраторов данных) и напрямую подключаются к компьютеру или ноутбуку.</p>
@@ -243,6 +236,7 @@
                 </div>
                 <div class="section__button section__button_buttons"><a class="btn btn_transparent" href="#"> <span>Подробнее о продукте</span><i class="icon_arrow_right"></i></a><a class="btn" href="#"> <span>WEB-версия</span><i class="icon_arrow_right"></i></a></div>
               </div>
+              <div class="digitalLab__label desktop"><span>* - PWA является способность трансформировать сайт в приложение. При этом выглядит оно как полноценный <br> mobile app, но имеет совсем небольшой размер, тратит меньше ресурсов, а загружается быстрее.</span></div>
             </div>
           </div>
         </section>
@@ -267,7 +261,7 @@
                 <div class="neuro__macbook bg"></div>
               </div>
               <div class="neuro__right">
-                <h2 class="section__title"><span>РобикЛаб Нейро</span></h2>
+                <h2 class="section__title animate-js" data-aos="fade-left"><span>РобикЛаб Нейро</span></h2>
                 <div class="section__content">
                   <p>Современный инструмент обучения, позволяющий проводить эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.</p>
                   <p>Датчики не требуют дополнительных согласующих устройств (регистраторов данных) и напрямую подключаются к компьютеру или ноутбуку.</p>
@@ -305,10 +299,19 @@
             <li></li>
           </ul>
           <div class="container_center">
-            <h2 class="section__title"><span>Практикум</span></h2>
             <div class="practical__content">
-              <div class="practical__left"></div>
-              <div class="practical__right"></div>
+              <div class="practical__left">
+                <div class="practical__hand bg"></div>
+                <div class="practical__flach bg animate-js" data-aos="zoom-in-up" data-aos-delay="300"></div>
+              </div>
+              <div class="practical__right">
+                <h2 class="section__title animate-js" data-aos="fade-left"><span>Практикум</span></h2>
+                <div class="section__content">
+                  <p>Современный инструмент обучения, позволяющий проводить эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.</p>
+                  <p>Датчики не требуют дополнительных согласующих устройств (регистраторов данных) и напрямую подключаются к компьютеру или ноутбуку.</p>
+                </div>
+                <div class="section__button"><a class="btn btn_transparent" href="#"> <span>Подробнее о продукте</span><i class="icon_arrow_right"></i></a></div>
+              </div>
             </div>
           </div>
         </section>
@@ -328,10 +331,50 @@
             <li></li>
           </ul>
           <div class="container_center">
-            <h2 class="section__title"><span>robotics</span></h2>
             <div class="robotics__content">
-              <div class="robotics__left"></div>
-              <div class="robotics__right"></div>
+              <div class="robotics__left">
+                <div class="robotics__list">
+                  <!-- robotics__item 1-->
+                  <div class="robotics__item animate-js" data-aos="fade-down-right" data-aos-delay="200">
+                    <div class="robotics__icon"><i class="icon_geography"></i></div>
+                    <div class="robotics__label"><span>География</span></div>
+                  </div>
+                  <!-- robotics__item 2-->
+                  <div class="robotics__item animate-js" data-aos="fade-down-left" data-aos-delay="400">
+                    <div class="robotics__icon"><i class="icon_chemistry"></i></div>
+                    <div class="robotics__label"><span>Химия</span></div>
+                  </div>
+                  <!-- robotics__item 6-->
+                  <div class="robotics__item animate-js" data-aos="fade-right" data-aos-delay="1200">
+                    <div class="robotics__icon"><i class="icon_physics"></i></div>
+                    <div class="robotics__label"><span>Физика</span></div>
+                  </div>
+                  <!-- robotics__item 3    -->
+                  <div class="robotics__item animate-js" data-aos="fade-left" data-aos-delay="600">
+                    <div class="robotics__icon"><i class="icon_biology"></i></div>
+                    <div class="robotics__label"><span>Естествознание</span></div>
+                  </div>
+                  <!-- robotics__item 5-->
+                  <div class="robotics__item animate-js" data-aos="fade-up-right" data-aos-delay="1000">
+                    <div class="robotics__icon"><i class="icon_maths"></i></div>
+                    <div class="robotics__label"><span>Математика</span></div>
+                  </div>
+                  <!-- robotics__item 4-->
+                  <div class="robotics__item animate-js" data-aos="fade-up-left" data-aos-delay="800">
+                    <div class="robotics__icon"><i class="icon_chemistry"></i></div>
+                    <div class="robotics__label"><span>Экология</span></div>
+                  </div>
+                </div>
+                <div class="robotics__hand bg"></div>
+              </div>
+              <div class="robotics__right">
+                <h2 class="section__title animate-js" data-aos="fade-right"><span>Робототехника</span></h2>
+                <div class="section__content">
+                  <p>Современный инструмент обучения, позволяющий проводить эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.</p>
+                  <p>Датчики не требуют дополнительных согласующих устройств (регистраторов данных) и напрямую подключаются к компьютеру или ноутбуку.</p>
+                </div>
+                <div class="section__button"><a class="btn btn_transparent" href="#"> <span>Подробнее о продукте</span><i class="icon_arrow_right"></i></a></div>
+              </div>
             </div>
           </div>
         </section>
@@ -424,6 +467,7 @@
       <script src="../js/swiper-bundle.min.js"></script>
       <script src="../js/slider.js"></script>
       <script src="../js/jquery.maskedinput.min.js"></script>
+      <script src="../js/aos.js"></script>
       <script src="../js/function.js"></script>
     </div>
   </body>

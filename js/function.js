@@ -42,13 +42,30 @@ $(document).ready(function() {
         animationTime: 800,             // AnimationTime let you define how long each section takes to animate
         pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
         // updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-        beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+        beforeMove: function(index) {
+
+        },  // This option accepts a callback function. The function will be called before the page moves.
         afterMove: function(index) {
             if (index > 2) {
                 $('.toTop').fadeIn(900);
             } else {
                 $('.toTop').fadeOut(700);
-            }
+            };
+
+            addClassAnimate(index);
+
+            // console.log(index);
+
+            // $('.section__title').removeClass('aos-animate');
+        	// setTimeout(function() {
+        	// 	$('.section__title').addClass('aos-animate');
+        	// }, 400);
+
+            // $('.section__title').addClass('class_name');
+
+            // AOS.init();
+
+            // console.log('aos init afterMove');
         },   // This option accepts a callback function. The function will be called after the page moves.
         loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
         keyboard: true,                  // You can activate the keyboard controls
@@ -66,6 +83,29 @@ $(document).ready(function() {
         })
     }
     toTopScroll();
+
+    function addClassAnimate(index) {
+        $('.animate-js').removeClass('aos-animate')
+        let wrap = $(".section_scrool[data-index='"+index+"']");
+        let animate = wrap.find('.animate-js');
+        animate.addClass('aos-animate');
+    }
+
+    // https://github.com/michalsnik/aos
+    AOS.init({
+        disable: 'mobile',
+        // anchorPlacement: 'bottom-bottom',
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        // offset: 20,
+        // once: true,
+    });
+
+    AOS.init({
+        disable: function () {
+            var maxWidth = 768;
+            return window.innerWidth < maxWidth;
+        }
+    });
 
     function toggleContent() {
         $('.header__button').click(function() {
@@ -354,21 +394,7 @@ $(document).ready(function() {
     // });
 
 
-    // https://github.com/michalsnik/aos
-    // AOS.init({
-    //     disable: 'mobile',
-    //     // anchorPlacement: 'bottom-bottom',
-    //     duration: 1000, // values from 0 to 3000, with step 50ms
-    //     // offset: 20,
-    //     once: true,
-    // });
 
-    // AOS.init({
-    //     disable: function () {
-    //         var maxWidth = 768;
-    //         return window.innerWidth < maxWidth;
-    //     }
-    // });
 
 
     function showMore(classItem, btn) {

@@ -1,19 +1,44 @@
 .neuro {
-    background-image: url("../img/neuro_bg.svg");
+
+    @media (min-width: 768px) {
+        background-image: url("../img/neuro_bg.svg");
+    }
 
     &__content {
-        display: flex;
-        justify-content: space-between;
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
     }
 
-    &__left {}
+    &__left {
+        @media (min-width: 768px) {
+            margin-top: 2em;
+        }
+    }
 
     &__macbook {
+        background-image: url("../img/macbook.png");
         width: 50.3125em;
         height: 40em;
-        background-image: url("../img/macbook.png");
+
+        font-size: 0.425em;
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+            font-size: 1em;
+            margin: 0;
+
+        }
     }
 
-    &__right {}
+    &__right {
+        margin-top: -2em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            width: 40.875em;
+            margin-left: 6.25em;
+        }
+    }
 
 }
