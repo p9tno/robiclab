@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/aos.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/onepage-scroll.css"/>
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
   </head>
   <body>
@@ -205,10 +206,16 @@
             <div class="digitalLab__content">
               <div class="digitalLab__left">
                 <div class="digitalLab__row">
-                  <div class="digitalLab__macbook bg"></div>
+                  <div class="digitalLab__macbook bg">
+                    <div class="chart chart-light" id="chartDesctop"></div>
+                    <div class="chart chart-dark" id="chartDesctopDark"></div>
+                  </div>
                   <div class="digitalLab__col">
                     <div class="digitalLab__pwa bg">   </div>
-                    <div class="digitalLab__iphone bg"></div>
+                    <div class="digitalLab__iphone bg">
+                      <div class="chart chart-light" id="chartMobile"></div>
+                      <div class="chart chart-dark" id="chartMobileDark"></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -464,10 +471,12 @@
       <div class="toTop toTopSlide-js"><a href="test"> <i class="icon_to_Top"></i></a></div>
       <script src="../js/jquery.js"></script>
       <script src="../js/jquery.onepage-scroll.min.js"></script>
+      <script src="../js/scroll.js"></script>
       <script src="../js/swiper-bundle.min.js"></script>
       <script src="../js/slider.js"></script>
       <script src="../js/jquery.maskedinput.min.js"></script>
       <script src="../js/aos.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie_svg.min.js"></script>
       <script src="../js/function.js"></script>
     </div>
   </body>

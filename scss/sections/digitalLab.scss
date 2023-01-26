@@ -26,35 +26,38 @@
     }
 
     &__macbook {
+        // border: 1px solid #000;
         background-image: url("../img/macbook.png");
 
         width: 50.3125em;
-        height: 40em;
-
+        height: 32.5em;
         font-size: 0.425em;
         margin: 0 auto;
 
         @media (min-width: 768px) {
             font-size: 1em;
-            margin: 4em -2em 0 0;
-
+            margin: 6.5em -2em 0 0;
             position: relative;
 
         }
 
-        // .video__wrap {
-        //     border: 1px solid red;
-        //     width: 612px;
-        //     height: 384px;
-        //
-        //     top: 28px;
-        //     left: 1px;
-        // }
+        .chart {
+            width: 38.5em;
+            height: 21.75em;
+            top: 10.36em;
+            left: 8.1em;
+
+            @media (min-width: 768px) {
+                top: 1.5em;
+                left: 5.5em;
+
+            }
+        }
 
     }
 
     &__col {
-        margin-top: -2.5em;
+        margin-top: -0.25em;
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
@@ -68,14 +71,10 @@
         background-image: url("../img/pwa.png");
         width: 9.1875em;
         height: 9.1875em;
-
         font-size: 1em;
-
         margin-top: 2em;
 
         @media (min-width: 768px) {
-
-            // font-size: 1em;
             margin-top: -1.5em;
             margin-bottom: 3em;
             margin-left: 4em;
@@ -84,6 +83,7 @@
     }
 
     &__iphone {
+        // border: 1px solid #000;
         background-image: url("../img/iphone.png");
         width: 19em;
         height: 33.75em;
@@ -95,17 +95,21 @@
 
             position: relative;
 
-            // .video__wrap {
-            //     border: 1px solid green;
-            //     width: 9.5em;
-            //     height: 22.375em;
-            //
-            //
-            //     top: 0.75em;
-            //     left: 4.5625em;
-            //     border-radius: 1em;
-            //     overflow: hidden;
-            // }
+            .chart {
+                background-color: red;
+                width: 9.375em;
+                /* 150/16 */
+                height: 20.5em;
+                /* 328/16 */
+
+                top: 0.75em;
+                /* 12/16 */
+                left: 4.625em;
+                /* 74/16 */
+                border-radius: 1em;
+                /* 16/16 */
+                overflow: hidden;
+            }
         }
 
     }

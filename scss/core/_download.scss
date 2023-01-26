@@ -35,7 +35,28 @@
             color: $color_white;
 
             @media (min-width: 768px) {
+                position: relative;
                 font-size: 1.125em;
+
+                text-decoration: none;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -0.125em;
+                    left: 0;
+                    width: 0;
+                    border-bottom: 1px solid;
+                    transition: 0.3s;
+                }
+
+                &:hover {
+                    &:after {
+
+                        width: 100%;
+
+                    }
+                }
             }
         }
     }

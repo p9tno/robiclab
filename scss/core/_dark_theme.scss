@@ -1,1 +1,17 @@
-.dark_theme {}
+.chart-light {
+    display: block;
+}
+
+.chart-dark {
+    display: none;
+}
+
+.dark_theme {
+    .chart-light {
+        display: none;
+    }
+
+    .chart-dark {
+        display: block;
+    }
+}

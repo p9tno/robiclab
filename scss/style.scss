@@ -12,12 +12,16 @@
 
 @import 'core/header';
 
+/* start home page */
 @import 'sections/firstscreen';
 @import 'sections/digitalLab';
 @import 'sections/neuro';
 @import 'sections/practical';
 @import 'sections/robotics';
 @import 'sections/footerScroll';
+/* end home page */
+
+@import 'sections/products';
 
 @import 'core/footer';
 
@@ -35,12 +39,10 @@
 @import 'core/programsInfo';
 @import 'core/figure';
 
-@import 'core/onepage-scroll';
 @import 'core/navbar';
 @import 'core/contacts';
 @import 'core/toTop';
 @import 'core/download';
-@import 'core/video';
 
 @import 'vendor/modal';
 @import 'vendor/slick';

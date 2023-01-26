@@ -1,14 +1,32 @@
 /* Footer
  ----------------------------------------------------------------------------- */
 .footer {
-	position: relative;
-	padding: 1em 0;
-	background-color: #ddd;
+	.navbar__main {
+		@media (min-width: 768px) {
+			margin-bottom: 9.625em;
 
-	&__content {
-		@extend .container_center;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		}
+	}
+
+	position: relative;
+	background-image: url("../img/footerScroll_bg.svg");
+	padding-bottom: 0;
+	padding-top: 1em;
+
+	@media (min-width: 768px) {
+		padding-top: 6.25em;
+	}
+
+	&__hand {
+		@media (min-width: 768px) {
+			position: absolute;
+			bottom: 8.75em;
+			right: 0;
+
+			width: 57.5em;
+			height: 17.75em;
+			background-image: url("../img/footerScroll_hand_bg.png");
+		}
+
 	}
 }

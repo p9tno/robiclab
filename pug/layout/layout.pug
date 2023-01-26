@@ -16,6 +16,9 @@ html(lang="en")
         link(rel="stylesheet", type="text/css", href=path +"css/aos.css")
         //- link(rel="stylesheet", type="text/css", href=path +"css/fancybox.min.css")
 
+        if pageScroll
+            link(rel="stylesheet", type="text/css", href=path +"css/onepage-scroll.css")
+
         link(rel="stylesheet", type="text/css", href=path +"css/style.css")
         //- link(rel="stylesheet", type="text/css", href=path +"css/onepage-scroll.css")
     body
@@ -25,20 +28,16 @@ html(lang="en")
             main.main_content(class=classScroll)
                 block content
 
-            //- begin toTop
-            //- .toTop
-            //-     a(href="#wrapper") 
-            //-         i.icon_arrow_top
 
+            if pageScroll
+                .toTop.toTopSlide-js
+                    a(href="test") 
+                        i.icon_to_Top
+            else
+                .toTop.toTop-js
+                    a(href="test") 
+                        i.icon_to_Top
 
-
-            .toTop.toTopSlide-js
-                a(href="test") 
-                    i.icon_to_Top
-
-
-
-            //- end toTop
 
             if !pageScroll
                 include footer.pug
@@ -46,7 +45,11 @@ html(lang="en")
 
 
             script(src=path +"js/jquery.js")
-            script(src=path +"js/jquery.onepage-scroll.min.js")
+
+            if pageScroll
+                script(src=path +"js/jquery.onepage-scroll.min.js")
+                script(src=path +"js/scroll.js")
+
             //- script(src=path +"js/modal.js")
             script(src=path +"js/swiper-bundle.min.js")
             script(src=path +"js/slider.js")
@@ -55,5 +58,7 @@ html(lang="en")
             script(src=path +"js/aos.js")
             //- script(src=path +"js/fancybox.min.js")
             //- script(src=path +"js/form.js")
+
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie_svg.min.js")
 
             script(src=path +"js/function.js")

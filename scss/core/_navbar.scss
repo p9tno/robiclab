@@ -152,8 +152,13 @@
                 i {
                     position: absolute;
                     top: 0;
-                    left: 0;
+                    left: -1.5em;
                     font-size: 1.25em;
+
+                    @media (min-width: 768px) {
+                        transform: scale(1);
+                        transition: 0.3s;
+                    }
                 }
             }
         }
@@ -209,6 +214,7 @@
                 margin-bottom: 0;
             }
         }
+
         @media (min-width: 768px) {
             padding: 1.276em 0;
             flex-direction: row;
@@ -236,6 +242,11 @@
 
         a {
             color: rgba($color_white, 0.6);
+
+            &:hover {
+                color: rgba($color_white, 1);
+
+            }
         }
     }
 
@@ -259,13 +270,43 @@
         }
 
         a {
+            position: relative;
+
             text-decoration: none;
             color: $color_white;
 
             font-size: 1.375em;
+
             @media (min-width: 768px) {
                 font-size: 2em;
+            }
 
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -0.125em;
+                left: 0;
+                width: 0;
+                border-bottom: 1px solid;
+                transition: 0.3s;
+            }
+        }
+
+        &:hover {
+            a {
+                color: $color_white;
+
+                &:after {
+
+                    width: 100%;
+
+                }
+            }
+
+            @media (min-width: 768px) {
+                i {
+                    transform: scale(1.2);
+                }
             }
         }
     }

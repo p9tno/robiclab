@@ -1,22 +1,30 @@
 extends layout/layout.pug
 
+block variable
+    -var path = '';
+    //- -var classScroll = 'main_scroll';
+    //- -var pageScroll = false;
+
 block content
 
+
     // begin testNav
-    section#testNav.testNav.section.section_scroll
+    section#testNav.testNav.section(style="background-color: #31343D;")
         .container_center
             h2.section__title
                 span Навиганция
-            ul
+            ul(style="color: #fff;font-size:1.5em;")
                 li
-                    a(href="home") главная
+                    a(href="home")(style="color: #fff;") главная
+                li
+                    a(href="products")(style="color: #fff;") продукты
 
     // end testNav
 
     // begin testButton
-    section#testButton.testButton.section(style="background-color: #000;")
+    section#testButton.testButton.section(style="background-color: #282B33;")
         .container_center
-            h2.section__title.animate-js(data-aos="fade-right")
+            h2.section__title
                 span Кнопки
             .testButton__content
                 a.btn(href="#") 

@@ -59,6 +59,14 @@ body {
 .section {
 	padding: 2.5em 0;
 
+	&:first-child {
+		padding-top: 5.25em;
+		@media (min-width: 768px) {
+			padding-top: 8em;
+		}
+
+	}
+
 	&__title {
 		font-size: 1em;
 		margin: 0;
@@ -282,6 +290,10 @@ body {
 		background-image: url("../img/mouse_mask.svg");
 	}
 
+}
+
+.chart {
+	position: absolute;
 }
 
 // * {

@@ -13,27 +13,26 @@
 
     &__left {
         @media (min-width: 768px) {
-            margin-top: 2em;
+            margin-top: 3em;
         }
     }
 
     &__macbook {
-        background-image: url("../img/macbook.png");
-        width: 50.3125em;
-        height: 40em;
+        background-image: url("../img/macbook_neuro.png");
+        width: 53.5em;
+        height: 40.625em;
 
-        font-size: 0.425em;
+        font-size: 0.4em;
         margin: 0 auto;
 
         @media (min-width: 768px) {
             font-size: 1em;
             margin: 0;
-
         }
     }
 
     &__right {
-        margin-top: -2em;
+        margin-top: -0.25em;
         @media (min-width: 768px) {
             margin-top: 0;
             width: 40.875em;
