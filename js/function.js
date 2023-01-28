@@ -155,7 +155,8 @@ $(document).ready(function() {
 
         let chartMobileDark = bodymovin.loadAnimation({
             container: document.getElementById('chartMobileDark'), // Required
-            path: '../json/mobile_dark.json', // Required
+            // path: '../json/mobile_dark.json', // Required
+            path: '../json/mobile_dark_2.json', // Required
             renderer: 'svg', // Required
             loop: true, // Optional
             autoplay: true, // Optional

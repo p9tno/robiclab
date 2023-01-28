@@ -1,6 +1,7 @@
 extends ../layout/layout.pug
 block variable
     -var path = '../';
+    -var pathTest = '../home/';
     -var classScroll = 'main_scroll';
     -var pageScroll = true;
 
@@ -10,12 +11,13 @@ block content
     // begin firstscreen
     section#firstscreen.firstscreen.bg.section.section_scrool
         .container_center
-            h2.section__title
-                span firstscreen
-            .firstscreen__content
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. LOLUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. LOLDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                .firstscreen__left
-                .firstscreen__right
+
+            <div class="btns">
+                <button class="" id="Globus">География</button>
+                <button class="" id="Bottle">Химия</button>
+            </div>
+
+
 
     // end firstscreen
 
@@ -56,7 +58,7 @@ block content
                     h2.section__title.animate-js(data-aos="fade-right")
                         span Цифровая лаборатория
                     .section__content
-                        p Современный инструмент обучения, позволяющий проводить  эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.
+                        p Современный инструмент обучения, позволяющий проводить эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.
 
                         p Датчики не требуют дополнительных согласующих устройств (регистраторов данных) и напрямую подключаются к компьютеру или ноутбуку.
 

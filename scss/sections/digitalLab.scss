@@ -16,7 +16,11 @@
         }
     }
 
-    &__left {}
+    &__left {
+        @media (min-width: 768px) {
+            margin-right: 6em;
+        }
+    }
 
     &__row {
         @media (min-width: 768px) {
@@ -36,7 +40,7 @@
 
         @media (min-width: 768px) {
             font-size: 1em;
-            margin: 6.5em -2em 0 0;
+            margin: 6.5em 0 0;
             position: relative;
 
         }
@@ -58,58 +62,60 @@
 
     &__col {
         margin-top: -0.25em;
+        margin-left: 2em;
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
         @media (min-width: 768px) {
-            margin-top: 0;
+            margin-top: -2.5em;
+            margin-left: 0;
+
             display: block;
         }
     }
 
     &__pwa {
+        // border: 1px solid #000;
         background-image: url("../img/pwa.png");
         width: 9.1875em;
         height: 9.1875em;
         font-size: 1em;
-        margin-top: 2em;
+        margin-top: 2.5em;
 
-        @media (min-width: 768px) {
-            margin-top: -1.5em;
+        margin-left: 2em;
+        @media (min-width:768px) {
+            // margin-top: -1.5em;
             margin-bottom: 3em;
-            margin-left: 4em;
+            margin-left: 18px;
+            // margin-left: 4em;
         }
 
     }
 
     &__iphone {
+        position: relative;
         // border: 1px solid #000;
         background-image: url("../img/iphone.png");
-        width: 19em;
-        height: 33.75em;
+        width: 10.625em;
+        /* 170/16 */
+        height: 31.875em;
+        /* 510/16 */
 
-        font-size: 0.52em;
+        font-size: 0.6em;
+
+        .chart {
+            width: 8.5625em;
+            height: 20.5em;
+
+            top: 0.6875em;
+            left: 1.1875em;
+            border-radius: 1em;
+            overflow: hidden;
+
+        }
 
         @media (min-width: 768px) {
             font-size: 1em;
-
-            position: relative;
-
-            .chart {
-                background-color: red;
-                width: 9.375em;
-                /* 150/16 */
-                height: 20.5em;
-                /* 328/16 */
-
-                top: 0.75em;
-                /* 12/16 */
-                left: 4.625em;
-                /* 74/16 */
-                border-radius: 1em;
-                /* 16/16 */
-                overflow: hidden;
-            }
         }
 
     }
@@ -127,7 +133,8 @@
         @media (min-width: 768px) {
             position: absolute;
             right: 1em;
-            bottom: -3.6em;
+            // bottom: -3.6em;
+            bottom: 0;
 
             span {
                 font-size: 0.75em;

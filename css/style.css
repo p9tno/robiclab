@@ -657,7 +657,7 @@ body {
 @media (max-width: 767px) {
   .main_scroll {
     background-image: url("../img/main_scroll_bg_m.svg");
-    background-position-y: 60%;
+    background-position-y: 56%;
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -1318,9 +1318,23 @@ body {
 }
 /* start home page */
 .firstscreen {
-  background-image: url("../img/firstscreen_bg.jpg");
-  min-height: 50.75em;
-  /* 812/16 */
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  width: 100%;
+  height: 100vh;
+  background: #fff url("../home/robot/images/Texture/BG_e.jpg") center bottom no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.firstscreen .btns {
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+  z-index: 2;
+}
+.firstscreen canvas {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -1341,6 +1355,11 @@ body {
   }
 }
 @media (min-width: 768px) {
+  .digitalLab__left {
+    margin-right: 6em;
+  }
+}
+@media (min-width: 768px) {
   .digitalLab__row {
     display: flex;
   }
@@ -1355,7 +1374,7 @@ body {
 @media (min-width: 768px) {
   .digitalLab__macbook {
     font-size: 1em;
-    margin: 6.5em -2em 0 0;
+    margin: 6.5em 0 0;
     position: relative;
   }
 }
@@ -1373,13 +1392,15 @@ body {
 }
 .digitalLab__col {
   margin-top: -0.25em;
+  margin-left: 2em;
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
 @media (min-width: 768px) {
   .digitalLab__col {
-    margin-top: 0;
+    margin-top: -2.5em;
+    margin-left: 0;
     display: block;
   }
 }
@@ -1388,39 +1409,35 @@ body {
   width: 9.1875em;
   height: 9.1875em;
   font-size: 1em;
-  margin-top: 2em;
+  margin-top: 2.5em;
+  margin-left: 2em;
 }
 @media (min-width: 768px) {
   .digitalLab__pwa {
-    margin-top: -1.5em;
     margin-bottom: 3em;
-    margin-left: 4em;
+    margin-left: 18px;
   }
 }
 .digitalLab__iphone {
+  position: relative;
   background-image: url("../img/iphone.png");
-  width: 19em;
-  height: 33.75em;
-  font-size: 0.52em;
+  width: 10.625em;
+  /* 170/16 */
+  height: 31.875em;
+  /* 510/16 */
+  font-size: 0.6em;
+}
+.digitalLab__iphone .chart {
+  width: 8.5625em;
+  height: 20.5em;
+  top: 0.6875em;
+  left: 1.1875em;
+  border-radius: 1em;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .digitalLab__iphone {
     font-size: 1em;
-    position: relative;
-  }
-  .digitalLab__iphone .chart {
-    background-color: red;
-    width: 9.375em;
-    /* 150/16 */
-    height: 20.5em;
-    /* 328/16 */
-    top: 0.75em;
-    /* 12/16 */
-    left: 4.625em;
-    /* 74/16 */
-    border-radius: 1em;
-    /* 16/16 */
-    overflow: hidden;
   }
 }
 .digitalLab__right {
@@ -1436,7 +1453,7 @@ body {
   .digitalLab__label {
     position: absolute;
     right: 1em;
-    bottom: -3.6em;
+    bottom: 0;
   }
   .digitalLab__label span {
     font-size: 0.75em;
