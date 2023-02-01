@@ -7,9 +7,12 @@ $(document).ready(function() {
         pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
         // updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
         beforeMove: function(index) {
+            // console.log('beforeMove init, index: ', index);
 
         },  // This option accepts a callback function. The function will be called before the page moves.
         afterMove: function(index) {
+            // console.log('afterMove init, index: ', index);
+
             if (index > 2) {
                 $('.toTop').fadeIn(900);
             } else {
@@ -58,5 +61,21 @@ $(document).ready(function() {
             return window.innerWidth < maxWidth;
         }
     });
+
+    function moveSectionUp() {
+
+        $('.following-js').click(function(event) {
+            console.log('Показ меню');
+            // $(".main_scroll").moveUp();
+            $(".main_scroll").moveDown();
+
+        });
+    }
+    moveSectionUp();
+
+
+
+
+
 
 });

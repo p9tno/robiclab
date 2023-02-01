@@ -11,12 +11,59 @@ block content
     // begin firstscreen
     section#firstscreen.firstscreen.bg.section.section_scrool
         .container_center
+            .firstscreen__content
+                h1.firstscreen__title
+                    span Лаборатория <br>«Робиклаб»
+                .hexagon
 
-            <div class="btns">
-                <button class="" id="Globus">География</button>
-                <button class="" id="Bottle">Химия</button>
-            </div>
+                    button.hexagon__button(id="Globus")
+                        .hexagon__icon
+                            i.icon_geography
+                        .hexagon__label
+                            span География
 
+                    button.hexagon__button(id="Bottle")
+                        .hexagon__icon
+                            i.icon_chemistry
+                        .hexagon__label
+                            span Химия
+
+                    button.hexagon__button.disabled(id="#")
+                        .hexagon__icon
+                            i.icon_biology
+                        .hexagon__label
+                            span Естествознание
+
+                    button.hexagon__button.disabled(id="#")
+                        .hexagon__icon
+                            i.icon_maths
+                        .hexagon__label
+                            span Математика
+
+                    button.hexagon__button.disabled(id="#")
+                        .hexagon__icon
+                            i.icon_chemistry
+                        .hexagon__label
+                            span Экология
+
+                    button.hexagon__button.disabled(id="#")
+                        .hexagon__icon
+                            i.icon_maths
+                        .hexagon__label
+                            span Физика
+
+                    button.hexagon__button(id="#")
+                        .hexagon__icon
+                            i.icon_arrow_right
+                        .hexagon__label
+                            span Смотреть все<br> предметы
+
+
+        .following.desktop.following-js
+            .following__btn
+            .following__label
+                span Scroll
+            .following__mask
 
 
     // end firstscreen
@@ -47,7 +94,17 @@ block content
 
 
                         .digitalLab__col
-                            .digitalLab__pwa.bg    
+                            .digitalLab__pwa.bg
+                                ul.blink
+                                    li
+                                    li
+                                    li
+                                    li
+                                    li
+                                    li
+                                    li
+
+
                             .digitalLab__iphone.bg
                                 .chart.chart-light#chartMobile
                                 .chart.chart-dark#chartMobileDark
@@ -95,6 +152,12 @@ block content
                 .digitalLab__label.desktop
                     span * - PWA является способность трансформировать сайт в приложение. При этом выглядит оно как полноценный <br> mobile app, но имеет совсем небольшой размер, тратит меньше ресурсов, а загружается быстрее.
 
+        .following.desktop.following-js
+            .following__btn
+            .following__label
+                span Scroll
+            .following__mask
+
     // end digitalLab
 
     // begin neuro
@@ -140,6 +203,12 @@ block content
                             span Подробнее о продукте
                             i.icon_arrow_right
 
+        .following.desktop.following-js
+            .following__btn
+            .following__label
+                span Scroll
+            .following__mask
+
     // end neuro
 
     // begin practical
@@ -174,6 +243,12 @@ block content
                             span Подробнее о продукте
                             i.icon_arrow_right
 
+        .following.desktop.following-js
+            .following__btn
+            .following__label
+                span Scroll
+            .following__mask
+
     // end practical
 
     // begin robotics
@@ -196,45 +271,51 @@ block content
                     .robotics__list
                         // robotics__item 1
                         .robotics__item.animate-js(data-aos="fade-down-right" data-aos-delay="200")
-                            .robotics__icon
-                                i.icon_geography
-                            .robotics__label
-                                span География
+                            a(href="#").robotics__link
+                                .robotics__icon
+                                    i.icon_geography
+                                .robotics__label
+                                    span География
 
                         // robotics__item 2
                         .robotics__item.animate-js(data-aos="fade-down-left" data-aos-delay="400")
-                            .robotics__icon
-                                i.icon_chemistry
-                            .robotics__label
-                                span Химия
+                            a(href="#").robotics__link
+                                .robotics__icon
+                                    i.icon_chemistry
+                                .robotics__label
+                                    span Химия
 
                         // robotics__item 6
                         .robotics__item.animate-js(data-aos="fade-right" data-aos-delay="1200")
-                            .robotics__icon
-                                i.icon_physics
-                            .robotics__label
-                                span Физика
+                            a(href="#").robotics__link
+                                .robotics__icon
+                                    i.icon_physics
+                                .robotics__label
+                                    span Физика
 
                         // robotics__item 3    
                         .robotics__item.animate-js(data-aos="fade-left" data-aos-delay="600")
-                            .robotics__icon
-                                i.icon_biology
-                            .robotics__label
-                                span Естествознание
+                            a(href="#").robotics__link
+                                .robotics__icon
+                                    i.icon_biology
+                                .robotics__label
+                                    span Естествознание
 
                         // robotics__item 5
                         .robotics__item.animate-js(data-aos="fade-up-right" data-aos-delay="1000")
-                            .robotics__icon
-                                i.icon_maths
-                            .robotics__label
-                                span Математика
+                            a(href="#").robotics__link
+                                .robotics__icon
+                                    i.icon_maths
+                                .robotics__label
+                                    span Математика
 
                         // robotics__item 4
                         .robotics__item.animate-js(data-aos="fade-up-left" data-aos-delay="800")
-                            .robotics__icon
-                                i.icon_chemistry
-                            .robotics__label
-                                span Экология
+                            a(href="#").robotics__link
+                                .robotics__icon
+                                    i.icon_chemistry
+                                .robotics__label
+                                    span Экология
                     .robotics__hand.bg
 
                 .robotics__right
@@ -249,6 +330,12 @@ block content
                         a.btn.btn_transparent(href="#") 
                             span Подробнее о продукте
                             i.icon_arrow_right
+
+        .following.desktop.following-js
+            .following__btn
+            .following__label
+                span Scroll
+            .following__mask
 
     // end robotics
 

@@ -1,9 +1,13 @@
+let idleLoop = null;
+let idleStop = null;
+
 function initRobotAnimations() {
+    let intensity = 0.5;
+    let resized = false;
     const scene = new THREE.Scene();
 
     // прямой
     const color = 0xFFFFFF;
-    let intensity = 0.5;
     const dirLight = new THREE.DirectionalLight(color, intensity);
     dirLight.position.set(-4.5, 14.66, 16.655);
     scene.add(dirLight);
@@ -17,10 +21,11 @@ function initRobotAnimations() {
     scene.add(hLight);
 
     //Рендер
+    const sceneWrapper = document.querySelector('.firstscreen');
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor( 0xffffff, 0);
-    document.querySelector('.firstscreen').prepend(renderer.domElement);
+    sceneWrapper.prepend(renderer.domElement);
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMapping = 1;
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
@@ -153,7 +158,7 @@ function initRobotAnimations() {
     const loader = new THREE.GLTFLoader();
     // const robikGeo = await loader.loadAsync('models/Robik.glb');
     const btns = document.querySelectorAll('.firstscreen button');
-    let mixer, action;
+    let mixer, action, idle = false;
     // let mixer, globusAction, idleAction;
 
 
@@ -183,6 +188,7 @@ function initRobotAnimations() {
         const idleClip = THREE.AnimationClip.findByName(clips, 'Idle');
         const idleAction = mixer.clipAction(idleClip);
         idleAction.play();
+        idle = true;
 
         clips.forEach((anim, i) => {
             const {name} = anim;
@@ -209,11 +215,20 @@ function initRobotAnimations() {
             }
         });
 
-        function idleLoop() {
+        idleLoop = () => {
+            console.log('Loop function');
             idleAction.reset();
             idleAction.play();
-            action.fadeOut(0.25);
+            if (action) action.fadeOut(0.25);
             idleAction.fadeIn(0.25);
+            idle = true;
+        }
+
+        idleStop = () => {
+            console.log('stop function');
+            idleAction.stop();
+            if (action) action.reset();
+            idle = false;
         }
 
         // body
@@ -246,6 +261,17 @@ function initRobotAnimations() {
         //bottle
         robot.getObjectByName('bottleGeo').material = bottle_mt;
         robot.getObjectByName('bottleHimGeo').material = chime_mt;
+
+        // window.addEventListener('scroll', ev => {
+        //     if (window.scrollY > sceneWrapper.offsetHeight) {
+        //         if (idle) idleStop();
+        //         console.log('idleStop');
+        //     } else {
+        //         if (!idle) idleLoop();
+        //         console.log('idleLoop');
+        //     }
+        // });
+
     });
 
 
@@ -312,8 +338,50 @@ function initRobotAnimations() {
     }
 
     window.addEventListener('resize', ev => {
+        let windowWidth = window.innerWidth;
+        // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
+        if (resized == windowWidth) { return; }
+        resized = windowWidth;
+
+        // console.log('resize');
+
         setAspectOnResize();
         setPositionOnResize();
     });
+
+    // window.onload = function() {
+    //     console.log('window onload');
+    //     function onVisible( selector, callback, playback, threshold=[0.5] ) {
+    //         let options = {
+    //             threshold: threshold
+    //         };
+    //         let observer = new IntersectionObserver( onEntry, options );
+    //         let elements = document.querySelectorAll( selector );
+    //         // let play = selector.querySelector('.video__play');
+    //         for ( let elm of elements ) {
+    //             observer.observe( elm );
+    //         }
+    //         function onEntry( entry ) {
+    //             entry.forEach( change => {
+    //                 let elem = change.target;
+    //                 let frame = elem.querySelector('iframe');
+    //
+    //                 if ( change.isIntersecting ) {
+    //                     // console.log('show', elem);
+    //                     console.log('show');
+    //                     callback(elem);
+    //                 } else {
+    //                     // console.log('hidden', elem);
+    //                     console.log('hidden');
+    //                     playback(elem);
+    //                 }
+    //             } );
+    //         }
+    //     }
+    //
+    //     onVisible('.firstscreen',idleLoop,idleStop);
+    //
+    // }
+
 }
 initRobotAnimations();

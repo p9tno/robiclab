@@ -4,19 +4,239 @@
     width: 100%;
     height: 100vh;
     background: #fff url("../home/robot/images/Texture/BG_e.jpg") center bottom no-repeat;
-
     background-size: cover;
     position: relative;
 
-    .btns {
+    &__content {
         position: absolute;
-        bottom: 2em;
-        left: 2em;
-        z-index: 2;
+        top: 50%;
+        transform: translateY(-45%);
+        left: 13.375em;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 2.5em;
+
+        span {
+            color: #005EA8;
+            font-size: 4.0625em;
+            font-weight: 700;
+        }
+    }
+
+    .hexagon {
+        position: relative;
+        width: 33.125em;
+        height: 33.125em;
+
+        &__button {
+            position: absolute;
+            padding: 0;
+            border: none;
+            font: inherit;
+            color: inherit;
+            background-color: transparent;
+            cursor: pointer;
+
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("../img/hexagon_bg.svg");
+
+            display: flex;
+            width: 11.875em;
+            height: 10em;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            text-decoration: none;
+
+            transform: scale(1);
+
+            transition: 0.3s;
+
+            // &:before {
+            //     content: '';
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-position: center;
+            //     background-size: cover;
+            //     background-repeat: no-repeat;
+            //     background-image: url("../img/hexagon_bg_reverse.svg");
+            //     opacity: 0;
+            //
+            //     transition: 0.3s;
+            // }
+
+            &:nth-child(1) {
+                top: 5.625em;
+                left: 0;
+            }
+
+            &:nth-child(2) {
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%)scale(1);
+            }
+
+            &:nth-child(3) {
+                top: 5.625em;
+                right: 0;
+            }
+
+            &:nth-child(4) {
+                bottom: 5.625em;
+                right: 0;
+            }
+
+            &:nth-child(5) {
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%)scale(1);
+            }
+
+            &:nth-child(6) {
+                bottom: 5.625em;
+                left: 0;
+            }
+
+            &:nth-child(7) {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%)scale(1);
+                background-image: url("../img/hexagon_bg_reverse.svg");
+
+                .hexagon__icon {
+                    color: $color_white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    width: 2em;
+                    height: 2em;
+
+                    border-radius: 100%;
+                    border: 0.0625em solid $color_white;
+
+                    i {
+                        font-size: 0.75em;
+                    }
+                }
+
+                .hexagon__label {
+                    color: $color_white;
+                }
+
+                &.disabled,
+                &:disabled {
+                    .hexagon__icon {
+                        border: 0.0625em solid rgba($color_white, .6);
+                    }
+
+                    .hexagon__icon {
+                        color: rgba($color_white, .6);
+                    }
+
+                    .hexagon__label {
+                        color: rgba($color_white, .6);
+                    }
+                }
+
+            }
+
+            &.disabled,
+            &:disabled {
+
+                pointer-events: none;
+                cursor: not-allowed;
+
+                .hexagon__icon {
+                    color: rgba(#08203A, .6);
+                }
+
+                .hexagon__label {
+                    color: rgba(#08203A, .6);
+                }
+
+            }
+
+            &:hover {
+                // &:before {
+                //     opacity: 1;
+                // }
+
+                // .hexagon__icon {
+                //     color: $color_white;
+                // }
+                //
+                // .hexagon__label {
+                //     color: $color_white;
+                // }
+                transform: scale(1.2);
+
+                &:nth-child(2) {
+                    transform: translateX(-50%)scale(1.2);
+                }
+
+                &:nth-child(5) {
+                    transform: translateX(-50%)scale(1.2);
+                }
+
+                &:nth-child(7) {
+                    transform: translate(-50%,-50%)scale(1.2);
+                }
+            }
+
+        }
+
+        &__icon {
+            position: relative;
+            z-index: 1;
+            color: $color_info;
+            line-height: 1;
+            margin-bottom: 0.5em;
+
+            transition: 0.3s;
+
+            i {
+                font-size: 2.5em;
+            }
+        }
+
+        &__label {
+            position: relative;
+            z-index: 1;
+            color: #005EA8;
+            text-align: center;
+            line-height: 1;
+            transition: 0.3s;
+
+            span {
+                font-weight: 500;
+                font-size: 1em;
+            }
+        }
+
     }
 
     canvas {
         width: 100%;
         height: 100%;
     }
+}
+
+.no-flickr {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
 }

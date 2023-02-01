@@ -30,7 +30,6 @@
     }
 
     &__macbook {
-        // border: 1px solid #000;
         background-image: url("../img/macbook.png");
 
         width: 50.3125em;
@@ -46,14 +45,16 @@
         }
 
         .chart {
-            width: 38.5em;
-            height: 21.75em;
-            top: 10.36em;
-            left: 8.1em;
+            width: 38.75em;
+            height: 21.875em;
+            top: 10.3em;
+            left: 8em;
 
             @media (min-width: 768px) {
-                top: 1.5em;
-                left: 5.5em;
+                top: 1.375em;
+                /* 22/16 */
+                left: 5.4375em;
+                /* 87/16 */
 
             }
         }
@@ -75,38 +76,110 @@
     }
 
     &__pwa {
-        // border: 1px solid #000;
+        position: relative;
         background-image: url("../img/pwa.png");
         width: 9.1875em;
         height: 9.1875em;
         font-size: 1em;
         margin-top: 2.5em;
+        border-radius: 100%;
 
         margin-left: 2em;
+
         @media (min-width:768px) {
-            // margin-top: -1.5em;
             margin-bottom: 3em;
-            margin-left: 18px;
-            // margin-left: 4em;
+            margin-left: 1.125em;
         }
 
+        .blink {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                position: absolute;
+                top: 10%;
+                left: 1%;
+
+                display: block;
+                width: 1.5em;
+                height: 1.5em;
+
+                background-image: radial-gradient(rgba(255,255,255,1), rgba(255,255,255,0) 30%), linear-gradient(45deg, rgba(0,0,0,0) 49%, rgba(255,255,255,.4) 50%, rgba(0,0,0,0) 51%), linear-gradient(135deg, rgba(0,0,0,0) 49%, rgba(255,255,255,.4) 50%, rgba(0,0,0,0) 51%);
+
+                -webkit-animation: blink 8s linear infinite;
+                animation: blink 8s linear infinite;
+                transform: scale(0, 0) rotate(0deg);
+
+                &:nth-child(1) {
+                    top: 66%;
+                    left: 10%;
+                    animation-delay: 7s;
+                    -webkit-animation-delay: 7s;
+                }
+
+                &:nth-child(2) {
+                    top: 20%;
+                    left: 48%;
+                    animation-delay: 4s;
+                    -webkit-animation-delay: 4s;
+                }
+
+                &:nth-child(3) {
+                    top: 36%;
+                    left: 1%;
+                    animation-delay: 3s;
+                    -webkit-animation-delay: 3s;
+                }
+
+                &:nth-child(4) {
+                    top: 58%;
+                    left: 45%;
+                    animation-delay: 2s;
+                    -webkit-animation-delay: 2s;
+                }
+
+                &:nth-child(5) {
+                    top: 41%;
+                    left: 69%;
+                    animation-delay: 1s;
+                    -webkit-animation-delay: 1s;
+                }
+
+                &:nth-child(6) {
+                    top: 8%;
+                    left: 19%;
+                    animation-delay: 5s;
+                    -webkit-animation-delay: 5s;
+                }
+
+                &:nth-child(7) {
+                    top: 33%;
+                    left: 27%;
+                    animation-delay: 6s;
+                    -webkit-animation-delay: 6s;
+                }
+
+            }
+        }
     }
 
     &__iphone {
         position: relative;
-        // border: 1px solid #000;
         background-image: url("../img/iphone.png");
         width: 10.625em;
-        /* 170/16 */
         height: 31.875em;
-        /* 510/16 */
-
         font-size: 0.6em;
 
         .chart {
             width: 8.5625em;
             height: 20.5em;
-
             top: 0.6875em;
             left: 1.1875em;
             border-radius: 1em;
@@ -133,20 +206,41 @@
         @media (min-width: 768px) {
             position: absolute;
             right: 1em;
-            // bottom: -3.6em;
             bottom: 0;
 
             span {
                 font-size: 0.75em;
-                /* 12/16 */
                 color: rgba($color_white, 0.7);
             }
 
         }
     }
 
-    // .bg {
-    //     border: 1px solid #000;
-    // }
+}
 
+@-webkit-keyframes blink {
+    10% {
+        transform: scale(1, 1) rotate(80deg);
+    }
+
+    20% {
+        transform: scale(0, 0) rotate(160deg);
+    }
+
+    100% {
+        transform: scale(0, 0) rotate(0deg);
+    }
+}
+@keyframes blink {
+    10% {
+        transform: scale(1, 1) rotate(80deg);
+    }
+
+    20% {
+        transform: scale(0, 0) rotate(160deg);
+    }
+
+    100% {
+        transform: scale(0, 0) rotate(0deg);
+    }
 }

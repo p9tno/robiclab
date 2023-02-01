@@ -44,6 +44,8 @@
         height: 11.9375em;
         margin-left: -1.75em;
 
+        text-decoration: none;
+
         @media (max-width: 767px) {
             &:nth-child(odd) {
                 margin-top: -7.25em;
@@ -65,7 +67,7 @@
             transition: 0.3s;
 
             &:hover {
-                transform: scale(1.1);
+                transform: scale(1.2);
             }
         }
 

@@ -104,7 +104,6 @@ $(document).ready(function() {
 
     function changeTheme() {
         $('input[name=themeCheckbox]').change(function() {
-
             if ($(this).is(':checked')) {
                 // console.log("Checkbox is checked..");
                 localStorage.setItem("theme", "night");
@@ -114,6 +113,7 @@ $(document).ready(function() {
                 // console.log("Checkbox is not checked..");
                 localStorage.setItem("theme", "day");
                 $('input[name=themeCheckbox]').prop('checked', false);
+                // lottie.play('chart-Desctop');
             }
             $( 'body' ).toggleClass('dark_theme');
         });
@@ -127,14 +127,13 @@ $(document).ready(function() {
     changeTheme();
 
     function initAnimationDevaice() {
-
         let chartDesctop = bodymovin.loadAnimation({
             container: document.getElementById('chartDesctop'), // Required
             path: '../json/desctop.json', // Required
             renderer: 'svg', // Required
             loop: true, // Optional
-            autoplay: true, // Optional
-            // name: "Hello World",
+            autoplay: false, // Optional
+            name: "chart-desctop",
         })
 
         let chartDesctopDark = bodymovin.loadAnimation({
@@ -142,7 +141,8 @@ $(document).ready(function() {
             path: '../json/desctop_dark.json', // Required
             renderer: 'svg', // Required
             loop: true, // Optional
-            autoplay: true, // Optional
+            autoplay: false, // Optional
+            name: "chart-desctop-dark",
         })
 
         let chartMobile = bodymovin.loadAnimation({
@@ -150,7 +150,8 @@ $(document).ready(function() {
             path: '../json/mobile.json', // Required
             renderer: 'svg', // Required
             loop: true, // Optional
-            autoplay: true, // Optional
+            autoplay: false, // Optional
+            name: "chart-mobile",
         })
 
         let chartMobileDark = bodymovin.loadAnimation({
@@ -159,13 +160,60 @@ $(document).ready(function() {
             path: '../json/mobile_dark_2.json', // Required
             renderer: 'svg', // Required
             loop: true, // Optional
-            autoplay: true, // Optional
+            autoplay: false, // Optional
+            name: "chart-mobile-dark",
         })
 
     }
-    initAnimationDevaice()
+    initAnimationDevaice();
+
+    function onVisible( selector, callback, playback, threshold=[0.5] ) {
+        let options = {
+            threshold: threshold
+        };
+        let observer = new IntersectionObserver( onEntry, options );
+        let elements = document.querySelectorAll( selector );
+        // let play = selector.querySelector('.video__play');
+        for ( let elm of elements ) {
+            observer.observe( elm );
+        }
+        function onEntry( entry ) {
+            entry.forEach( change => {
+                let elem = change.target;
+                let frame = elem.querySelector('iframe');
+
+                if ( change.isIntersecting ) {
+                    // console.log('show', elem);
+                    // console.log('show');
+                    callback(elem);
+                } else {
+                    // console.log('hidden', elem);
+                    // console.log('hidden');
+                    playback(elem);
+                }
+            } );
+        }
+    }
+
+    onVisible('.chart',playDigitalLab,stopDigitalLab);
 
 
+
+    function stopDigitalLab() {
+        // console.log('stop Digital Lab');
+        lottie.stop('chart-desctop');
+        lottie.stop('chart-desctop-dark');
+        lottie.stop('chart-mobile');
+        lottie.stop('chart-mobile-dark');
+    }
+
+    function playDigitalLab() {
+        // console.log('play Digital Lab');
+        lottie.play('chart-desctop');
+        lottie.play('chart-desctop-dark');
+        lottie.play('chart-mobile');
+        lottie.play('chart-mobile-dark');
+    }
 
 
     // scrollTop
@@ -395,7 +443,5 @@ $(document).ready(function() {
     }
     // showMore('.cost__item', '.show_more_js');
     // showMore('.reviews__item', '.show_reviews_js');
-
-
 
 })

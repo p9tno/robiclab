@@ -66,18 +66,6 @@
     &__item {
         position: relative;
         z-index: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        width: 10em;
-        height: 10em;
-        border-radius: 100%;
-        border: 0.0625em solid rgba($color_white, 0.4);
-        background-color: rgba(12, 93, 249, 0.25);
-        backdrop-filter: blur(30px);
-        color: $color_white;
 
         &:nth-child(1),
         &:nth-child(5) {
@@ -104,6 +92,30 @@
 
             }
 
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        width: 10em;
+        height: 10em;
+        border-radius: 100%;
+        border: 0.0625em solid rgba($color_white, 0.4);
+        background-color: rgba(12, 93, 249, 0.25);
+        backdrop-filter: blur(30px);
+        color: $color_white;
+        @media (min-width: 768px) {
+            transform: scale(1);
+
+            &:hover {
+                background-color: rgba(12, 93, 249, 0.75);
+                transform: scale(1.2);
+            }
         }
     }
 

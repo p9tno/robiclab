@@ -49,9 +49,6 @@ html(lang="en")
             script(src=path +"js/jquery.js")
 
             if pageScroll
-                script(src=path +"js/jquery.onepage-scroll.min.js")
-                script(src=path +"js/scroll.js")
-
                 // start robot
                 script(src=pathTest +"robot/scripts/three.js")
                 script(type="module" src=pathTest +"robot/scripts/GLTFLoader.js")
@@ -60,10 +57,10 @@ html(lang="en")
                 script(type="module" src=pathTest +"robot/scripts/RenderPass.js")
                 script(type="module" src=pathTest +"robot/scripts/UnrealBloomPass.js")
                 script(type="module" src=pathTest +"robot/scripts/main.js")
-
-
-
                 // end robot
+
+                script(src=path +"js/jquery.onepage-scroll.min.js")
+                script(src=path +"js/scroll.js")
 
 
             //- script(src=path +"js/modal.js")

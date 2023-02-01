@@ -178,10 +178,45 @@
       <main class="main_content main_scroll">
         <!-- begin firstscreen-->
         <section class="firstscreen bg section section_scrool" id="firstscreen">
-          <div class="container_center"><div class="btns">
-<button class="" id="Globus">География</button>
-<button class="" id="Bottle">Химия</button>
-</div>
+          <div class="container_center">
+            <div class="firstscreen__content">
+              <h1 class="firstscreen__title"><span>Лаборатория <br>«Робиклаб»</span></h1>
+              <div class="hexagon">
+                <button class="hexagon__button" id="Globus">
+                  <div class="hexagon__icon"><i class="icon_geography"></i></div>
+                  <div class="hexagon__label"><span>География</span></div>
+                </button>
+                <button class="hexagon__button" id="Bottle">
+                  <div class="hexagon__icon"><i class="icon_chemistry"></i></div>
+                  <div class="hexagon__label"><span>Химия</span></div>
+                </button>
+                <button class="hexagon__button disabled" id="#">
+                  <div class="hexagon__icon"><i class="icon_biology"></i></div>
+                  <div class="hexagon__label"><span>Естествознание</span></div>
+                </button>
+                <button class="hexagon__button disabled" id="#">
+                  <div class="hexagon__icon"><i class="icon_maths"></i></div>
+                  <div class="hexagon__label"><span>Математика</span></div>
+                </button>
+                <button class="hexagon__button disabled" id="#">
+                  <div class="hexagon__icon"><i class="icon_chemistry"></i></div>
+                  <div class="hexagon__label"><span>Экология</span></div>
+                </button>
+                <button class="hexagon__button disabled" id="#">
+                  <div class="hexagon__icon"><i class="icon_maths"></i></div>
+                  <div class="hexagon__label"><span>Физика</span></div>
+                </button>
+                <button class="hexagon__button" id="#">
+                  <div class="hexagon__icon"><i class="icon_arrow_right"></i></div>
+                  <div class="hexagon__label"><span>Смотреть все<br> предметы</span></div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="following desktop following-js">
+            <div class="following__btn"></div>
+            <div class="following__label"><span>Scroll</span></div>
+            <div class="following__mask"></div>
           </div>
         </section>
         <!-- end firstscreen-->
@@ -208,7 +243,17 @@
                     <div class="chart chart-dark" id="chartDesctopDark"></div>
                   </div>
                   <div class="digitalLab__col">
-                    <div class="digitalLab__pwa bg">   </div>
+                    <div class="digitalLab__pwa bg">
+                      <ul class="blink">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
                     <div class="digitalLab__iphone bg">
                       <div class="chart chart-light" id="chartMobile"></div>
                       <div class="chart chart-dark" id="chartMobileDark"></div>
@@ -242,6 +287,11 @@
               </div>
               <div class="digitalLab__label desktop"><span>* - PWA является способность трансформировать сайт в приложение. При этом выглядит оно как полноценный <br> mobile app, но имеет совсем небольшой размер, тратит меньше ресурсов, а загружается быстрее.</span></div>
             </div>
+          </div>
+          <div class="following desktop following-js">
+            <div class="following__btn"></div>
+            <div class="following__label"><span>Scroll</span></div>
+            <div class="following__mask"></div>
           </div>
         </section>
         <!-- end digitalLab-->
@@ -286,6 +336,11 @@
               </div>
             </div>
           </div>
+          <div class="following desktop following-js">
+            <div class="following__btn"></div>
+            <div class="following__label"><span>Scroll</span></div>
+            <div class="following__mask"></div>
+          </div>
         </section>
         <!-- end neuro-->
         <!-- begin practical-->
@@ -318,6 +373,11 @@
               </div>
             </div>
           </div>
+          <div class="following desktop following-js">
+            <div class="following__btn"></div>
+            <div class="following__label"><span>Scroll</span></div>
+            <div class="following__mask"></div>
+          </div>
         </section>
         <!-- end practical-->
         <!-- begin robotics-->
@@ -339,35 +399,29 @@
               <div class="robotics__left">
                 <div class="robotics__list">
                   <!-- robotics__item 1-->
-                  <div class="robotics__item animate-js" data-aos="fade-down-right" data-aos-delay="200">
-                    <div class="robotics__icon"><i class="icon_geography"></i></div>
-                    <div class="robotics__label"><span>География</span></div>
-                  </div>
+                  <div class="robotics__item animate-js" data-aos="fade-down-right" data-aos-delay="200"><a class="robotics__link" href="#">
+                      <div class="robotics__icon"><i class="icon_geography"></i></div>
+                      <div class="robotics__label"><span>География</span></div></a></div>
                   <!-- robotics__item 2-->
-                  <div class="robotics__item animate-js" data-aos="fade-down-left" data-aos-delay="400">
-                    <div class="robotics__icon"><i class="icon_chemistry"></i></div>
-                    <div class="robotics__label"><span>Химия</span></div>
-                  </div>
+                  <div class="robotics__item animate-js" data-aos="fade-down-left" data-aos-delay="400"><a class="robotics__link" href="#">
+                      <div class="robotics__icon"><i class="icon_chemistry"></i></div>
+                      <div class="robotics__label"><span>Химия</span></div></a></div>
                   <!-- robotics__item 6-->
-                  <div class="robotics__item animate-js" data-aos="fade-right" data-aos-delay="1200">
-                    <div class="robotics__icon"><i class="icon_physics"></i></div>
-                    <div class="robotics__label"><span>Физика</span></div>
-                  </div>
+                  <div class="robotics__item animate-js" data-aos="fade-right" data-aos-delay="1200"><a class="robotics__link" href="#">
+                      <div class="robotics__icon"><i class="icon_physics"></i></div>
+                      <div class="robotics__label"><span>Физика</span></div></a></div>
                   <!-- robotics__item 3    -->
-                  <div class="robotics__item animate-js" data-aos="fade-left" data-aos-delay="600">
-                    <div class="robotics__icon"><i class="icon_biology"></i></div>
-                    <div class="robotics__label"><span>Естествознание</span></div>
-                  </div>
+                  <div class="robotics__item animate-js" data-aos="fade-left" data-aos-delay="600"><a class="robotics__link" href="#">
+                      <div class="robotics__icon"><i class="icon_biology"></i></div>
+                      <div class="robotics__label"><span>Естествознание</span></div></a></div>
                   <!-- robotics__item 5-->
-                  <div class="robotics__item animate-js" data-aos="fade-up-right" data-aos-delay="1000">
-                    <div class="robotics__icon"><i class="icon_maths"></i></div>
-                    <div class="robotics__label"><span>Математика</span></div>
-                  </div>
+                  <div class="robotics__item animate-js" data-aos="fade-up-right" data-aos-delay="1000"><a class="robotics__link" href="#">
+                      <div class="robotics__icon"><i class="icon_maths"></i></div>
+                      <div class="robotics__label"><span>Математика</span></div></a></div>
                   <!-- robotics__item 4-->
-                  <div class="robotics__item animate-js" data-aos="fade-up-left" data-aos-delay="800">
-                    <div class="robotics__icon"><i class="icon_chemistry"></i></div>
-                    <div class="robotics__label"><span>Экология</span></div>
-                  </div>
+                  <div class="robotics__item animate-js" data-aos="fade-up-left" data-aos-delay="800"><a class="robotics__link" href="#">
+                      <div class="robotics__icon"><i class="icon_chemistry"></i></div>
+                      <div class="robotics__label"><span>Экология</span></div></a></div>
                 </div>
                 <div class="robotics__hand bg"></div>
               </div>
@@ -380,6 +434,11 @@
                 <div class="section__button"><a class="btn btn_transparent" href="#"> <span>Подробнее о продукте</span><i class="icon_arrow_right"></i></a></div>
               </div>
             </div>
+          </div>
+          <div class="following desktop following-js">
+            <div class="following__btn"></div>
+            <div class="following__label"><span>Scroll</span></div>
+            <div class="following__mask"></div>
           </div>
         </section>
         <!-- end robotics-->
@@ -467,8 +526,6 @@
       </main>
       <div class="toTop toTopSlide-js"><a href="test"> <i class="icon_to_Top"></i></a></div>
       <script src="../js/jquery.js"></script>
-      <script src="../js/jquery.onepage-scroll.min.js"></script>
-      <script src="../js/scroll.js"></script>
       <!-- start robot-->
       <script src="../home/robot/scripts/three.js"></script>
       <script type="module" src="../home/robot/scripts/GLTFLoader.js"></script>
@@ -477,6 +534,8 @@
       <script type="module" src="../home/robot/scripts/UnrealBloomPass.js"></script>
       <script type="module" src="../home/robot/scripts/main.js"></script>
       <!-- end robot-->
+      <script src="../js/jquery.onepage-scroll.min.js"></script>
+      <script src="../js/scroll.js"></script>
       <script src="../js/swiper-bundle.min.js"></script>
       <script src="../js/slider.js"></script>
       <script src="../js/jquery.maskedinput.min.js"></script>

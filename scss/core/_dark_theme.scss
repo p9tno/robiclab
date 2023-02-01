@@ -1,17 +1,21 @@
 .chart-light {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .chart-dark {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .dark_theme {
     .chart-light {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
     }
 
     .chart-dark {
-        display: block;
+        opacity: 1;
+        visibility: visible;
     }
 }
