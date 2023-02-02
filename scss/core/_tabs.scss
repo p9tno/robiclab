@@ -1,40 +1,96 @@
-.tabs {
-    border-bottom: 1px solid #eee;
-    display: flex;
+.tabs-wrapper {
+    margin-top: 1.5em;
+    @media (min-width: 768px) {
+        margin-top: 3.125em;
 
-    &__item {
-        padding: 5px 15px;
-        border: 1px solid #eee;
-        margin: 0 5px;
-        border-bottom: 0;
-        border-radius: 5px 5px 0 0;
-        cursor: pointer;
-
-        &:first-child {
-            margin-left: 0;
-        }
-
-        &:hover {
-            background-color: #eee;
-        }
-
-        &.active {
-            background-color: blue;
-            color: #fff;
-        }
     }
 
-}
+    .tabs {
+        display: flex;
 
-.tabContent {
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
+        margin-bottom: 0.75em;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 1em;
 
-    &__item {
-        display: none;
+        @media (min-width: 768px) {
+            margin-bottom: 2.375em;
 
-        &.active {
-            display: block;
         }
+
+        @media (min-width: 768px) {
+            &::-webkit-scrollbar {
+                height: 0.25em;
+                background-color: rgba($color_info, 0.25);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba($color_info, 0.5);
+                border-radius: 1em;
+                transition: background-color 0.3s;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba($color_info, 1);
+                }
+            }
+        }
+
+        .tab {
+
+            width: fit-content;
+            flex: none;
+            margin-right: 1.875em;
+
+            position: relative;
+            text-decoration: none;
+            font-size: 1.125em;
+            color: #897F7F;
+            transition: 0.3s;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -0.1875em;
+                left: 50%;
+                width: 0;
+                opacity: 1;
+                border-bottom: 1px solid #0A8299;
+                transition: 0.3s;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.active {
+                color: #2E2010;
+
+                &:after {
+                    content: '';
+                    left: 0;
+                    opacity: 1;
+                    width: 100%;
+                }
+
+            }
+
+            &:hover {
+                color: #2E2010;
+
+                @media (min-width: 768px) {
+                    &:after {
+                        content: '';
+                        left: 0;
+                        opacity: 1;
+                        width: 100%;
+                    }
+
+                }
+
+            }
+        }
+
     }
 }

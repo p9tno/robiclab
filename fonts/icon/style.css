@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?a9uoxl');
-  src:  url('fonts/icomoon.eot?a9uoxl#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?a9uoxl') format('truetype'),
-    url('fonts/icomoon.woff?a9uoxl') format('woff'),
-    url('fonts/icomoon.svg?a9uoxl#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?am4i0b');
+  src:  url('fonts/icomoon.eot?am4i0b#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?am4i0b') format('truetype'),
+    url('fonts/icomoon.woff?am4i0b') format('woff'),
+    url('fonts/icomoon.svg?am4i0b#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon_compare:before {
+  content: "\e924";
+}
+.icon_check_mark:before {
+  content: "\e91f";
+}
+.icon_cheak_list:before {
+  content: "\e920";
+}
+.icon_note:before {
+  content: "\e921";
+}
+.icon_sim:before {
+  content: "\e922";
+}
+.icon_glasses_book:before {
+  content: "\e923";
+}
 .icon_mac:before {
   content: "\e91b";
 }

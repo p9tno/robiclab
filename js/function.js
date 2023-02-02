@@ -184,11 +184,11 @@ $(document).ready(function() {
 
                 if ( change.isIntersecting ) {
                     // console.log('show', elem);
-                    // console.log('show');
+                    console.log('show chart');
                     callback(elem);
                 } else {
                     // console.log('hidden', elem);
-                    // console.log('hidden');
+                    console.log('hidden chart');
                     playback(elem);
                 }
             } );
@@ -348,6 +348,17 @@ $(document).ready(function() {
     $(function(){
         $(".tel").mask("+ 7 (999) 999-99-99");
     });
+
+
+
+    function moveSectionUpSinglePage() {
+
+        $('.following-single-js').click(function(event) {
+            console.log('moveSectionUpSinglePage');
+
+        });
+    }
+    moveSectionUpSinglePage();
 
     // scrollTop
     // $(document).ready(function(){

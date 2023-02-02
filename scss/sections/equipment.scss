@@ -1,0 +1,33 @@
+.equipment {
+    &__wrap {}
+
+    &__box {}
+
+    &__tabs {}
+
+    &__content {}
+
+    &__row {}
+
+    &__label {}
+
+    &__list {
+
+        // start sensors
+        &_sensors {}
+        // end sensors
+
+        // start included
+        &_included {}
+        // end included
+    }
+
+    &__item {}
+
+    &__icon {}
+
+    &__action {}
+
+    &__link {}
+
+}

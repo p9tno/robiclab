@@ -65,7 +65,6 @@ $(document).ready(function() {
     function moveSectionUp() {
 
         $('.following-js').click(function(event) {
-            console.log('Показ меню');
             // $(".main_scroll").moveUp();
             $(".main_scroll").moveDown();
 

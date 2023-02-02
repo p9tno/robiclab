@@ -1,0 +1,178 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    //- -var classScroll = 'main_scroll';
+    //- -var pageScroll = false;
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+
+                span.kb_sep
+
+                span.kb_title Цифровая лаборатория по математике
+
+    // end breadcrumbs
+
+    // begin heading
+    section#heading.heading.section.figure.bg
+        ul.figure__list
+            li
+            li
+            li
+            li
+            li.desktop
+            li
+            li
+            li
+            li
+            li.desktop
+
+        .container_center
+
+            .heading__content
+                .heading__left
+                    h1.section__title
+                        span Цифровая лаборатория <br>по математике
+                    .section__content
+                        p Мы считаем, что трудность понимания математики в школе может быть связана в первую очередь с тем, что теоретические данные отделены от практических. Для решения этой задачи была разработана цифровая лаборатория по математике. Она позволяет продемонстрировать абстрактные математические понятия и принципы в виде реальных процессов и применить их в будущем при изучении дисциплин по физики, химии и др.
+                    .section__download
+                        .download
+                            .download__item
+                                .download__icon
+                                    i.icon_windows
+                                .download__link
+                                    a(href="#") Скачать на Windows
+
+                            .download__item
+                                .download__icon
+                                    i.icon_linux
+                                .download__link
+                                    a(href="#") Скачать на Linux
+
+                            .download__item
+                                .download__icon
+                                    i.icon_mac
+                                .download__link
+                                    a(href="#") Скачать на Mac
+
+                    .section__button.section__button_buttons
+                        a.btn(href="#") 
+                            span WEB-версия
+                            i.icon_arrow_right
+
+                        a.btn.btn_transparent(href="#") 
+                            span Инструкция
+                            i.icon_arrow_right
+
+
+                .heading__right
+                    .heading__row
+
+                        .heading__macbook.bg
+                            .chart.chart-light#chartDesctop
+                            .chart.chart-dark#chartDesctopDark
+
+                        .heading__col
+                            .heading__pwa.bg
+
+                            .heading__iphone.bg
+                                .chart.chart-light#chartMobile
+                                .chart.chart-dark#chartMobileDark
+
+        .following.desktop.following-single-js
+            .following__btn
+            .following__label
+                span Scroll
+            .following__mask
+
+    // end heading
+
+    // begin equipment
+    section#equipment.equipment.section
+        .container_center
+            h2.section__title
+                span Состав лаборатории по<br> математике
+            .equipment__wrap
+                .equipment__box.bg
+                .equipment__tabs
+                    .tabs-wrapper
+                        .tabs
+                            each item in ['Базовая', 'Стандартная', 'Профильная']
+                                span.tab=item
+                        .tabs-content
+                            each item in ['', '', '', ]
+                                .tab-item
+
+                                    .equipment__content
+                                        // start equipment__row
+                                        .equipment__row
+                                            .equipment__label
+                                                span Набор цифровых датчиков
+                                            ul.equipment__list.equipment__list_sensors
+                                                each sensor in ['Датчик Освещённости', 'Датчик Расстояния', 'Датчик Температуры', 'Датчик Тока 2.5 A', 'Датчик Угловой Скорости' ]
+                                                    li.equipment__item
+                                                        span=sensor
+
+                                        // end equipment__row
+
+                                        // start equipment__row
+                                        .equipment__row
+                                            .equipment__label
+                                                span В комплекте
+                                            ul.equipment__list.equipment__list_included
+
+                                                li.equipment__item
+                                                    .equipment__icon
+                                                        i.icon_sim
+                                                    span Провода и USB flash с ПО
+
+                                                li.equipment__item
+                                                    .equipment__icon
+                                                        i.icon_check_mark
+                                                    span Cертификаты
+
+                                                li.equipment__item
+                                                    .equipment__icon
+                                                        i.icon_glasses_book
+                                                    span Методичка
+
+                                                li.equipment__item
+                                                    .equipment__icon
+                                                        i.icon_cheak_list
+                                                    span Cпецификация 
+
+                                                li.equipment__item
+                                                    .equipment__icon
+                                                        i.icon_note
+                                                    span Инструкции по применению
+
+                                        // end equipment__row
+
+                                        // start equipment__row
+                                        .equipment__row
+                                            .equipment__label
+                                                span Дополнительная комплектация
+                                            ul.equipment__list
+                                                each item in ['линейка', 'линейка', 'штатив', 'штатив', 'стакан 250 мл', 'стакан 250 мл', 'боберка 5 штук', 'боберка 5 штук', 'пробка 4 шт', 'пробка 4 шт', 'Бутылка 250мл', 'Бутылка 250мл',]
+                                                    li.equipment__item
+                                                        span=item
+
+                                        // end equipment__row
+
+
+                                        .equipment__action
+                                            a.btn(href="#") Оформить покупку
+                                            a.equipment__link(href="#") Сравнить наборы
+
+
+
+
+
+    // end equipment
