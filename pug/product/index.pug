@@ -95,24 +95,24 @@ block content
     // end heading
 
     // begin equipment
-    section#equipment.equipment.section
+    section#equipment.equipment.section.section_changeTheme
         .container_center
-            h2.section__title
-                span Состав лаборатории по<br> математике
             .equipment__wrap
                 .equipment__box.bg
                 .equipment__tabs
+                    h2.section__title.section__title_black
+                        span Состав лаборатории по<br> математике
                     .tabs-wrapper
                         .tabs
-                            each item in ['Базовая', 'Стандартная', 'Профильная']
+                            each item in ['Базовая', 'Стандартная', 'Профильная', 'Точка роста']
                                 span.tab=item
                         .tabs-content
-                            each item in ['', '', '', ]
+                            each item in ['', '', '', '' ]
                                 .tab-item
 
                                     .equipment__content
                                         // start equipment__row
-                                        .equipment__row
+                                        .equipment__row.equipment__row_sensors
                                             .equipment__label
                                                 span Набор цифровых датчиков
                                             ul.equipment__list.equipment__list_sensors
@@ -159,7 +159,7 @@ block content
                                         .equipment__row
                                             .equipment__label
                                                 span Дополнительная комплектация
-                                            ul.equipment__list
+                                            ul.equipment__list.equipment__list_list
                                                 each item in ['линейка', 'линейка', 'штатив', 'штатив', 'стакан 250 мл', 'стакан 250 мл', 'боберка 5 штук', 'боберка 5 штук', 'пробка 4 шт', 'пробка 4 шт', 'Бутылка 250мл', 'Бутылка 250мл',]
                                                     li.equipment__item
                                                         span=item
@@ -169,7 +169,7 @@ block content
 
                                         .equipment__action
                                             a.btn(href="#") Оформить покупку
-                                            a.equipment__link(href="#") Сравнить наборы
+                                            a.equipment__link.show_js(href="#compare") Сравнить наборы
 
 
 

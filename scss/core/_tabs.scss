@@ -1,62 +1,92 @@
 .tabs-wrapper {
-    margin-top: 1.5em;
+    margin-top: 1.875em;
+    /* 30/16 */
+
     @media (min-width: 768px) {
         margin-top: 3.125em;
-
     }
 
     .tabs {
+        position: relative;
         display: flex;
 
-        margin-bottom: 0.75em;
         overflow-x: auto;
         overflow-y: hidden;
-        padding-bottom: 1em;
+        margin-bottom: 1.875em;
+        padding-bottom: 0.625em;
 
-        @media (min-width: 768px) {
-            margin-bottom: 2.375em;
+        @media (max-width: 767px) {
+            // &::-webkit-scrollbar {
+            //     height: 0.1875em;
+            //     background-color: rgba(#ECF3FF, 1);
+            // }
+            //
+            // &::-webkit-scrollbar-thumb {
+            //     background-color: rgba($color_info, 1);
+            //     border-radius: 1em;
+            //     transition: background-color 0.3s;
+            //     cursor: pointer;
+            //     width: 10px!important;
+            //
+            // }
+
+            // &::-webkit-scrollbar-track-piece:end {
+            //     margin-right: 4em;
+            // }
+            //
+            // &::-webkit-scrollbar-track-piece:start {
+            //     margin-left: 4em;
+            // }
 
         }
 
         @media (min-width: 768px) {
-            &::-webkit-scrollbar {
-                height: 0.25em;
-                background-color: rgba($color_info, 0.25);
+            padding-bottom: 1.125em;
+            margin-bottom: 2.375em;
+
+            width: fit-content;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0.1875em;
+
+                background-color: rgba($color_info, 0.1);
             }
 
-            &::-webkit-scrollbar-thumb {
-                background-color: rgba($color_info, 0.5);
-                border-radius: 1em;
-                transition: background-color 0.3s;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: rgba($color_info, 1);
-                }
-            }
         }
 
         .tab {
 
             width: fit-content;
             flex: none;
-            margin-right: 1.875em;
 
             position: relative;
             text-decoration: none;
-            font-size: 1.125em;
-            color: #897F7F;
+            font-weight: 400;
+            color: #6F90B4;
             transition: 0.3s;
             cursor: pointer;
+
+            font-size: 1em;
+            margin-right: 1.25em;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+                margin-right: 2.5em;
+            }
 
             &:after {
                 content: '';
                 position: absolute;
-                bottom: -0.1875em;
+                bottom: -0.9em;
                 left: 50%;
                 width: 0;
                 opacity: 1;
-                border-bottom: 1px solid #0A8299;
+                border-bottom: 0.1875em solid $color_info;
+                /* 3/16 */
                 transition: 0.3s;
             }
 
@@ -65,19 +95,21 @@
             }
 
             &.active {
-                color: #2E2010;
+                color: $color_info;
 
-                &:after {
-                    content: '';
-                    left: 0;
-                    opacity: 1;
-                    width: 100%;
+                @media (min-width: 768px) {
+                    &:after {
+                        content: '';
+                        left: 0;
+                        opacity: 1;
+                        width: 100%;
+                    }
                 }
 
             }
 
             &:hover {
-                color: #2E2010;
+                color: $color_info;
 
                 @media (min-width: 768px) {
                     &:after {

@@ -56,4 +56,18 @@
 
 	}
 
+	&_dark {
+		.kama_breadcrumbs {
+			a,
+			span {
+				color: rgba($main_color, 0.6);
+			}
+
+			.kb_sep {
+				background-color: rgba($main_color, 0.6);
+			}
+		}
+
+	}
+
 }

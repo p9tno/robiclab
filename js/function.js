@@ -98,8 +98,18 @@ $(document).ready(function() {
 
             $(id).modal('show');
         });
+        
+        $('.modal').on('show.bs.modal', () => {
+            let openedModal = $('.modal');
+            if (openedModal.length > 0) {
+                openedModal.modal('hide');
+            }
+        });
+
     }
     showModal();
+
+
 
 
     function changeTheme() {

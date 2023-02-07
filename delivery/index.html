@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/aos.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aos.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
   </head>
   <body>
     <div class="wrapper" id="wrapper">
@@ -175,31 +175,40 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin testNav-->
-        <section class="testNav section" id="testNav" style="background-color: #31343D;">
+        <!-- begin breadcrumbs-->
+        <div class="breadcrumbs breadcrumbs_dark section">
           <div class="container_center">
-            <h2 class="section__title"><span>Навиганция</span></h2>
-            <ul style="color: #fff;font-size:1.5em;">
-              <li><a href="home" style="color: #fff;">главная</a></li>
-              <li><a href="products" style="color: #fff;">продукты</a></li>
-              <li><a href="product" style="color: #fff;">продукт (Цифровая лаборатория по математике)</a></li>
-              <li><a href="delivery" style="color: #fff;">Доставка и заказ</a></li>
-            </ul>
+            <div class="kama_breadcrumbs"><span><a href="#"><span>Главная</span></a></span><span class="kb_sep"></span><span class="kb_title">Доставка и заказ</span></div>
           </div>
-        </section>
-        <!-- end testNav-->
-        <!-- begin testButton-->
-        <section class="testButton section" id="testButton" style="background-color: #282B33;">
+        </div>
+        <!-- end breadcrumbs-->
+        <!-- begin delivery-->
+        <section class="delivery section pt" id="delivery">
           <div class="container_center">
-            <h2 class="section__title"><span>Кнопки</span></h2>
-            <div class="testButton__content"><a class="btn" href="#"> <span>Оформить покупку</span></a><br/><br/><a class="btn btn_transparent" href="#"> <span>Инструкция</span></a><br/><br/><a class="btn" href="#"> <span>WEB-версия</span><i class="icon_arrow_right"></i></a><br/><br/><a class="btn btn_transparent" href="#"> <span>Подробнее о продукте</span><i class="icon_arrow_right"></i></a><br/><br/><a class="btn btn_circle" href="#"> <span>Смотреть все предметы</span><i class="icon_arrow_circle"></i></a><br/><br/><a class="btn btn_circle btn_transform" href="#"> <span>Скачать инструкцию</span><i class="icon_arrow_circle"></i></a><br/><br/><br/><br/></div>
-            <h2 class="section__title"><span>Модальные окна</span></h2>
-            <div class="testButton__content">
-              <!-- Button trigger modal compare--><a class="btn show_js" href="#compare">Сравнение наборов лабораторий по математике</a>
+            <h1 class="section__title section__title_black"><span>Доставка и заказ</span></h1>
+            <div class="delivery__content">
+              <div class="section__content section__content_black">
+                <div class="delivery__label"><span>Доставка по России, в страны СНГ и Таможенного союза</span></div>
+                <p>Доставка по России, в страны СНГ и Таможенного союза.</p>
+                <p>Доставка до Заказчика производится транспортными компаниями: Деловые линии, DPD, Байкал-Сервис, Желдорэкспедиция, КиТ и др. </p>
+                <p>Стоимость доставки каждого заказа рассчитывается индивидуально, исходя из региона и массогабаритных характеристик итогового заказа. </p>
+                <p>Продукция отгружается в упаковке по качеству соответствующей ГОСТ и ТУ, что подтверждается соответствующими документами.</p>
+              </div>
+              <div class="delivery__contacts">
+                <div class="delivery__title"><span>Наши контакты</span></div>
+                <div class="contacts">
+                  <div class="contacts__list">
+                    <div class="contacts__item"><i class="icon_phone"></i><span class="desktop">8 (800) 51 11 202</span><a class="mobile" href="tel:+8 (800) 51 11 202">8 (800) 51 11 202</a></div>
+                    <div class="contacts__item"><i class="icon_mail"></i><span class="desktop">info@robiclab.ru</span><a class="mobile" href="mailto:info@robiclab.ru">info@robiclab.ru</a></div>
+                    <div class="contacts__item"><i class="icon_location"></i><span>Россия г. Санкт-Петербург,<br> ул. Парковая, 4 оф 325</span></div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="delivery__form"></div>
           </div>
         </section>
-        <!-- end testButton-->
+        <!-- end delivery-->
       </main>
       <div class="toTop toTop-js"><a href="test"> <i class="icon_to_Top"></i></a></div>
       <!-- begin footer-->
@@ -357,16 +366,16 @@
         </div>
       </div>
       <!-- End modal compare-->
-      <script src="js/jquery.js"></script>
-      <script src="js/modal.js"></script>
-      <script src="js/swiper-bundle.min.js"></script>
-      <script src="js/slider.js"></script>
-      <script src="js/jquery.maskedinput.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/jquery.event.move.js"></script>
+      <script src="../js/jquery.js"></script>
+      <script src="../js/modal.js"></script>
+      <script src="../js/swiper-bundle.min.js"></script>
+      <script src="../js/slider.js"></script>
+      <script src="../js/jquery.maskedinput.min.js"></script>
+      <script src="../js/aos.js"></script>
+      <script src="../js/jquery.event.move.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie_svg.min.js"></script>
       <script src="https://cdnjs.com/libraries/bodymovin"></script>
-      <script src="js/function.js"></script>
+      <script src="../js/function.js"></script>
     </div>
   </body>
 </html>

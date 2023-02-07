@@ -18,4 +18,96 @@
         opacity: 1;
         visibility: visible;
     }
+
+    .following__mask {
+        background-image: url("../img/mask_dark.png");
+
+    }
+
+    // ---------------------- SECTION
+
+    .section_changeTheme {
+        background-color: $color_dark;
+    }
+
+    .section__title_black {
+        span {
+            color: $color_white;
+
+        }
+    }
+
+    // ---------------------- TABS
+
+    .tabs-wrapper {
+        .tabs {
+            @media (min-width: 768px) {
+                &:after {
+                    background-color: rgba($color_white, 0.4);
+                }
+
+            }
+
+            .tab {
+                color: rgba($color_white, 0.4);
+
+                &:after {
+                    border-bottom: 0.1875em solid rgba($color_white, 1);
+                }
+
+                &.active {
+                    color: rgba($color_white, 1);
+                }
+            }
+
+        }
+    }
+
+    // ---------------------- equipment
+
+    .equipment {
+        &__label {
+            span {
+                color: $color_white;
+            }
+        }
+
+        &__item {
+            span {
+                color: $color_dark_text;
+            }
+        }
+
+        &__icon {
+
+            background-color: $color_dark_bg;
+            color: $color_dark_text;
+        }
+
+        &__list {
+            &_sensors {
+                .equipment__item {
+                    background-color: $color_dark_bg;
+                }
+            }
+
+            &_list {
+                .equipment__item {
+                    &:before {
+                        background-color: $color_dark_text;
+
+                    }
+                }
+            }
+        }
+
+        &__link {
+            color: $color_white;
+
+            &:before {
+                color: $color_white;
+            }
+        }
+    }
+
 }

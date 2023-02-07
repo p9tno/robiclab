@@ -1,0 +1,43 @@
+// Begin Modal compare
+.modal.fade.compare#compare
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-title
+                span Сравнение наборов лабораторий по математике
+            .modal-body
+                .modal-table
+                    .table
+                        .table__head
+                            .table__row
+                                each item in ['Комплектация', 'Набор цифровых датчиков', 'В комплекте', 'Дополнительная комплектация']
+                                    .table__col
+                                        span=item
+                        .table__body
+                            each title in [ {mobil: 'Базовая комплектация', desctop: 'Базовая'}, {mobil: 'Стандартная комплектация', desctop: 'Стандартная'}, {mobil: 'Профильная комплектация', desctop: 'Профильная'} ]
+
+                                .table__row
+                                    .table__col.table__col_title
+                                        span.desktop=title.desctop 
+                                        span.mobile=title.mobil 
+                                    .table__col
+                                        .table__label.mobile
+                                            span Набор цифровых датчиков
+                                        .table__list.table__list_sensors
+                                            each item in ['Датчик Освещённости', 'Датчик Расстояния', 'Датчик Тока 2.5 A', 'Датчик Угловой Скорости']
+                                                span=item
+
+                                    .table__col
+                                        .table__label.mobile
+                                            span В комплекте
+                                        .table__list
+                                            span Провода и USB flash с ПО, методичка, инструкции по применению, сертификаты, спецификация
+                                    .table__col
+                                        .table__label.mobile
+                                            span Дополнительная комплектация
+                                        .table__list
+                                            span Линейка, штатив, стакан 250 мл, боберка 5 штук, пробка 4 шт, бутылка 250мл, линейка, штатив, стакан 250 мл, боберка 5 штук, пробка 4 шт, бутылка 250мл 
+
+            .modal-button
+                a.btn(href="#" data-dismiss="modal") Закрыть
+// End modal compare

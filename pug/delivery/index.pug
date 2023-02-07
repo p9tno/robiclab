@@ -1,0 +1,60 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    //- -var classScroll = 'main_scroll';
+    //- -var pageScroll = false;
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.breadcrumbs_dark.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+
+                span.kb_sep
+
+                span.kb_title Доставка и заказ
+
+    // end breadcrumbs
+
+    // begin delivery
+    section#delivery.delivery.section.pt
+        .container_center
+            h1.section__title.section__title_black
+                span Доставка и заказ
+            .delivery__content
+                .section__content.section__content_black
+                    .delivery__label
+                        span Доставка по России, в страны СНГ и Таможенного союза
+
+                    p Доставка по России, в страны СНГ и Таможенного союза.
+                    p Доставка до Заказчика производится транспортными компаниями: Деловые линии, DPD, Байкал-Сервис, Желдорэкспедиция, КиТ и др. 
+                    p Стоимость доставки каждого заказа рассчитывается индивидуально, исходя из региона и массогабаритных характеристик итогового заказа. 
+                    p Продукция отгружается в упаковке по качеству соответствующей ГОСТ и ТУ, что подтверждается соответствующими документами.
+                .delivery__contacts
+                    .delivery__title
+                        span Наши контакты
+                    .contacts
+                        .contacts__list
+                            .contacts__item
+                                i.icon_phone
+                                span.desktop 8 (800) 51 11 202
+                                a.mobile(href="tel:+8 (800) 51 11 202") 8 (800) 51 11 202
+
+                            .contacts__item
+                                i.icon_mail
+                                span.desktop info@robiclab.ru
+                                a.mobile(href="mailto:info@robiclab.ru") info@robiclab.ru
+
+                            .contacts__item
+                                i.icon_location
+                                span Россия г. Санкт-Петербург,<br> ул. Парковая, 4 оф 325
+
+
+            .delivery__form
+
+
+    // end delivery

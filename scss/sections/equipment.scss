@@ -1,33 +1,261 @@
 .equipment {
-    &__wrap {}
+    padding: 7.5em 0;
 
-    &__box {}
+    &__wrap {
+        position: relative;
+        // border: 1px solid #000;
 
-    &__tabs {}
+    }
+
+    &__box {
+        // border: 1px solid #000;
+
+        width: 76.875em;
+        height: 50em;
+        background-image: url("../img/equipment__box.png");
+
+        font-size: 0.278em;
+        @media (min-width: 768px) {
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            font-size: 1em;
+            z-index: 1;
+
+        }
+    }
+
+    &__tabs {
+        @media (min-width: 768px) {
+            width: 45.625em;
+            position: relative;
+            z-index: 2;
+        }
+    }
 
     &__content {}
 
-    &__row {}
+    &__row {
+        margin-bottom: 2em;
 
-    &__label {}
+        &:last-child {
+            margin-bottom: 4em;
+        }
+
+        // &:last-child {
+        //     margin-bottom: 0;
+        // }
+
+        &_sensors {
+            margin-bottom: 1.375em;
+        }
+    }
+
+    &__label {
+        margin-bottom: 0.875em;
+        @media (min-width: 768px) {
+            margin-bottom: 1.25em;
+
+        }
+
+        span {
+            font-weight: 600;
+            font-size: 1.125em;
+            transition: 0.3s;
+        }
+    }
 
     &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
 
         // start sensors
-        &_sensors {}
+        &_sensors {
+            display: flex;
+            flex-wrap: wrap;
+
+            .equipment__item {
+                border-radius: 0.5625em;
+                background-color: #E7ECF5;
+                margin-right: 0.625em;
+                margin-bottom: 0.625em;
+                transition: 0.3s;
+
+                padding: 0.5em 0.75em;
+                @media (min-width: 768px) {
+                    padding: 0.625em 1.125em;
+
+                }
+
+                span {
+                    font-size: 0.8125em;
+                    @media (min-width: 768px) {
+                        font-size: 0.875em;
+
+                    }
+                }
+            }
+        }
         // end sensors
 
         // start included
-        &_included {}
+        &_included {
+            @media (min-width: 768px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 0.75em;
+            }
+
+            .equipment__item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1em;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                @media (min-width: 768px) {
+                    margin-bottom: 0;
+                }
+
+                span {
+                    font-size: 1em;
+                    @media (min-width: 768px) {
+                        font-size: 1.125em;
+
+                    }
+                }
+            }
+        }
         // end included
+
+        // start list
+        &_list {
+            @media (min-width: 768px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 0.75em;
+            }
+
+            .equipment__item {
+                position: relative;
+                padding-left: 1.75em;
+
+                margin-bottom: 0.45em;
+
+                &:last-child {
+                    margin-bottom: 0;
+
+                }
+                @media (min-width: 768px) {
+                    margin-bottom: 0;
+                }
+
+                span {
+                    font-size: 1em;
+                    @media (min-width: 768px) {
+                        font-size: 1.125em;
+
+                    }
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0.7em;
+                    display: block;
+                    width: 0.375em;
+                    height: 0.375em;
+                    border-radius: 100%;
+                    background-color: rgba($main_color, 0.6);
+                    font-size: 0.75em;
+                    transition: background-color 0.3s;
+                    @media (min-width: 768px) {
+                        font-size: 1em;
+
+                    }
+
+                }
+            }
+        }
+        // end list
     }
 
-    &__item {}
+    &__item {
+        span {
+            color: rgba($main_color, 0.6);
+            transition: 0.3s;
+        }
+    }
 
-    &__icon {}
+    &__icon {
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    &__action {}
+        width: 2em;
+        height: 2em;
+        border-radius: 100%;
+        margin-right: 0.75em;
 
-    &__link {}
+        background-color: #E7ECF5;
+        color: rgba($main_color, 0.6);
+        transition: 0.3s;
+    }
+
+    &__action {
+        margin-top: 2.25em;
+
+        .btn {
+            margin-bottom: 1.5em;
+            @media (min-width: 768px) {
+                margin-bottom: 0;
+
+            }
+        }
+
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+
+            > * {
+                margin-right: 48px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $main_color;
+        font-weight: 600;
+        font-size: 1.125em;
+
+        &:before {
+            display: inline-block;
+            content: '\e924';
+            font-family: 'icomoon';
+            font-size: 1.5em;
+            color: $color_info;
+            transform: translateY(0.1em)scale(1);
+            margin-right: 0.55em;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            &:before {
+                transform: translateY(0.1em)scale(1.2);
+
+            }
+        }
+    }
 
 }
