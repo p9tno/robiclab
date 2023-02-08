@@ -1,62 +1,113 @@
-.icon_close {
-	position: absolute;
-	width: 1.3125em;
-	height: 1.3125em;
-	display: block;
-	right: 1.375em;
-	top: 1.375em;
-
-	&:after,
-	&:before {
-		content: '';
-		position: absolute;
-		display: block;
-		width: 100%;
-		left: 0;
-		top: 50%;
-		border-top: 0.0625em solid #C4C4C4;
-	}
-
-	&:before {
-		transform: rotate(45deg);
-	}
-
-	&:after {
-		transform: rotate(-45deg);
-
-	}
-
-}
-
 .form {
-	&_grid {
+	&_row {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 -1em;
 
 		.form__row {
-			margin: 0 1em 2em;
+			margin: 0 1em 1.25em;
 			width: 100%;
 
 			@media (min-width: 768px) {
-				width: calc(50% - 2em);
+				margin: 0 1em 1.375em;
+				width: calc(25% - 2em);
 			}
 
 			&_full {
 				width: 100%;
 			}
 		}
+
+	}
+
+	&_grid {
+
+		@media (min-width: 768px) {
+			display: grid;
+			grid-template-columns: 32.625em 67.25em;
+			grid-column-gap: 1.875em;
+			grid-row-gap: 2.125em;
+
+			.form__row_textarea {
+				grid-row-start: 1;
+				grid-row-end: 4;
+
+				grid-column-start: 2;
+				grid-column-end: 3;
+
+			}
+		}
+
+		.form__text {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
 	}
 
 	&__content {
-		background: #FFFFFF;
-		box-shadow: 0 1.25em 3.125em rgba(50, 63, 83, 0.3);
-		padding: 2.5em 3em 3em;
 		position: relative;
+		background-image: url("../img/form_bg.svg");
+		border-radius: 1.625em;
+		color: $color_white;
+
+		padding: 1.875em 1.25em 0.625em;
+		@media (min-width: 768px) {
+			padding: 3.125em 3.75em 4.875em;
+		}
+	}
+
+	&__title {
+		margin-bottom: 1em;
+		@media (min-width: 768px) {
+			margin-bottom: 1.375em;
+
+		}
+
+		span {
+			font-weight: 500;
+			font-size: 1.5em;
+			@media (min-width: 768px) {
+				font-size: 2.625em;
+
+			}
+		}
+	}
+
+	&__subtitle {
+		line-height: 1.6;
+		margin-bottom: 1.875em;
+		/* 30/16 */
+		@media (min-width: 768px) {
+			margin-bottom: 2.875em;
+
+		}
+
+		span {
+			font-size: 1em;
+			@media (min-width: 768px) {
+				font-size: 1.125em;
+
+			}
+		}
 	}
 
 	&__row {
-		margin-bottom: 1em;
+		position: relative;
+		@media (max-width: 767px) {
+			margin-bottom: 1.25em;
+
+		}
+
+		&:hover {
+			.form__label {
+				span {
+					color: rgba($color_white, 1);
+				}
+			}
+		}
 
 		.btn,
 		input:not([type]),
@@ -73,22 +124,64 @@
 		}
 
 		textarea {
-			min-height: 6em;
+			min-height: 100%;
 			resize: vertical;
 		}
 
 	}
 
-	&__label {}
-
-	&__grup {}
-
-	&__check {
-		display: flex;
-		align-items: center;
+	&__label {
+		position: absolute;
+		top: -0.5em;
+		left: 0.8125em;
+		background-color: #005EA8;
+		padding: 0 0.375em;
+		line-height: 0.8;
 
 		span {
-			margin-left: 0.5em;
+			font-size: 0.8125em;
+			color: rgba($color_white, 0.7);
+			transition: 0.3s;
+		}
+	}
+
+	&__text {
+		span {
+			color: rgba($color_white,0.7);
+			font-size: 0.75em;
+			/* 12/16 */
+			@media (min-width: 768px) {
+				font-size: 0.875em;
+
+			}
+		}
+
+		a {
+			position: relative;
+			text-decoration: none;
+			color: rgba($color_white,0.7);
+
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: -0.125em;
+				left: 0;
+				width: 100%;
+				border-bottom: 0.0625em solid;
+				border-color: rgba($color_white,0.7);
+				transition: 0.3s;
+
+			}
+
+			&:hover {
+				color: rgba($color_white,1);
+
+				&:after {
+					width: 80%;
+					border-color: rgba($color_white,1);
+				}
+			}
+
 		}
 	}
 	// Input text and textarea ================================================
@@ -102,34 +195,38 @@
 	input[type=text],
 	input[type=url],
 	textarea {
-		background-color: $input_bg_color;
-		border: 0.0625em solid $input_border_color;
+		background-color: transparent;
+		border: 0.0625em solid;
+		border-color: rgba($color_white, 0.8);
 		font-family: $main_font_family;
-		color: $input_color;
-		padding: 0.5em 1em;
+		color: $color_white;
 		outline: none;
-		font-size: 1em;
 		font-weight: 400;
-		border-radius: 0.3125em;
+		border-radius: 0.5625em;
 		transition: 0.3s;
 
+		font-size: 1em;
+		padding: 1.188em 1em;
+		@media (min-width: 768px) {
+			font-size: 1.125em;
+			padding: 1.084em 1em;
+		}
+
 		&:hover {
-			border: 0.0625em solid $input_hover_border_color;
-			background-color: $input_hover_bg_color;
+			border: 0.0625em solid rgba($color_white, 1);
 		}
 
 		&:focus {
-			border: 0.0625em solid $input_focus_border_color;
-			background-color: $input_focus_bg_color;
+			border: 0.0625em solid rgba($color_white, 1);
 		}
 
 		&.invalid {
-			background-color: $input_error_bg_color;
-			border: 0.0625em solid $input_error_border_color;
+			background-color: rgba($color_white, 0.2);
+			border: 0.0625em solid red;
 		}
 		// Placeholder for input +++++++++++++++
 		@include placeholder {
-			color: $input_placeholder_color;
+			color: rgba($color_white, 0.8);
 		}
 	}
 }

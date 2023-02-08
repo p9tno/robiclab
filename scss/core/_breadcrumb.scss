@@ -61,10 +61,12 @@
 			a,
 			span {
 				color: rgba($main_color, 0.6);
+				transition: 0.3s;
 			}
 
 			.kb_sep {
 				background-color: rgba($main_color, 0.6);
+				transition: 0.3s;
 			}
 		}
 

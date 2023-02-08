@@ -183,7 +183,7 @@
         </div>
         <!-- end breadcrumbs-->
         <!-- begin delivery-->
-        <section class="delivery section pt" id="delivery">
+        <section class="delivery section pt section_changeTheme" id="delivery">
           <div class="container_center">
             <h1 class="section__title section__title_black"><span>Доставка и заказ</span></h1>
             <div class="delivery__content">
@@ -200,15 +200,66 @@
                   <div class="contacts__list">
                     <div class="contacts__item"><i class="icon_phone"></i><span class="desktop">8 (800) 51 11 202</span><a class="mobile" href="tel:+8 (800) 51 11 202">8 (800) 51 11 202</a></div>
                     <div class="contacts__item"><i class="icon_mail"></i><span class="desktop">info@robiclab.ru</span><a class="mobile" href="mailto:info@robiclab.ru">info@robiclab.ru</a></div>
-                    <div class="contacts__item"><i class="icon_location"></i><span>Россия г. Санкт-Петербург,<br> ул. Парковая, 4 оф 325</span></div>
+                    <div class="contacts__item"><i class="icon_location"></i><span>Россия г. Санкт-Петербург, ул. Парковая, 4 оф 325</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="delivery__form"></div>
           </div>
         </section>
         <!-- end delivery-->
+        <!-- begin order-->
+        <section class="order section section_changeTheme" id="order">
+          <div class="container_center">
+            <div class="order__form">
+              <!-- begin form-->
+              <div class="form__content bg figure">
+                <ul class="figure__list figure__list_form-row">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <div class="form__title"><span>Оформление заказа</span></div>
+                <div class="form__subtitle"><span>Для заказа оборудования заполните форму обратной связи, и мы ответим Вам в кратчайшее время. Наши специалисты помогут<br> в оформлении заказа и, если необходимо, окажут помощь в составлении аукционной (тендерной) документации.</span></div>
+                <form class="form form_row" action="send.php">
+                  <input type="hidden" name="subject" value="форма в футоре"/>
+                  <input type="hidden" name="notspam" value=""/>
+                  <div class="form__row">
+                    <div class="form__label"><span>Ваше имя*</span></div>
+                    <input type="text" required="required" placeholder="Ввведите ваше имя"/>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__label"><span>Телефон*</span></div>
+                    <input class="tel" type="text" required="required" placeholder="+7 000 000 000"/>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__label"><span>Ваша почта*</span></div>
+                    <input type="email" required="required" placeholder="Ввведите ваш email"/>
+                  </div>
+                  <div class="form__row">
+                    <div class="button">
+                      <button class="btn" type="submit"><span>Отправить</span></button>
+                    </div>
+                  </div>
+                  <div class="form__row form__row_full">
+                    <div class="form__text"><span>Нажимая кнопку «Отправить» вы соглашаетесь с обработой ваших персональных данных и принимаете <a href="#">политику конфендициальности</a></span></div>
+                  </div>
+                </form>
+              </div>
+              <!-- end form-->
+            </div>
+          </div>
+        </section>
+        <!-- end order-->
+        <!-- begin FeedbackForm-->
+        <!-- end FeedbackForm-->
       </main>
       <div class="toTop toTop-js"><a href="test"> <i class="icon_to_Top"></i></a></div>
       <!-- begin footer-->
@@ -366,6 +417,55 @@
         </div>
       </div>
       <!-- End modal compare-->
+      <!-- Begin Modal info-->
+      <div class="modal fade info" id="info">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="form__message"></div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal info-->
+      <!-- Begin Modal reportBug-->
+      <div class="modal fade reportBug" id="reportBug">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <!-- begin form-->
+            <div class="form__title"><span>Сообщить об ошибке</span></div>
+            <div class="form__subtitle"><span>Раскажите нам подробнее об ошибке и мы её исправим</span></div>
+            <form class="form form_grid" action="send.php">
+              <input type="hidden" name="subject" value="форма в футоре"/>
+              <input type="hidden" name="notspam" value=""/>
+              <div class="form__row">
+                <div class="form__label"><span>Ваше имя*</span></div>
+                <input type="text" required="required" placeholder="Ввведите ваше имя"/>
+              </div>
+              <div class="form__row">
+                <div class="form__label"><span>Телефон*</span></div>
+                <input class="tel" type="text" required="required" placeholder="+7 000 000 000"/>
+              </div>
+              <div class="form__row">
+                <div class="form__label"><span>Ваша почта*</span></div>
+                <input type="email" required="required" placeholder="Ввведите ваш email"/>
+              </div>
+              <div class="form__row form__row_textarea">
+                <div class="form__label"><span>Ваше сообщение</span></div>
+                <textarea type="text" placeholder="Ввведите ваше сообщение"></textarea>
+              </div>
+              <div class="form__row">
+                <div class="button">
+                  <button class="btn" type="submit"><span>Отправить</span></button>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__text"><span>Нажимая кнопку «Отправить» вы соглашаетесь с обработой ваших персональных данных и принимаете <a href="#">политику конфендициальности</a></span></div>
+              </div>
+            </form>
+            <!-- end form-->
+          </div>
+        </div>
+      </div>
+      <!-- End modal reportBug-->
       <script src="../js/jquery.js"></script>
       <script src="../js/modal.js"></script>
       <script src="../js/swiper-bundle.min.js"></script>

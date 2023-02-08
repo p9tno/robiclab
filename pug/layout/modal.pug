@@ -41,3 +41,69 @@
             .modal-button
                 a.btn(href="#" data-dismiss="modal") Закрыть
 // End modal compare
+
+
+
+// Begin Modal info
+.modal.fade.info#info
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .form__message
+// End modal info
+
+
+// Begin Modal reportBug
+.modal.fade.reportBug#reportBug
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+
+            // begin form
+            .form__title
+                span Сообщить об ошибке
+
+            .form__subtitle
+                span Раскажите нам подробнее об ошибке и мы её исправим
+
+            form.form.form_grid(action="send.php")
+                input(type="hidden" name="subject" value="форма в футоре")
+                input(type="hidden" name="notspam" value="")
+
+
+                .form__row
+                    .form__label
+                        span Ваше имя*
+                    input(type="text" required placeholder="Ввведите ваше имя")
+
+                .form__row
+                    .form__label
+                        span Телефон*
+                    input(type="text" class="tel" required placeholder="+7 000 000 000")
+
+
+                .form__row
+                    .form__label
+                        span Ваша почта*
+                    input(type="email" required placeholder="Ввведите ваш email")
+
+
+                .form__row.form__row_textarea
+                    .form__label
+                        span Ваше сообщение
+                    textarea(type="text" placeholder="Ввведите ваше сообщение")
+
+
+                .form__row
+                    .button
+                        button.btn(type="submit")
+                            span Отправить
+
+                .form__row
+                    .form__text
+                        span Нажимая кнопку «Отправить» вы соглашаетесь с обработой ваших персональных данных и принимаете <a href="#">политику конфендициальности</a>
+
+
+            // end form
+
+// End modal reportBug

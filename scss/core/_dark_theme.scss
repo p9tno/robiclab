@@ -33,7 +33,14 @@
     .section__title_black {
         span {
             color: $color_white;
+            transition: 0.3s;
+        }
+    }
 
+    .section__content_black {
+        p {
+            color: $color_white;
+            transition: 0.3s;
         }
     }
 
@@ -63,8 +70,21 @@
         }
     }
 
-    // ---------------------- equipment
+    // ---------------------- breadcrumbs_dark
+    .breadcrumbs_dark {
+        .kama_breadcrumbs {
+            a,
+            span {
+                color: rgba($color_white, 0.6);
+            }
 
+            .kb_sep {
+                background-color: rgba($color_white, 0.6);
+            }
+        }
+    }
+
+    // ---------------------- equipment
     .equipment {
         &__label {
             span {
@@ -106,6 +126,47 @@
 
             &:before {
                 color: $color_white;
+            }
+        }
+    }
+
+    // ---------------------- delivery
+    .delivery__label {
+        span {
+            color: $color_white;
+        }
+    }
+
+    .delivery__title {
+        span {
+            color: $color_white;
+        }
+    }
+
+    .delivery__contacts {
+        background-color: $color_dark_bg;
+        // box-shadow: rgba($color_dark_bg;, 0.2) 0 8px 24px;
+    }
+
+    // ---------------------- delivery
+    .delivery {
+        .contacts {
+            &__item {
+                i {
+                    background-color: #3A3D47;
+                    color: $color_dark_text;
+
+                }
+
+                span {
+                    color: $color_dark_text;
+                    transition: 0.3s;
+                }
+
+                a {
+                    color: $color_dark_text;
+
+                }
             }
         }
     }

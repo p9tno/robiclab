@@ -323,3 +323,64 @@
 	// }
 
 }
+
+.header_dark {
+	background: rgba(red, 0.25);
+
+	// start switch
+
+	.switch {
+		display: flex;
+
+		&__label {
+			position: relative;
+			display: inline-block;
+			width: 3em;
+			height: 1.625em;
+
+			cursor: pointer;
+
+			input {
+				position: relative;
+				z-index: 1;
+				display: none;
+
+				&:checked ~ span i {
+					left: 1.4375em;
+					background-color: #01B5FE;
+
+					&:before {
+						opacity: 0;
+					}
+
+					&:after {
+						opacity: 1;
+						color: $color_white;
+					}
+				}
+
+				&:checked ~ span {}
+			}
+
+			span {
+				border: 0.0625em solid #01B5FE;
+				background-color: #01B5FE;
+
+				i {
+					background-color: $color_white;
+
+					&:after,
+					&:before {
+
+						color: #01B5FE;
+					}
+
+				}
+
+			}
+
+		}
+	}
+	// end switch
+
+}

@@ -22,8 +22,8 @@
             position: absolute;
             display: block;
             list-style: none;
-            width: 20px;
-            height: 20px;
+            width: 1.25em;
+            height: 1.25em;
             animation: animate 25s linear infinite;
             bottom: -14em;
 
@@ -129,6 +129,118 @@
                 filter: blur(8px);
                 animation: animate_reverse 11s linear infinite;
             }
+        }
+
+    }
+
+    .figure__list_form-row {
+        li {
+            &:nth-child(1) {
+                display: none;
+                @media (min-width: 768px) {
+                    display: block;
+                }
+            }
+
+            &:nth-child(2) {
+                display: none;
+                @media (min-width: 768px) {
+                    display: block;
+                }
+            }
+
+            &:nth-child(3) {
+                display: none;
+                @media (min-width: 768px) {
+                    display: block;
+                }
+            }
+
+            &:nth-child(5) {
+                left: -22%;
+                @media (min-width: 768px) {
+                    left: 21%;
+
+                }
+            }
+
+            &:nth-child(8) {
+                // left: -22%;
+                left: 48%;
+                // @media (min-width: 768px) {}
+            }
+
+            &:nth-child(9) {
+                display: none;
+                @media (min-width: 768px) {
+                    display: block;
+                }
+            }
+
+            &:nth-child(10) {
+                display: none;
+                @media (min-width: 768px) {
+                    left: 13%;
+                    font-size: 0.75em;
+                    display: block;
+                }
+            }
+
+        }
+
+    }
+
+    .figure__list_form-grid {
+        li {
+            &:nth-child(1) {
+                display: none;
+                @media (min-width: 768px) {
+                    display: block;
+                }
+            }
+
+            &:nth-child(2) {
+                display: none;
+                @media (min-width: 768px) {
+                    display: block;
+                }
+            }
+
+            &:nth-child(3) {
+                display: none;
+                @media (min-width: 768px) {
+                    display: block;
+                }
+            }
+
+            &:nth-child(5) {
+                left: -22%;
+                @media (min-width: 768px) {
+                    left: 21%;
+
+                }
+            }
+
+            &:nth-child(6) {
+                left: 48%;
+            }
+
+            &:nth-child(9) {
+                display: none;
+                @media (min-width: 768px) {
+                    display: block;
+                }
+            }
+
+            &:nth-child(10) {
+                display: none;
+                @media (min-width: 768px) {
+                    left: 13%;
+                    font-size: 0.75em;
+                    display: block;
+                }
+            }
+
         }
 
     }

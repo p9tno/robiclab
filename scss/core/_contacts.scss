@@ -31,6 +31,8 @@
             color: $color_white;
             margin-right: 1.25em;
 
+            transition: 0.3s;
+
             &:before {
                 font-size: 1.25em;
 
@@ -46,12 +48,14 @@
         span {
             font-size: 1.375em;
             color: $color_white;
+            transition: 0.3s;
         }
 
         a {
             font-size: 1.375em;
             color: $color_white;
             text-decoration: none;
+
         }
     }
 
