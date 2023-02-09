@@ -1,6 +1,8 @@
 extends ../layout/layout.pug
 block variable
     -var path = '../';
+    -var classHeader = 'header_primary';
+
     //- -var classScroll = 'main_scroll';
     //- -var pageScroll = false;
 
@@ -21,7 +23,7 @@ block content
     // end breadcrumbs
 
     // begin delivery
-    section#delivery.delivery.section.pt.section_changeTheme
+    section#delivery.delivery.section.pt.section_changeTheme.animate_bg
         .container_center
             h1.section__title.section__title_black
                 span Доставка и заказ
@@ -53,12 +55,7 @@ block content
                                 i.icon_location
                                 span Россия г. Санкт-Петербург, ул. Парковая, 4 оф 325
 
-    // end delivery
-
-    // begin order
-    section#order.order.section.section_changeTheme
-        .container_center
-            .order__form
+            .delivery__form
                 // begin form
                 .form__content.bg.figure
                     ul.figure__list.figure__list_form-row
@@ -114,8 +111,69 @@ block content
                 // end form
 
 
+    // end delivery
 
-    // end order
+    //- // begin order
+    //- section#order.order.section.section_changeTheme
+    //-     .container_center
+    //-         .order__form
+    //-             // begin form
+    //-             .form__content.bg.figure
+    //-                 ul.figure__list.figure__list_form-row
+    //-                     li
+    //-                     li
+    //-                     li
+    //-                     li
+    //-                     li
+    //-                     li
+    //-                     li
+    //-                     li
+    //-                     li
+    //-                     li
+    //- 
+    //-                 .form__title
+    //-                     span Оформление заказа
+    //- 
+    //-                 .form__subtitle
+    //-                     span Для заказа оборудования заполните форму обратной связи, и мы ответим Вам в кратчайшее время. Наши специалисты помогут<br> в оформлении заказа и, если необходимо, окажут помощь в составлении аукционной (тендерной) документации.
+    //- 
+    //-                 form.form.form_row(action="send.php")
+    //-                     input(type="hidden" name="subject" value="форма в футоре")
+    //-                     input(type="hidden" name="notspam" value="")
+    //- 
+    //- 
+    //-                     .form__row
+    //-                         .form__label
+    //-                             span Ваше имя*
+    //-                         input(type="text" required placeholder="Ввведите ваше имя")
+    //- 
+    //- 
+    //-                     .form__row
+    //-                         .form__label
+    //-                             span Телефон*
+    //-                         input(type="text" class="tel" required placeholder="+7 000 000 000")
+    //- 
+    //- 
+    //-                     .form__row
+    //-                         .form__label
+    //-                             span Ваша почта*
+    //-                         input(type="email" required placeholder="Ввведите ваш email")
+    //- 
+    //- 
+    //-                     .form__row
+    //-                         .button
+    //-                             button.btn(type="submit")
+    //-                                 span Отправить
+    //- 
+    //-                     .form__row.form__row_full
+    //-                         .form__text
+    //-                             span Нажимая кнопку «Отправить» вы соглашаетесь с обработой ваших персональных данных и принимаете <a href="#">политику конфендициальности</a>
+    //- 
+    //-             // end form
+    //- 
+    //- 
+    //- 
+    //- // end order
 
     // begin FeedbackForm
     //- section#FeedbackForm.FeedbackForm.section

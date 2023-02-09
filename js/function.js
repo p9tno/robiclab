@@ -333,14 +333,53 @@ $(document).ready(function() {
     // </div>
 
     // jQuery
-    $('.tabs-wrapper').each(function() {
-        let ths = $(this);
-        ths.find('.tab-item').not(':first').hide();
-        ths.find('.tab').click(function() {
-            ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-            ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
-        }).eq(0).addClass('active');
-    });
+    // $('.tabs-wrapper').each(function() {
+    //     let ths = $(this);
+    //     ths.find('.tab-item').not(':first').hide();
+    //     ths.find('.tab').click(function() {
+    //         ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+    //         ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+    //     }).eq(0).addClass('active');
+    // });
+
+
+
+    // .tabs__wrapper
+    //    .tabs
+    //        .tab
+    //            span Сухарево
+    //        .tab
+    //            span Асаналиева
+    //        .tab
+    //            span Янки Мавра
+    //    .tabs__content
+    //        .tab__item
+    //        .tab__item
+    //        .tab__item
+    function initTabs() {
+        $('.tabs__wrapper').each(function() {
+            let ths = $(this);
+            let danger = $('.tab_danger');
+            let wrap = $('.tabs');
+
+
+            ths.find('.tab__item').not(':first').hide();
+            ths.find('.tab').click(function() {
+                ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+                ths.find('.tab__item').hide().eq($(this).index()).fadeIn();
+
+                if (danger.hasClass('active')) {
+                    wrap.addClass('tabs_danger');
+                } else {
+                    wrap.removeClass('tabs_danger');
+                }
+
+            }).eq(0).addClass('active');
+
+
+        });
+    }
+    initTabs();
 
 
 
@@ -380,42 +419,33 @@ $(document).ready(function() {
         $(".tel").mask("+7 999 999 999 999");
     });
 
-
-
-    function moveSectionUpSinglePage() {
-
-        $('.following-single-js').click(function(event) {
-            console.log('moveSectionUpSinglePage');
-
+    function followingScroll() {
+        $(".following-single-js").on("click", function (event) {
+            event.preventDefault();
+            let id  = $(this).attr('href');
+            let top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 700);
         });
     }
-    moveSectionUpSinglePage();
+    followingScroll()
 
-    // scrollTop
-    // $(document).ready(function(){
-    //     //отменяем стандартную обработку нажатия по ссылке
-    //     $(".toTop").on("click","a", function (event) {
-    //         event.preventDefault();
-    //         //забираем идентификатор блока с атрибута href
-    //         let id  = $(this).attr('href'),
-    //         //узнаем высоту от начала страницы до блока на который ссылается якорь
-    //         top = $(id).offset().top;
-    //         //анимируем переход на расстояние - top за 1500 мс
-    //         $('body,html').animate({scrollTop: top}, 1500);
-    //     });
-    // });
-    //
-    // $(document).ready(function(){
-    //     $(window).scroll(function(){
-    //         if($(window).scrollTop()>500){
-    //             $('.toTop').fadeIn(900)
-    //         }else{
-    //             $('.toTop').fadeOut(700)
-    //         }
-    //     });
-    // });
+    function scrollTop() {
+        $(".toTop").on("click","a", function (event) {
+            event.preventDefault();
+            let id  = $(this).attr('href');
+            let top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 700);
+        });
 
-    // end scrollTop
+        $(window).scroll(function(){
+            if($(window).scrollTop()>500){
+                $('.toTop').fadeIn(900)
+            }else{
+                $('.toTop').fadeOut(700)
+            }
+        });
+    }
+    scrollTop()
 
     function addDataFancybox() {
         let item = $('.itemForDataFancybox_js');
@@ -442,6 +472,22 @@ $(document).ready(function() {
     //         /* код */
     //     }
     // });
+
+    // https://github.com/michalsnik/aos
+    AOS.init({
+        disable: 'mobile',
+        // anchorPlacement: 'bottom-bottom',
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        // offset: 20,
+        // once: true,
+    });
+
+    AOS.init({
+        disable: function () {
+            var maxWidth = 768;
+            return window.innerWidth < maxWidth;
+        }
+    });
 
 
 
@@ -483,7 +529,9 @@ $(document).ready(function() {
             }, 500);
         });
     }
+
     // showMore('.cost__item', '.show_more_js');
     // showMore('.reviews__item', '.show_reviews_js');
+
 
 })

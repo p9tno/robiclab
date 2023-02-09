@@ -178,37 +178,45 @@
         <!-- begin breadcrumbs-->
         <div class="breadcrumbs breadcrumbs_dark section">
           <div class="container_center">
-            <div class="kama_breadcrumbs"><span><a href="#"><span>Главная</span></a></span><span class="kb_sep"></span><span class="kb_title">Доставка и заказ</span></div>
+            <div class="kama_breadcrumbs"><span><a href="#"><span>Главная</span></a></span><span class="kb_sep"></span><span class="kb_title">Контакты</span></div>
           </div>
         </div>
         <!-- end breadcrumbs-->
-        <!-- begin delivery-->
-        <section class="delivery section pt section_changeTheme animate_bg" id="delivery">
+        <!-- begin communications-->
+        <section class="communications section section_changeTheme animate_bg animate_bg_info pt" id="communications">
           <div class="container_center">
-            <h1 class="section__title section__title_black"><span>Доставка и заказ</span></h1>
-            <div class="delivery__content">
-              <div class="section__content section__content_black">
-                <div class="delivery__label"><span>Доставка по России, в страны СНГ и Таможенного союза</span></div>
-                <p>Доставка по России, в страны СНГ и Таможенного союза.</p>
-                <p>Доставка до Заказчика производится транспортными компаниями: Деловые линии, DPD, Байкал-Сервис, Желдорэкспедиция, КиТ и др. </p>
-                <p>Стоимость доставки каждого заказа рассчитывается индивидуально, исходя из региона и массогабаритных характеристик итогового заказа. </p>
-                <p>Продукция отгружается в упаковке по качеству соответствующей ГОСТ и ТУ, что подтверждается соответствующими документами.</p>
+            <h1 class="section__title mobile section__title_black"><span>Контакты</span></h1>
+            <div class="communications__top">
+              <div class="communications__map">
+                <div class="map">
+                  <div class="map__content"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5ea42b8e9045f6a4c6f1d418e7e30af3bb069ce2470e3f79df50a1b7117a8cb2&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script></div>
+                </div>
               </div>
-              <div class="delivery__contacts">
-                <div class="delivery__title"><span>Наши контакты</span></div>
+              <div class="communications__contacts">
+                <h1 class="section__title desktop section__title_black"><span>Контакты</span></h1>
                 <div class="contacts">
                   <div class="contacts__list">
                     <div class="contacts__item"><i class="icon_phone"></i><span class="desktop">8 (800) 51 11 202</span><a class="mobile" href="tel:+8 (800) 51 11 202">8 (800) 51 11 202</a></div>
+                    <div class="contacts__item"><i class="icon_clock"></i><span>пн-пт, 10:00 – 18:00</span></div>
                     <div class="contacts__item"><i class="icon_mail"></i><span class="desktop">info@robiclab.ru</span><a class="mobile" href="mailto:info@robiclab.ru">info@robiclab.ru</a></div>
                     <div class="contacts__item"><i class="icon_location"></i><span>Россия г. Санкт-Петербург, ул. Парковая, 4 оф 325</span></div>
+                    <div class="contacts__item"><i class="icon_certification"></i><span>ИНН: 7810697745</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="delivery__form">
+            <div class="communications__bottom">
+              <div class="section__content section__content_black">
+                <p>Мы считаем, что трудность понимания математики в школе может быть связана в первую очередь с тем, что теоретические данные отделены от практических. Для решения этой задачи была разработана цифровая лаборатория по математике. Она позволяет продемонстрировать абстрактные математические понятия и принципы в виде реальных процессов и применить их в будущем при изучении дисциплин по физики, химии и др.</p>
+              </div>
+              <div class="section__content section__content_black">
+                <p>Комплект учебного оборудования позволяет выполнять не менее 40 лабораторных работ в соответствии с требованиями учебных программ школьного курса физики, в т.ч.: измерение объема, массы, силы, средней скорости, коэффициента трения скольжения, выталкивающей силы, КПД наклонной плоскости, ускорения свободного падения, момента инерции и др.</p>
+              </div>
+            </div>
+            <div class="communications__form">
               <!-- begin form-->
               <div class="form__content bg figure">
-                <ul class="figure__list figure__list_form-row">
+                <ul class="figure__list figure__list_form-grid">
                   <li></li>
                   <li></li>
                   <li></li>
@@ -220,9 +228,9 @@
                   <li></li>
                   <li></li>
                 </ul>
-                <div class="form__title"><span>Оформление заказа</span></div>
-                <div class="form__subtitle"><span>Для заказа оборудования заполните форму обратной связи, и мы ответим Вам в кратчайшее время. Наши специалисты помогут<br> в оформлении заказа и, если необходимо, окажут помощь в составлении аукционной (тендерной) документации.</span></div>
-                <form class="form form_row" action="send.php">
+                <div class="form__title"><span>Форма обратной связи</span></div>
+                <div class="form__subtitle"><span>Заполните форму обратной связи и задайте нам свой вопрос. Наши менеджеры свяжутся с вами в ближайшее время.</span></div>
+                <form class="form form_grid" action="send.php">
                   <input type="hidden" name="subject" value="форма в футоре"/>
                   <input type="hidden" name="notspam" value=""/>
                   <div class="form__row">
@@ -237,23 +245,25 @@
                     <div class="form__label"><span>Ваша почта*</span></div>
                     <input type="email" required="required" placeholder="Ввведите ваш email"/>
                   </div>
+                  <div class="form__row form__row_textarea">
+                    <div class="form__label"><span>Ваше сообщение</span></div>
+                    <textarea type="text" placeholder="Ввведите ваше сообщение"></textarea>
+                  </div>
                   <div class="form__row">
                     <div class="button">
                       <button class="btn" type="submit"><span>Отправить</span></button>
                     </div>
                   </div>
-                  <div class="form__row form__row_full">
+                  <div class="form__row">
                     <div class="form__text"><span>Нажимая кнопку «Отправить» вы соглашаетесь с обработой ваших персональных данных и принимаете <a href="#">политику конфендициальности</a></span></div>
                   </div>
                 </form>
               </div>
-              <!-- end form-->
             </div>
+            <!-- end form-->
           </div>
         </section>
-        <!-- end delivery-->
-        <!-- begin FeedbackForm-->
-        <!-- end FeedbackForm-->
+        <!-- end communications-->
       </main>
       <div class="toTop toTop-js"><a href="#wrapper"> <i class="icon_to_Top"></i></a></div>
       <!-- begin footer-->

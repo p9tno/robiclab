@@ -1,4 +1,8 @@
 .delivery {
+    @media (min-width: 768px) {
+        padding-bottom: 4em;
+    }
+
     &__content {
         @media (min-width: 768px) {
             display: flex;
@@ -10,24 +14,34 @@
         @media (min-width: 768px) {
             width: 53.75em;
         }
+
+        @media (max-width: 767px) {
+            margin-bottom: 2.5em;
+        }
     }
 
     &__label {
         span {
             font-weight: 700;
-            font-size: 1.5em;
             transition: 0.3s;
+            font-size: 1.125em;
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+
+            }
         }
     }
 
     &__contacts {
-        box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+
         background-color: $color_white;
         border-radius: 0.5em;
         height: fit-content;
-        padding: 1.75em 2.5em 2.25em;
         transition: 0.3s;
+        padding: 1.25em;
         @media (min-width: 768px) {
+            padding: 1.75em 2.5em 2.25em;
             width: 53.75em;
         }
 
@@ -40,7 +54,6 @@
                 i {
                     background-color: #E7ECF5;
                     color: #687789;
-
                 }
 
                 a,
@@ -56,11 +69,20 @@
 
         span {
             font-weight: 700;
-            font-size: 1.5em;
             transition: 0.3s;
+            font-size: 1.125em;
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+
+            }
         }
     }
 
-    &__form {}
-
+    &__form {
+        margin-top: 3.75em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+        /* 60/16 */
+    }
 }

@@ -1,0 +1,103 @@
+.communications {
+
+    @media (min-width: 768px) {
+        padding-bottom: 6em;
+    }
+
+    &__top {
+        margin-bottom: 1.25em;
+        @media (min-width: 768px) {
+            margin-bottom: 3.125em;
+            display: flex;
+        }
+    }
+
+    &__map {
+        margin-bottom: 1.875em;
+        @media (min-width: 768px) {
+            width: 53.75em;
+            margin-bottom: 0;
+        }
+    }
+
+    &__contacts {
+        @media (min-width: 768px) {
+            margin-left: 5em;
+
+        }
+
+        .contacts {
+            @media (min-width: 768px) {
+                font-size: 1.087em;
+            }
+
+            &__item {
+                i {
+                    background-color: #E7ECF5;
+                    @media (min-width: 768px) {
+                        background-color: $color_white;
+
+                    }
+                    color: #687789;
+                }
+
+                a,
+                span {
+                    color: rgba($main_color, 0.6);
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+
+            > * {
+                width: 53.75em;
+            }
+        }
+    }
+
+    &__form {
+        margin-top: 3.75em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
+
+}
+
+.map {
+    &__content {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        border-radius: 1.5em;
+        padding-bottom: 21.5625em;
+        /* 345/16 */
+        /* 316/16 */
+        @media (min-width: 768px) {
+            padding-bottom: 42em;
+            /* 672/16 */
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+
+}
+
+// [class*="copyrights-pane"] {
+//     display: none !important;
+// }
+//
+// [class*="ground-pane"] {
+//     filter: grayscale(1);
+// }

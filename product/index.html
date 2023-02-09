@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="wrapper" id="wrapper">
-      <header class="header">
+      <header class="header header_primary">
         <div class="container_center">
           <div class="header__row">
             <div class="header__col"><a class="logo" href="/"><img class="close_nav_js active" src="/img/logo.svg" alt="logo"/><img class="open_nav_js" src="/img/logo_w.svg" alt="logo"/></a></div>
@@ -237,12 +237,10 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="following desktop following-single-js">
+          </div><a class="following desktop following-single-js" href="#equipment">
             <div class="following__btn"></div>
             <div class="following__label"><span>Scroll</span></div>
-            <div class="following__mask"></div>
-          </div>
+            <div class="following__mask"></div></a>
         </section>
         <!-- end heading-->
         <!-- begin equipment-->
@@ -251,12 +249,16 @@
             <div class="equipment__wrap">
               <div class="equipment__box bg"></div>
               <div class="equipment__tabs">
-                <h2 class="section__title section__title_black"><span>Состав лаборатории по<br> математике</span></h2>
-                <div class="tabs-wrapper">
-                  <div class="tabs"><span class="tab">Базовая</span><span class="tab">Стандартная</span><span class="tab">Профильная</span><span class="tab">Точка роста</span>
+                <h2 class="section__title section__title_black" data-aos="fade-up"><span>Состав лаборатории по<br> математике</span></h2>
+                <div class="tabs__wrapper">
+                  <div class="tabs">
+                    <div class="tab"><span>Базовая</span></div>
+                    <div class="tab"><span>Стандартная</span></div>
+                    <div class="tab"><span>Профильная</span></div>
+                    <div class="tab tab_danger"><span>Точка роста</span></div>
                   </div>
-                  <div class="tabs-content">
-                    <div class="tab-item">
+                  <div class="tabs__content">
+                    <div class="tab__item">
                       <div class="equipment__content">
                         <!-- start equipment__row-->
                         <div class="equipment__row equipment__row_sensors">
@@ -314,7 +316,7 @@
                         <div class="equipment__action"><a class="btn" href="#">Оформить покупку</a><a class="equipment__link show_js" href="#compare">Сравнить наборы</a></div>
                       </div>
                     </div>
-                    <div class="tab-item">
+                    <div class="tab__item">
                       <div class="equipment__content">
                         <!-- start equipment__row-->
                         <div class="equipment__row equipment__row_sensors">
@@ -372,7 +374,7 @@
                         <div class="equipment__action"><a class="btn" href="#">Оформить покупку</a><a class="equipment__link show_js" href="#compare">Сравнить наборы</a></div>
                       </div>
                     </div>
-                    <div class="tab-item">
+                    <div class="tab__item">
                       <div class="equipment__content">
                         <!-- start equipment__row-->
                         <div class="equipment__row equipment__row_sensors">
@@ -430,7 +432,7 @@
                         <div class="equipment__action"><a class="btn" href="#">Оформить покупку</a><a class="equipment__link show_js" href="#compare">Сравнить наборы</a></div>
                       </div>
                     </div>
-                    <div class="tab-item">
+                    <div class="tab__item">
                       <div class="equipment__content">
                         <!-- start equipment__row-->
                         <div class="equipment__row equipment__row_sensors">
@@ -496,7 +498,7 @@
         </section>
         <!-- end equipment-->
       </main>
-      <div class="toTop toTop-js"><a href="test"> <i class="icon_to_Top"></i></a></div>
+      <div class="toTop toTop-js"><a href="#wrapper"> <i class="icon_to_Top"></i></a></div>
       <!-- begin footer-->
       <footer class="footer section bg figure">
         <ul class="figure__list desktop">

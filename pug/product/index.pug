@@ -1,6 +1,7 @@
 extends ../layout/layout.pug
 block variable
     -var path = '../';
+    -var classHeader = 'header_primary';
     //- -var classScroll = 'main_scroll';
     //- -var pageScroll = false;
 
@@ -86,7 +87,7 @@ block content
                                 .chart.chart-light#chartMobile
                                 .chart.chart-dark#chartMobileDark
 
-        .following.desktop.following-single-js
+        a(href="#equipment").following.desktop.following-single-js
             .following__btn
             .following__label
                 span Scroll
@@ -94,22 +95,112 @@ block content
 
     // end heading
 
+    //- // begin equipment
+    //- section#equipment.equipment.section.section_changeTheme
+    //-     .container_center
+    //-         .equipment__wrap
+    //-             .equipment__box.bg
+    //-             .equipment__tabs
+    //-                 h2.section__title.section__title_black
+    //-                     span Состав лаборатории по<br> математике
+    //-                 .tabs-wrapper
+    //-                     .tabs
+    //-                         each item in ['Базовая', 'Стандартная', 'Профильная', 'Точка роста']
+    //-                             span.tab=item
+    //-                     .tabs-content
+    //-                         each item in ['', '', '', '' ]
+    //-                             .tab-item
+    //- 
+    //-                                 .equipment__content
+    //-                                     // start equipment__row
+    //-                                     .equipment__row.equipment__row_sensors
+    //-                                         .equipment__label
+    //-                                             span Набор цифровых датчиков
+    //-                                         ul.equipment__list.equipment__list_sensors
+    //-                                             each sensor in ['Датчик Освещённости', 'Датчик Расстояния', 'Датчик Температуры', 'Датчик Тока 2.5 A', 'Датчик Угловой Скорости' ]
+    //-                                                 li.equipment__item
+    //-                                                     span=sensor
+    //- 
+    //-                                     // end equipment__row
+    //- 
+    //-                                     // start equipment__row
+    //-                                     .equipment__row
+    //-                                         .equipment__label
+    //-                                             span В комплекте
+    //-                                         ul.equipment__list.equipment__list_included
+    //- 
+    //-                                             li.equipment__item
+    //-                                                 .equipment__icon
+    //-                                                     i.icon_sim
+    //-                                                 span Провода и USB flash с ПО
+    //- 
+    //-                                             li.equipment__item
+    //-                                                 .equipment__icon
+    //-                                                     i.icon_check_mark
+    //-                                                 span Cертификаты
+    //- 
+    //-                                             li.equipment__item
+    //-                                                 .equipment__icon
+    //-                                                     i.icon_glasses_book
+    //-                                                 span Методичка
+    //- 
+    //-                                             li.equipment__item
+    //-                                                 .equipment__icon
+    //-                                                     i.icon_cheak_list
+    //-                                                 span Cпецификация 
+    //- 
+    //-                                             li.equipment__item
+    //-                                                 .equipment__icon
+    //-                                                     i.icon_note
+    //-                                                 span Инструкции по применению
+    //- 
+    //-                                     // end equipment__row
+    //- 
+    //-                                     // start equipment__row
+    //-                                     .equipment__row
+    //-                                         .equipment__label
+    //-                                             span Дополнительная комплектация
+    //-                                         ul.equipment__list.equipment__list_list
+    //-                                             each item in ['линейка', 'линейка', 'штатив', 'штатив', 'стакан 250 мл', 'стакан 250 мл', 'боберка 5 штук', 'боберка 5 штук', 'пробка 4 шт', 'пробка 4 шт', 'Бутылка 250мл', 'Бутылка 250мл',]
+    //-                                                 li.equipment__item
+    //-                                                     span=item
+    //- 
+    //-                                     // end equipment__row
+    //- 
+    //- 
+    //-                                     .equipment__action
+    //-                                         a.btn(href="#") Оформить покупку
+    //-                                         a.equipment__link.show_js(href="#compare") Сравнить наборы
+    //- 
+    //- 
+    //- // end equipment
+
     // begin equipment
     section#equipment.equipment.section.section_changeTheme
         .container_center
             .equipment__wrap
                 .equipment__box.bg
                 .equipment__tabs
-                    h2.section__title.section__title_black
+                    h2.section__title.section__title_black(data-aos="fade-up")
                         span Состав лаборатории по<br> математике
-                    .tabs-wrapper
-                        .tabs
-                            each item in ['Базовая', 'Стандартная', 'Профильная', 'Точка роста']
-                                span.tab=item
-                        .tabs-content
-                            each item in ['', '', '', '' ]
-                                .tab-item
 
+
+
+                    .tabs__wrapper
+                        .tabs
+                            .tab
+                                span Базовая
+                            .tab
+                                span Стандартная
+                            .tab
+                                span Профильная
+                            .tab.tab_danger
+                                span Точка роста
+
+                        .tabs__content
+                            each item in ['', '', '', '', ]
+
+                                .tab__item
                                     .equipment__content
                                         // start equipment__row
                                         .equipment__row.equipment__row_sensors

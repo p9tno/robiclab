@@ -1,0 +1,139 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    -var classHeader = 'header_primary';
+
+    //- -var classScroll = 'main_scroll';
+    //- -var pageScroll = false;
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.breadcrumbs_dark.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+
+                span.kb_sep
+
+                span.kb_title Контакты
+
+    // end breadcrumbs
+
+    // begin communications
+    section#communications.communications.section.section_changeTheme.animate_bg.animate_bg_info.pt
+        .container_center
+            h1.section__title.mobile.section__title_black
+                span Контакты
+            .communications__top
+
+                .communications__map
+                    .map
+                        .map__content
+                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5ea42b8e9045f6a4c6f1d418e7e30af3bb069ce2470e3f79df50a1b7117a8cb2&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+
+
+
+                .communications__contacts
+                    h1.section__title.desktop.section__title_black
+                        span Контакты
+
+                    .contacts
+                        .contacts__list
+                            .contacts__item
+                                i.icon_phone
+                                span.desktop 8 (800) 51 11 202
+                                a.mobile(href="tel:+8 (800) 51 11 202") 8 (800) 51 11 202
+
+                            .contacts__item
+                                i.icon_clock
+                                span пн-пт, 10:00 – 18:00
+
+                            .contacts__item
+                                i.icon_mail
+                                span.desktop info@robiclab.ru
+                                a.mobile(href="mailto:info@robiclab.ru") info@robiclab.ru
+
+                            .contacts__item
+                                i.icon_location
+                                span Россия г. Санкт-Петербург, ул. Парковая, 4 оф 325
+
+                            .contacts__item
+                                i.icon_certification
+                                span ИНН: 7810697745
+
+
+            .communications__bottom
+                .section__content.section__content_black
+                    p Мы считаем, что трудность понимания математики в школе может быть связана в первую очередь с тем, что теоретические данные отделены от практических. Для решения этой задачи была разработана цифровая лаборатория по математике. Она позволяет продемонстрировать абстрактные математические понятия и принципы в виде реальных процессов и применить их в будущем при изучении дисциплин по физики, химии и др.
+                .section__content.section__content_black
+                    p Комплект учебного оборудования позволяет выполнять не менее 40 лабораторных работ в соответствии с требованиями учебных программ школьного курса физики, в т.ч.: измерение объема, массы, силы, средней скорости, коэффициента трения скольжения, выталкивающей силы, КПД наклонной плоскости, ускорения свободного падения, момента инерции и др.
+
+            .communications__form
+                // begin form
+                .form__content.bg.figure
+                    ul.figure__list.figure__list_form-grid
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+
+                    .form__title
+                        span Форма обратной связи
+
+                    .form__subtitle
+                        span Заполните форму обратной связи и задайте нам свой вопрос. Наши менеджеры свяжутся с вами в ближайшее время.
+
+                    form.form.form_grid(action="send.php")
+                        input(type="hidden" name="subject" value="форма в футоре")
+                        input(type="hidden" name="notspam" value="")
+
+
+                        .form__row
+                            .form__label
+                                span Ваше имя*
+                            input(type="text" required placeholder="Ввведите ваше имя")
+
+                        .form__row
+                            .form__label
+                                span Телефон*
+                            input(type="text" class="tel" required placeholder="+7 000 000 000")
+
+
+                        .form__row
+                            .form__label
+                                span Ваша почта*
+                            input(type="email" required placeholder="Ввведите ваш email")
+
+
+                        .form__row.form__row_textarea
+                            .form__label
+                                span Ваше сообщение
+                            textarea(type="text" placeholder="Ввведите ваше сообщение")
+
+
+                        .form__row
+                            .button
+                                button.btn(type="submit")
+                                    span Отправить
+
+                        .form__row
+                            .form__text
+                                span Нажимая кнопку «Отправить» вы соглашаетесь с обработой ваших персональных данных и принимаете <a href="#">политику конфендициальности</a>
+
+
+            // end form
+
+
+
+
+
+    // end communications
