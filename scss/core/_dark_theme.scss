@@ -369,7 +369,7 @@
         // box-shadow: rgba($color_dark_bg;, 0.2) 0 8px 24px;
     }
 
-    // ---------------------- delivery
+    // ---------------------- delivery communications
     .communications,
     .delivery {
         .contacts {
@@ -391,6 +391,45 @@
                 }
             }
         }
+    }
+
+    // ---------------------- composition
+
+    .composition {
+        &__item {
+            span {
+                color: $color_dark_text;
+            }
+        }
+    }
+
+    // ---------------------- swiper
+    .swiper-scrollbar {
+        background: $color_dark_bg;
+    }
+
+    .swiper-pagination-fraction {
+        color: $color_white;
+    }
+
+    .swiper-pagination-current {
+        color: #387AF2;
+    }
+
+    .swiper {
+        &__arrows {
+            i {
+                color: $color_white;
+
+                &.swiper-button-disabled {
+                    color: $color_dark_text;
+
+                }
+
+            }
+
+        }
+
     }
 
 }

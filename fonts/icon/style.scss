@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?am4i0b');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?am4i0b#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?am4i0b') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?am4i0b') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?am4i0b##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?oneik8');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?oneik8#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?oneik8') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?oneik8') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?oneik8##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -200,6 +200,16 @@
 .icon_to_Top {
   &:before {
     content: $icon_to_Top; 
+  }
+}
+.icon_slider_left {
+  &:before {
+    content: $icon_slider_left; 
+  }
+}
+.icon_slider_right {
+  &:before {
+    content: $icon_slider_right; 
   }
 }
 .icon_sun {

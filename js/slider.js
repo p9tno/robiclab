@@ -1,39 +1,38 @@
 $(document).ready(function() {
 
 
-    // const deals = new Swiper('.deals-swiper-js', {
-    //     speed: 500,
-    //     // autoplay: {
-    //     //     delay: 5000,
-    //     // },
-    //     slidesPerView: 2,
-    //     spaceBetween: 10,
-    //     loop: true,
-    //
-    //     navigation: {
-    //         nextEl: '.icon_arrow_right',
-    //         prevEl: '.icon_arrow_left',
-    //     },
-    //
-    //     pagination: {
-    //         el: '.deals__dotted',
-    //         clickable: true,
-    //     },
-    //
-    //     breakpoints: {
-    //         768: {
-    //             spaceBetween: 40,
-    //             slidesPerView: 1,
-    //             loop: false,
-    //
-    //             grid: {
-    //                 rows: 2,
-    //                 fill: "col",
-    //             },
-    //
-    //         },
-    //     }
-    // });
+    const composition = new Swiper('.composition_slider_js', {
+        speed: 500,
+        autoplay: {
+            delay: 5000,
+        },
+        lazy: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        // loop: true,
+
+
+        navigation: {
+          nextEl: ".icon_slider_right",
+          prevEl: ".icon_slider_left",
+        },
+
+        pagination: {
+            el: '.composition__dotted',
+            clickable: true,
+            dynamicBullets: true,
+        },
+
+        scrollbar: {
+         el: ".swiper-scrollbar",
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+
+    });
 
     // const indications = new Swiper('.indications-swiper-js', {
     //     speed: 500,

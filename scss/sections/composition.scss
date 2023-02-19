@@ -1,0 +1,63 @@
+.composition {
+    @media (min-width: 768px) {
+        padding: 7.5em 0;
+    }
+
+    &__wrap {
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+
+    &__slider {
+        @media (min-width: 768px) {
+            width: 46.375em;
+        }
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            width: 57.5em;
+        }
+    }
+
+    &__img {
+        @media (min-width: 768px) {
+            width: 46.375em;
+            height: 49.375em;
+        }
+    }
+
+    &__control {
+        position: relative;
+        height: 3.125em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @media (min-width: 768px) {
+            columns: 2;
+            column-gap: 2em;
+        }
+    }
+
+    &__item {
+        margin-bottom: 0.375em;
+        line-height: 1.1;
+
+        span {
+            font-size: 1.125em;
+            color: rgba($main_color, 0.6);
+            transition: 0.3s;
+        }
+    }
+
+}

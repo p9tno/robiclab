@@ -351,6 +351,29 @@ body {
 	position: absolute;
 }
 
+.img {
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.counter-wrap {
+	counter-reset: line var(--line-num, 0);
+}
+
+.counter-item {
+	counter-increment: line;
+
+	.counter-el {
+		&:before {
+			content: counter(line) ' ';
+		}
+	}
+}
+
 // * {
 // 	border: 1px solid #000;
 // }

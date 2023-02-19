@@ -312,16 +312,16 @@
             animation-direction: reverse;
         }
 
-        &_info {
-            &:after,
-            &:before {
-
-                // background-color: rgba(#31B1FA, 0.5);
-                // background-color: rgba($color_info, 0.5);
-                background-color: rgba($color_dark, 0.1);
-
-            }
-        }
+        // &_info {
+        //     &:after,
+        //     &:before {
+        //
+        //         // background-color: rgba(#31B1FA, 0.5);
+        //         // background-color: rgba($color_info, 0.5);
+        //         background-color: rgba($color_dark, 0.1);
+        //
+        //     }
+        // }
     }
 }
 

@@ -1,0 +1,122 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    -var classHeader = 'header_primary';
+    //- -var classScroll = 'main_scroll';
+    //- -var pageScroll = false;
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+
+                span.kb_sep
+
+                span.kb_title Практикум
+
+    // end breadcrumbs
+
+    // begin heading
+    section#heading.heading.heading_practical.section.figure.bg
+        ul.figure__list
+            li
+            li
+            li
+            li
+            li.desktop
+            li
+            li
+            li
+            li
+            li.desktop
+
+        .container_center
+
+            .heading__content
+                .heading__right
+                    .heading__img.img
+                        img(src="../img/heading_usb.png", alt="alt")
+
+                .heading__left
+                    h1.section__title
+                        span Практикум по физике
+                    .section__content
+                        p Современный инструмент обучения, позволяющий проводить эксперименты на более качественном уровне. Идеально подходит для проектов и учебно-исследовательских испытаний.
+                        p Датчики не требуют дополнительных согласующих устройств (регистраторов данных) и напрямую подключаются к компьютеру или ноутбуку.
+
+                    .section__button.section__button_buttons
+                        a.btn(href="#") 
+                            span Заказать
+                            i.icon_arrow_right
+
+                        a.btn.btn_transparent(href="#") 
+                            span Подробнее
+                            i.icon_arrow_right
+
+        .heading__hand.bg
+
+
+
+
+        a(href="#composition").following.desktop.following-single-js
+            .following__btn
+            .following__label
+                span Scroll
+            .following__mask
+
+    // end heading
+
+    // begin composition
+    section#composition.composition.section.section_changeTheme
+        .container_center
+            h2.section__title.section__title_black(data-aos="fade-up")
+                span Состав практикума по<br> физике
+            .composition__wrap
+                .composition__slider
+                    .swiper.composition_slider_js
+                        .swiper-wrapper
+                            each item in ['', '', '', '', '', '', '', '', '', '', '', '', '', '', ]
+                                .swiper-slide
+                                    .composition__img.img
+                                        img(src="../img/composition_img.png", alt="alt" loading="lazy")
+
+                        .composition__control
+                            .swiper-scrollbar
+
+                            .swiper__nav
+                                .swiper__arrows
+                                    i.icon_slider_left
+                                    i.icon_slider_right
+
+                                .swiper-pagination
+
+                .composition__content
+
+                    .section__content.section__content_black
+                        p Комплект учебного оборудования позволяет выполнять не менее 40 лабораторных работ в соответствии с требованиями учебных программ школьного курса физики, в т.ч.: измерение объема, массы, силы, средней скорости, коэффициента трения скольжения, выталкивающей силы, КПД наклонной плоскости, ускорения свободного падения, момента инерции и др.
+                    .tabs__wrapper
+                        .tabs
+                            .tab
+                                span Комплектация
+                            .tab
+                                span Дополнительное оборудование
+                            .tab
+                                span Документация
+
+
+                        .tabs__content
+                            each item in ['', '', '', ]
+                                .tab__item
+                                    ul.composition__list.counter-wrap
+                                        each item in ['Ящик для хранения – 1шт.', 'Крышка с поверхностями различного коэффициента трения – 1 шт.','Динамометр 5Н – 1 шт.','Груз 100 гр. – 4 шт.','Цилиндр стальной 20 см3 – 1 шт.','Цилиндр стальной 20 см3 – 1 шт.','Цилиндр стальной 20 см3 – 1 шт.','Желоб прямой – 1 шт.','Желоб криволинейный – 1 шт.','Шарик стальной – 1 шт.','Шарик полимерный – 1 шт.','Сосуд отливной – 1 шт.','Пружина – 1 шт.','Рулетка 2м – 1 шт.','Стакан 100 мл – 1 шт.','Блок подвижный – 1 шт.','Мотовильце с нитью – 1 шт.','Стержень штатива – 1 шт.','Муфта штатива – 1 шт.','Лапка штатива – 1 шт.','Рычаг с балансиром – 1 шт.','Опора желоба – 2 шт.','Подставка опоры желоба, 10мм – 2 шт.','Подставка опоры желоба, 6мм – 1 шт.','Коврик – 1 шт.','Пластилин – 1 шт.','Бумага копировальная (1 лист) – 1 шт.','Пластина неправильной формы с отверстиями – 1 шт.','Кронштейн – 1 шт.','Винт м6 – 2 шт.','Линейка 50см – 1 шт.','Горка для желоба – 1 шт.', ]
+                                            li.composition__item.counter-item
+                                                span.counter-el=item
+
+
+
+    // end composition

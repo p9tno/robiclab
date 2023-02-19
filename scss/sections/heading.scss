@@ -11,11 +11,24 @@
         height: 100vh;
     }
 
+    &_practical {
+        @media (max-width: 767px) {
+            padding-bottom: 3.75em;
+        }
+
+        .heading__content {
+            @media (min-width: 768px) {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
     &__content {
         @media (min-width: 768px) {
             display: flex;
             justify-content: space-between;
         }
+
     }
 
     &__row {
@@ -132,53 +145,37 @@
         }
     }
 
-}
+    &__img {
+        width: 27.5em;
+        height: 16.25em;
+        font-size: 0.41em;
+        margin: 0 auto 30em;
 
-.section {
-    &__title {}
+        @media (min-width: 768px) {
+            font-size: 1em;
+            margin: 0;
+            position: absolute;
+            top: 2em;
+            right: 30em;
+        }
+    }
 
-    &__content {}
+    &__hand {
 
-    &__download {}
+        position: absolute;
+        right: 0;
+        background-image: url("../img/heading_hand.png");
+        width: 53.125em;
+        height: 32.5em;
+        font-size: 0.35em;
+        @media (max-width: 767px) {
+            top: 45em;
+        }
+        @media (min-width: 768px) {
+            bottom: 2em;
+            font-size: 1em;
 
-    &__button {}
-
-    &__button_buttons {}
-
-}
-
-.figure {
-    &__list {}
-
-}
-
-.bg {}
-
-.container_center {}
-
-.chart {}
-
-.chart-light {}
-
-.chart-dark {}
-
-.download {
-    &__item {}
-
-    &__icon {}
-
-    &__link {}
+        }
+    }
 
 }
-
-.icon_windows {}
-
-.icon_linux {}
-
-.icon_mac {}
-
-.btn {}
-
-.icon_arrow_right {}
-
-.btn_transparent {}
