@@ -74,8 +74,7 @@ block content
     // begin composition
     section#composition.composition.section.section_changeTheme
         .container_center
-            h2.section__title.section__title_black(data-aos="fade-up")
-                span Состав практикума по<br> физике
+
             .composition__wrap
                 .composition__slider
                     .swiper.composition_slider_js
@@ -96,6 +95,8 @@ block content
                                 .swiper-pagination
 
                 .composition__content
+                    h2.section__title.section__title_black(data-aos="fade-up")
+                        span Состав практикума по<br> физике
 
                     .section__content.section__content_black
                         p Комплект учебного оборудования позволяет выполнять не менее 40 лабораторных работ в соответствии с требованиями учебных программ школьного курса физики, в т.ч.: измерение объема, массы, силы, средней скорости, коэффициента трения скольжения, выталкивающей силы, КПД наклонной плоскости, ускорения свободного падения, момента инерции и др.
@@ -120,3 +121,83 @@ block content
 
 
     // end composition
+
+    // begin example
+    section#example.example.section.section_changeTheme
+        .container_center
+            h2.section__title.section__title_black(data-aos="fade-up")
+                span Пример одного эксперимента
+            .example__content
+                .section__content.section__content_black
+                    p Вы можете видеть на интерактиве пример одного из экспериментов: как он делается, от и до.
+                    p Лабораторные работы помогают раскрыть весь потенциал предложенного оборудования и состоят из нескольких частей:
+                    p краткая теоретическая часть по изучаемой тематике, список дополнительного оборудования для проведения опыта, описание хода работы с пошаговыми инструкциями и методика обработки полученных данных
+
+            .example__img.img
+                img(src="../img/example_img.jpg", alt="alt" loading="lazy")
+
+            .example__form
+                // begin form
+                .form__content.bg.figure
+                    ul.figure__list.figure__list_form-grid
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+
+                    .form__title
+                        span Форма обратной связи
+
+                    .form__subtitle
+                        span Заполните форму обратной связи и задайте нам свой вопрос. Наши менеджеры свяжутся с вами в ближайшее время.
+
+                    form.form.form_grid(action="send.php")
+                        input(type="hidden" name="subject" value="форма в футоре")
+                        input(type="hidden" name="notspam" value="")
+
+
+                        .form__row
+                            .form__label
+                                span Ваше имя*
+                            input(type="text" required placeholder="Ввведите ваше имя")
+
+                        .form__row
+                            .form__label
+                                span Телефон*
+                            input(type="text" class="tel" required placeholder="+7 000 000 000")
+
+
+                        .form__row
+                            .form__label
+                                span Ваша почта*
+                            input(type="email" required placeholder="Ввведите ваш email")
+
+
+                        .form__row.form__row_textarea
+                            .form__label
+                                span Ваше сообщение
+                            textarea(type="text" placeholder="Ввведите ваше сообщение")
+
+
+                        .form__row
+                            .button
+                                button.btn(type="submit")
+                                    span Отправить
+
+                        .form__row
+                            .form__text
+                                span Нажимая кнопку «Отправить» вы соглашаетесь с обработой ваших персональных данных и принимаете <a href="#">политику конфендициальности</a>
+
+
+                // end form
+
+
+
+
+    // end example

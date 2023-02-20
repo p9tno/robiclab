@@ -1,0 +1,43 @@
+.example {
+    background-color: #F5F5F5;
+    transition: background-color 0.3s;
+    @media (min-width: 768px) {
+        padding-top: 5.625em;
+        /* 90/16 */
+        padding-bottom: 7.5em;
+        /* 120/16 */
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            .section__content {
+                columns: 2;
+                column-gap: 2em;
+
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 0.25em;
+        overflow: hidden;
+        margin-bottom: 3.75em;
+        height: 11.875em;
+        @media (min-width: 768px) {
+            margin-bottom: 6.25em;
+            border-radius: 1em;
+            height: 54.625em;
+
+        }
+    }
+
+    &__form {
+        margin-top: 3.75em;
+        @media (min-width: 768px) {
+            margin-top: 6.25em;
+
+        }
+    }
+
+}

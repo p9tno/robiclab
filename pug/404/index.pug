@@ -1,0 +1,46 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    -var classHeader = 'header_primary';
+    //- -var classScroll = 'main_scroll';
+    //- -var pageScroll = false;
+
+
+block content
+    // begin notfound
+    section#notfound.notfound.section.bg
+        .container_center
+            .notfound__content
+                h1.first-four 4
+
+                .cog-wheel1
+                    .cog1
+                        .top
+                        .down
+                        .left-top
+                        .left-down
+                        .right-top
+                        .right-down
+                        .left
+                        .right
+
+                .cog-wheel2
+                    .cog2
+                        .top
+                        .down
+                        .left-top
+                        .left-down
+                        .right-top
+                        .right-down
+                        .left
+                        .right
+
+                h1.second-four 4
+
+            .notfound__text
+                span Такой<br> страницы нет
+
+            .notfound__button
+                a.btn(href="#") Вернуться на главную страницу
+
+    // end notfound

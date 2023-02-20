@@ -114,6 +114,7 @@ body {
 			margin: 2.25em 0;
 			color: $color_white;
 			font-size: 1em;
+			transition: color 0.3s;
 			@media (min-width: 768px) {
 				font-size: 1.125em;
 
