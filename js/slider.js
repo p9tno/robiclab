@@ -34,6 +34,39 @@ $(document).ready(function() {
 
     });
 
+    const row = new Swiper('.row_slider_js', {
+        speed: 500,
+        // autoplay: {
+        //     delay: 5000,
+        // },
+        // lazy: true,
+        slidesPerView: 5,
+        spaceBetween: 30,
+        // loop: true,
+
+
+        navigation: {
+          nextEl: ".icon_slider_right",
+          prevEl: ".icon_slider_left",
+        },
+
+        // pagination: {
+        //     el: '.composition__dotted',
+        //     clickable: true,
+        //     dynamicBullets: true,
+        // },
+
+        scrollbar: {
+         el: ".swiper-scrollbar",
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+
+    });
+
     // const indications = new Swiper('.indications-swiper-js', {
     //     speed: 500,
     //     slidesPerView: 1,

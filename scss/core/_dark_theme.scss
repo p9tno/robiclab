@@ -437,4 +437,37 @@
         background-color: $color_dark_bg;
     }
 
+    // ---------------------- helpcenter
+
+    .helpcenter {
+        &__title {
+            span {
+                color: $color_white;
+            }
+        }
+
+        &__nav {
+            .menu-item {
+                a {
+                    background-color: $color_dark_bg;
+                    color: $color_dark_text;
+                }
+
+                &:hover {
+                    a {
+                        background-color: $color_info;
+                        color: $color_white;
+                    }
+                }
+            }
+
+            .current-menu-item {
+                a {
+                    background-color: $color_info;
+                    color: $color_white;
+                }
+            }
+        }
+    }
+
 }

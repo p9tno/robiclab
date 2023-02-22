@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?oneik8');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?oneik8#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?oneik8') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?oneik8') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?oneik8##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?trlyfh');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?trlyfh#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?trlyfh') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?trlyfh') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?trlyfh##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon_play {
+  &:before {
+    content: $icon_play; 
+  }
+}
 .icon_compare {
   &:before {
     content: $icon_compare; 
@@ -40,6 +45,11 @@
 .icon_cheak_list {
   &:before {
     content: $icon_cheak_list; 
+  }
+}
+.icon_list {
+  &:before {
+    content: $icon_list; 
   }
 }
 .icon_note {

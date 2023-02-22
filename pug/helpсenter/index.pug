@@ -1,0 +1,145 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    -var classHeader = 'header_primary';
+
+    //- -var classScroll = 'main_scroll';
+    //- -var pageScroll = false;
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.breadcrumbs_dark.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+
+                span.kb_sep
+
+                span.kb_title Справочный центр
+
+    // end breadcrumbs
+
+    // begin helpcenter
+    section#helpcenter.helpcenter.section.section_changeTheme.pt
+        //- start top
+        .helpcenter__top
+            .container_center
+                h1.section__title.section__title_black
+                    span Справочный центр
+                .helpcenter__nav
+                    ul.menu
+                        li.menu-item.current-menu-item
+                            a(href="#") Цифровая лаборатория
+                        li.menu-item
+                            a(href="#") РобикЛаб Нейро
+                        li.menu-item
+                            a(href="#") Практикум
+                        li.menu-item.menu-danger
+                            a(href="#") Точка роста
+
+                .helpcenter__img.img
+                    img(src="../../img/helpcenter_img.png", alt="alt")
+
+                .helpcenter__content
+                    h2.helpcenter__title
+                        span Техническая поддержка и инструкции по эксплуатации
+                    .section__content.section__content_black
+                        p Рекомендации входят в состав готовых решений по цифровым лабораториям и содержат руководство по работе с ними, а также описание экспериментов.
+                        p Лабораторные работы помогают раскрыть весь потенциал предложенного оборудования и состоят из нескольких частей: краткая теоретическая часть по изучаемой тематике, список дополнительного оборудования для проведения опыта, описание хода работы с пошаговыми инструкциями и методика обработки полученных данных
+
+                .helpcenter__button
+                    a.btn.btn_circle.btn_transform(href="#") 
+                        span Скачать инструкцию
+                        i.icon_arrow_circle
+
+        //- end top
+
+        //- start main
+        .helpcenter__main
+            .tabs__wrapper
+                .container_center
+                    .tabs
+                        .tab
+                            span Офлайн версия на ПК
+                        .tab
+                            span Онлайн версия на ПК
+                        .tab
+                            span Планшет и телефон
+
+
+                .tabs__content
+                    each item in ['', '', '',]
+
+
+                        .tab__item
+                            .container_center
+                                each row in [ {titleImg : 'windows', title: 'Windows'}, {titleImg : 'linux', title: 'Linux'}, {titleImg : 'mac', title: 'Mac OS'} ]
+                                    .helpcenter__row
+                                        .row
+                                            .row__title
+                                                .row__title_img
+                                                    img(src="../../img/"+row.titleImg+".png", alt="alt")
+
+                                                span=row.title
+                                            .row__wrap
+                                                .row__content
+                                                    .section__content.section__content_black
+                                                        p Рекомендации входят в состав готовых решений по цифровым лабораториям и содержат руководство по работе с ними, а также описание экспериментов.
+                                                    ul.row__list
+                                                        each item in ['Установка и запуск приложения RobicLabMP в Windows','Установка драйверов для работы датчика по usb','Как включить Bluetooth на Windows 10','Как настроить доступ к камере и микрофону',]
+                                                            li
+                                                                i.icon_list
+                                                                a(href="#")=item
+
+                                                .row__button
+                                                    a.btn.btn_circle.btn_transform(href="#") 
+                                                        span Скачать инструкцию
+                                                        i.icon_arrow_circle
+
+
+
+                                            .row__slider
+                                                .swiper.row_slider_js
+
+                                                    .swiper__label
+                                                        span Видео-инструкции
+
+
+                                                    .swiper__nav
+                                                        .swiper__arrows
+                                                            i.icon_slider_left
+                                                            i.icon_slider_right
+
+                                                    .swiper-wrapper
+
+                                                        each item in [ {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}, {img: '5', title: 'Установка и запуск приложения RobicLabMP в Windows'}, {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}, {img: '5', title: 'Установка и запуск приложения RobicLabMP в Windows'}, {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}, {img: '5', title: 'Установка и запуск приложения RobicLabMP в Windows'},]
+                                                            .swiper-slide
+                                                                .video
+                                                                    .video__top
+                                                                        .video__img.img
+                                                                            img(src="../../img/video_img_"+item.img+".jpg", alt="alt")
+                                                                        .video__play
+                                                                            i.icon_play
+                                                                    .video__bottom
+                                                                        span=item.title
+
+
+                                                    .swiper-scrollbar
+
+
+
+
+        //- end main
+
+        //- start bottom
+
+
+        //- end bottom
+        .helpcenter__bottom
+
+
+
+    // end helpcenter
