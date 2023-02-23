@@ -75,9 +75,10 @@ block content
 
 
                         .tab__item
-                            .container_center
-                                each row in [ {titleImg : 'windows', title: 'Windows'}, {titleImg : 'linux', title: 'Linux'}, {titleImg : 'mac', title: 'Mac OS'} ]
-                                    .helpcenter__row
+
+                            each row in [ {titleImg : 'windows', title: 'Windows'}, {titleImg : 'linux', title: 'Linux'}, {titleImg : 'mac', title: 'Mac OS'} ]
+                                .helpcenter__row
+                                    .container_center
                                         .row
                                             .row__title
                                                 .row__title_img
@@ -107,11 +108,10 @@ block content
                                                     .swiper__label
                                                         span Видео-инструкции
 
-
-                                                    .swiper__nav
-                                                        .swiper__arrows
-                                                            i.icon_slider_left
-                                                            i.icon_slider_right
+                                                        .swiper__nav.desktop
+                                                            .swiper__arrows
+                                                                i.icon_slider_left
+                                                                i.icon_slider_right
 
                                                     .swiper-wrapper
 

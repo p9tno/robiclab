@@ -40,7 +40,7 @@ $(document).ready(function() {
         //     delay: 5000,
         // },
         // lazy: true,
-        slidesPerView: 5,
+        slidesPerView: 1,
         spaceBetween: 30,
         // loop: true,
 
@@ -64,6 +64,14 @@ $(document).ready(function() {
           el: ".swiper-pagination",
           type: "fraction",
         },
+
+        breakpoints: {
+            768: {
+                // spaceBetween: 68,
+                // spaceBetween: 5,
+                slidesPerView: 5,
+            },
+        }
 
     });
 
@@ -91,13 +99,13 @@ $(document).ready(function() {
     //        // hide: true,
     //     },
     //
-    //     breakpoints: {
-    //         768: {
-    //             spaceBetween: 68,
-    //             // spaceBetween: 5,
-    //             slidesPerView: 2,
-    //         },
-    //     }
+        // breakpoints: {
+        //     768: {
+        //         spaceBetween: 68,
+        //         // spaceBetween: 5,
+        //         slidesPerView: 2,
+        //     },
+        // }
     // });
 
     // const signup = new Swiper('.signup-swiper-js', {

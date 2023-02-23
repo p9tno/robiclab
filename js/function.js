@@ -247,48 +247,6 @@ $(document).ready(function() {
     }
     // changeHeader();
 
-    // scrollTop
-    // $(document).ready(function(){
-    //     //отменяем стандартную обработку нажатия по ссылке
-    //     $(".toTop").on("click","a", function (event) {
-    //         event.preventDefault();
-    //         console.log('click');
-    //         //забираем идентификатор блока с атрибута href
-    //         let id  = $(this).attr('href'),
-    //         //узнаем высоту от начала страницы до блока на который ссылается якорь
-    //         top = $(id).offset().top;
-    //         //анимируем переход на расстояние - top за 1500 мс
-    //         $('body,html').animate({scrollTop: top}, 1500);
-    //     });
-    // });
-    //
-    // $(document).ready(function(){
-    //     $(window).scroll(function(){
-    //         if($(window).scrollTop()>500){
-    //             $('.toTop').fadeIn(900)
-    //         }else{
-    //             $('.toTop').fadeOut(700)
-    //         }
-    //     });
-    // });
-    // end scrollTop
-
-
-
-    // $('.modal').on('show.bs.modal', () => {
-    //     let openedModal = $('.modal.in:not(.popapCalc)');
-    //     if (openedModal.length > 0) {
-    //         openedModal.modal('hide');
-    //     }
-    // });
-
-    // function activeNav() {
-    //     $('.menu-item').on('click', function() {
-    //         $('.menu-item').removeClass('current-menu-item');
-    //         $(this).addClass('current-menu-item');
-    //     })
-    // };
-    // activeNav();
 
     function collapsed() {
         let toggle = $('[data-collapse]');
@@ -319,43 +277,6 @@ $(document).ready(function() {
     collapsed();
 
 
-    // <div class="tabs-wrapper">
-    //     <div class="tabs">
-    //         <span class="tab">Вкладка 1</span>
-    //         <span class="tab">Вкладка 2</span>
-    //         <span class="tab">Вкладка 3</span>
-    //     </div>
-    //     <div class="tabs-content">
-    //         <div class="tab-item">Содержимое 1</div>
-    //         <div class="tab-item">Содержимое 2</div>
-    //         <div class="tab-item">Содержимое 3</div>
-    //     </div>
-    // </div>
-
-    // jQuery
-    // $('.tabs-wrapper').each(function() {
-    //     let ths = $(this);
-    //     ths.find('.tab-item').not(':first').hide();
-    //     ths.find('.tab').click(function() {
-    //         ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-    //         ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
-    //     }).eq(0).addClass('active');
-    // });
-
-
-
-    // .tabs__wrapper
-    //    .tabs
-    //        .tab
-    //            span Сухарево
-    //        .tab
-    //            span Асаналиева
-    //        .tab
-    //            span Янки Мавра
-    //    .tabs__content
-    //        .tab__item
-    //        .tab__item
-    //        .tab__item
     function initTabs() {
         $('.tabs__wrapper').each(function() {
             let ths = $(this);
@@ -384,20 +305,22 @@ $(document).ready(function() {
 
 
 
+
     function uploadYoutubeVideoForModal() {
-        if ( $( ".youtubeModal-js" ) ) {
+        if ( $( ".videoModal_js" ) ) {
 
-            $( '.youtubeModal-js' ).on( 'click', function () {
+            $( '.videoModal_js' ).on( 'click', function () {
                 $('#modalVideo').modal('show');
+                console.log('click');
 
-                let wrapp = $( this ).closest( '.youtubeModal-js' );
+                // создаем iframe со включенной опцией autoplay
+                let wrapp = $( this ).closest( '.videoModal_js' );
                 let videoId = wrapp.attr( 'id' );
                 let iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
 
                 // доп параметры для видоса
                 // if ( $( this ).data( 'params' ) ) iframe_url += '&' + $( this ).data( 'params' );
 
-                // Высота и ширина iframe должны быть такими же, как и у родительского блока
                 let iframe = $( '<iframe/>', {
                     'frameborder': '0',
                     'src': iframe_url,
@@ -412,7 +335,7 @@ $(document).ready(function() {
             } );
         }
     };
-    uploadYoutubeVideoForModal();
+    // uploadYoutubeVideoForModal();
 
 
     $(function(){
