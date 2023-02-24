@@ -40,9 +40,14 @@ $(document).ready(function() {
         //     delay: 5000,
         // },
         // lazy: true,
-        slidesPerView: 1,
-        spaceBetween: 30,
+        slidesPerView: 2,
+        spaceBetween: 20,
+
         // loop: true,
+        // loopedSlides: 0,
+        // slidesPerView: "auto",
+        //
+        // createElements: true,
 
 
         navigation: {
@@ -58,12 +63,19 @@ $(document).ready(function() {
 
         scrollbar: {
          el: ".swiper-scrollbar",
+         // draggable: true,
         },
 
         pagination: {
           el: ".swiper-pagination",
           type: "fraction",
+          // clickable: true,
         },
+
+        // pagination: {
+        //  el: '.swiper-dotted-line',
+        //  // draggable: true,
+        // },
 
         breakpoints: {
             768: {

@@ -31,6 +31,8 @@ block content
                     a(href="404")(style="color: #fff;") 404
                 li
                     a(href="helpсenter")(style="color: #fff;") Справочный центр
+                li
+                    a(href="experiments")(style="color: #fff;") Примеры опытов и экспериментов
 
     // end testNav
 
@@ -69,8 +71,13 @@ block content
 
                 br
                 br
+                a.btn.btn_transparent(href="#") 
+                    span Скачать
+
                 br
                 br
+
+
 
             h2.section__title
                 span Модальные окна
@@ -82,8 +89,14 @@ block content
                 a.btn.show_js(href="#reportBug") Сообщить об ошибке
                 br
                 br
-                //- a.btn.videoModal_js#2q4GNJTkdOU
-                //-     span видео
+                a.btn.videoModal_js(data-src="../media/video_1.mp4")
+                    span видео 1
+                br
+                br
+                a.btn.videoModal_js(data-src="../media/video_2.mp4")
+                    span видео 2
+
+
 
 
     // end testButton

@@ -1,0 +1,30 @@
+.experiments {
+    background-color: $color_light_bg;
+
+    .tab {
+        width: auto;
+
+        &:after {
+            border-color: $color_light_bg;
+        }
+    }
+
+    &__grid {
+
+        margin-top: 3.125em;
+        @media (min-width: 768px) {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 1.875em;
+        }
+
+        .video {
+            margin-bottom: 1.25em;
+            @media (min-width: 768px) {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+}

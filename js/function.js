@@ -306,27 +306,21 @@ $(document).ready(function() {
 
 
 
-    function uploadYoutubeVideoForModal() {
+    function uploaVideoForModal() {
         if ( $( ".videoModal_js" ) ) {
 
             $( '.videoModal_js' ).on( 'click', function () {
                 $('#modalVideo').modal('show');
                 console.log('click');
 
-                // создаем iframe со включенной опцией autoplay
-                let wrapp = $( this ).closest( '.videoModal_js' );
-                let videoId = wrapp.attr( 'id' );
-                let iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
+                let src = $(this).attr('data-src');
+                console.log(src);
 
-                // доп параметры для видоса
-                // if ( $( this ).data( 'params' ) ) iframe_url += '&' + $( this ).data( 'params' );
 
-                let iframe = $( '<iframe/>', {
-                    'frameborder': '0',
-                    'src': iframe_url,
-                    'allow': "autoplay"
-                } )
-                $(".modalVideo__wraper").append(iframe);
+                // https://videojs.com/
+                let video = $(`<video id="my-video" class="video-js" autoplay controls preload="auto"><source src="${src}" type="video/mp4" /></video>`)
+
+                $(".modalVideo__wraper").append(video);
 
                 $("#modalVideo").on('hide.bs.modal', function () {
                     $(".modalVideo__wraper").html('');
@@ -335,7 +329,7 @@ $(document).ready(function() {
             } );
         }
     };
-    // uploadYoutubeVideoForModal();
+    uploaVideoForModal();
 
 
     $(function(){

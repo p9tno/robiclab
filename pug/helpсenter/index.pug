@@ -117,7 +117,7 @@ block content
 
                                                         each item in [ {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}, {img: '5', title: 'Установка и запуск приложения RobicLabMP в Windows'}, {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}, {img: '5', title: 'Установка и запуск приложения RobicLabMP в Windows'}, {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}, {img: '5', title: 'Установка и запуск приложения RobicLabMP в Windows'},]
                                                             .swiper-slide
-                                                                .video
+                                                                .video.videoModal_js(data-src="../media/video_1.mp4")
                                                                     .video__top
                                                                         .video__img.img
                                                                             img(src="../../img/video_img_"+item.img+".jpg", alt="alt")
@@ -128,6 +128,7 @@ block content
 
 
                                                     .swiper-scrollbar
+                                                    //- .swiper-dotted-line
 
 
 
@@ -139,6 +140,102 @@ block content
 
         //- end bottom
         .helpcenter__bottom
+
+            .faq
+                .container_center
+                    .row__title
+                        span Популярные вопросы
+                    .faq__content
+                        each item in [1,2]
+                            .faq__col
+                                each title in ['Что делать, если не работает датчик по Bluetooth?', 'Гарантийные обязательства', 'Что делать, если индикаторы не горят?',]
+
+                                    .collapse(data-collapse-wrapper="")
+                                        .collapse__title(data-collapse="")
+                                            span=title
+                                            .collapse__button
+                                        .collapse__body(data-collapse-body="")
+                                            .section__content.section__content_black
+                                                p Рекомендации входят в состав готовых решений по цифровым лабораториям и содержат руководство по работе с ними, а также описание экспериментов.
+                                                p Лабораторные работы помогают раскрыть весь потенциал предложенного оборудования и состоят из нескольких частей: краткая теоретическая часть по изучаемой тематике, список дополнительного оборудования для проведения опыта, описание хода работы с пошаговыми инструкциями и методика обработки полученных данных
+
+
+            .documentation
+                .container_center
+                    .row__title
+                        span Документация лицензии в Минпром торг
+                    .documentation__list
+                        each item in ['Программа RobicLab полностью бесплатная', 'Документация, содержащая информацию, необходимую для установки этого экземпляра ПО', 'Документация содержащая описание процессов , обеспечивающих поддержание жизненного цикла программного обеспечения', 'Документация содержащая описание функциональных характеристик экземпляра программного обеспечения Робиклаб -цифровые лаборатории', 'Документация, содержащая информацию, необходимую для эксплуатации программного обеспечения, предоставленного для проведения экспертной проверки приложения Робиклаб Цифровые лаборатории', 'Лицензионное соглашение на программное обеспечение']
+                            .documentation__item
+                                .section__content.section__content_black
+                                    p=item
+                                .documentation__button
+                                    a.btn.btn_transparent(href="#") Скачать
+
+
+            .helpcenter__form
+                .container_center
+                    // begin form
+                    .form__content.bg.figure
+                        ul.figure__list.figure__list_form-grid
+                            li
+                            li
+                            li
+                            li
+                            li
+                            li
+                            li
+                            li
+                            li
+                            li
+
+                        .form__title
+                            span Форма обратной связи
+
+                        .form__subtitle
+                            span Заполните форму обратной связи и задайте нам свой вопрос. Наши менеджеры свяжутся с вами в ближайшее время.
+
+                        form.form.form_grid(action="send.php")
+                            input(type="hidden" name="subject" value="форма в футоре")
+                            input(type="hidden" name="notspam" value="")
+
+
+                            .form__row
+                                .form__label
+                                    span Ваше имя*
+                                input(type="text" required placeholder="Ввведите ваше имя")
+
+                            .form__row
+                                .form__label
+                                    span Телефон*
+                                input(type="text" class="tel" required placeholder="+7 000 000 000")
+
+
+                            .form__row
+                                .form__label
+                                    span Ваша почта*
+                                input(type="email" required placeholder="Ввведите ваш email")
+
+
+                            .form__row.form__row_textarea
+                                .form__label
+                                    span Ваше сообщение
+                                textarea(type="text" placeholder="Ввведите ваше сообщение")
+
+
+                            .form__row
+                                .button
+                                    button.btn(type="submit")
+                                        span Отправить
+
+                            .form__row
+                                .form__text
+                                    span Нажимая кнопку «Отправить» вы соглашаетесь с обработой ваших персональных данных и принимаете <a href="#">политику конфендициальности</a>
+
+
+                // end form
+
+
 
 
 

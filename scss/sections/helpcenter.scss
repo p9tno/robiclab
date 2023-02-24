@@ -1,6 +1,10 @@
 .helpcenter {
     background-color: $color_light_bg;
     overflow: hidden;
+    @media (min-width: 768px) {
+        padding-bottom: 5.625em;
+        /* 90/16 */
+    }
 
     .section__content {
         @media (min-width: 768px) {
@@ -174,6 +178,7 @@
 
         &:nth-child(2n) {
             background-color: $color_white;
+            transition: 0.3s;
 
         }
     }
@@ -198,8 +203,8 @@
             font-size: 1.5em;
             @media (min-width: 768px) {
                 font-size: 2.625em;
-
             }
+            transition: 0.3s;
         }
     }
 
@@ -268,6 +273,7 @@
             background-color: #E7ECF5;
             color: $color_info;
             margin-right: 0.5em;
+            transition: 0.3s;
         }
 
         a {
@@ -283,6 +289,8 @@
     }
 
     &__slider {
+        width: 40.25em;
+
         @media (min-width: 768px) {
             width: 125.625em;
             position: relative;
@@ -304,6 +312,7 @@
             span {
                 font-weight: 600;
                 font-size: 1.125em;
+                transition: 0.3s;
                 @media (min-width: 768px) {
                     font-weight: 700;
                     font-size: 1.5em;
@@ -315,13 +324,34 @@
 
         .swiper-scrollbar.swiper-scrollbar-horizontal {
             position: relative;
+            left: 0;
+            margin-top: 1.25em;
+            width: 21.5625em;
             @media (min-width: 768px) {
-                left: 0;
                 width: 109.5em;
                 margin-top: 2.5em;
 
             }
         }
+
+        // .swiper-dotted-line {
+        //     border: 1px solid #000;
+        //     margin-top: 1.25em;
+        //     width: 21.5625em;
+        //     /* 345/16 */
+        //     @media (min-width: 768px) {
+        //         width: 109.5em;
+        //         margin-top: 2.5em;
+        //
+        //     }
+        //
+        //     .swiper-pagination-bullet {
+        //         margin: 0;
+        //         // width: auto;
+        //         height: 1em;
+        //         border-radius: 0;
+        //     }
+        // }
     }
 
 }
@@ -352,6 +382,7 @@
     &__img {
         height: 15.3125em;
         @media (min-width: 768px) {
+            height: 15.3125em;
             transform: scale(1);
             transition: transform 1s;
         }
@@ -375,14 +406,98 @@
         color: $color_white;
 
         @media (min-width: 768px) {
-            // transform: scale(1);
             transition: transform 0.3s;
         }
     }
 
     &__bottom {
         span {
-            font-size: 1.375em;
+            font-size: 1em;
+            transition: 0.3s;
+            @media (min-width: 768px) {
+                font-size: 1.375em;
+
+            }
+        }
+    }
+
+}
+
+.documentation {
+    margin-bottom: 3.75em;
+    @media (min-width: 768px) {
+        margin-bottom: 5.625em;
+
+    }
+
+    .row__title {
+        @media (min-width: 768px) {
+            margin-bottom: 3.125em;
+        }
+    }
+
+    .section__content {
+        margin-bottom: 0;
+        @media (min-width: 768px) {
+            width: 72.5em;
+        }
+    }
+
+    &__list {}
+
+    &__item {
+        border-bottom: 0.0625em solid;
+        border-color: rgba($color_black, 0.2);
+        transition: 0.3s;
+        // padding: 0.625em 0;
+        padding: 1.25em 0;
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        &:first-child {
+            border-top: 0.0625em solid;
+            border-color: rgba($color_black, 0.2);
+        }
+    }
+
+    &__button {
+        margin-top: 1em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+
+        .btn_transparent {
+            border-color: $color_info;
+            color: $main_color;
+
+            font-size: 1.125em;
+            font-weight: 600;
+
+            padding: 0.901em 1.25em;
+            @media (min-width: 768px) {
+                min-width: 9.5em;
+            }
+
+            &:hover {
+                border-color: $color_info;
+                color: $color_white;
+                background-color: rgba($color_info, 1);
+            }
+
+            &:active {
+                border-color: $color_info;
+                color: $color_white;
+                background-color: rgba($color_info, 1);
+            }
+
+            &:before {
+                content: none;
+
+            }
         }
     }
 

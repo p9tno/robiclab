@@ -1,0 +1,80 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+    -var classHeader = 'header_primary';
+
+    //- -var classScroll = 'main_scroll';
+    //- -var pageScroll = false;
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.breadcrumbs_dark.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+
+                span.kb_sep
+
+                span.kb_title Примеры опытов и экспериментов
+
+    // end breadcrumbs
+
+    // begin experiments
+    section#experiments.experiments.section.section_changeTheme.pt
+        .container_center
+            h1.section__title.section__title_black
+                span Примеры опытов и экспериментов
+            .tabs__wrapper
+                .tabs
+                    .tab
+                        span Все эксперименты
+                    .tab
+                        span Эксперименты по Физике
+                    .tab
+                        span Эксперименты по Биологии
+                    .tab
+                        span Эксперименты по Химии
+
+            .experiments__grid
+                each item in [ {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}, {img: '5', title: 'Установка и запуск приложения RobicLabMP в Windows'}, {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}, {img: '5', title: 'Установка и запуск приложения RobicLabMP в Windows'}, {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}, {img: '5', title: 'Установка и запуск приложения RobicLabMP в Windows'}, {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}, {img: '5', title: 'Установка и запуск приложения RobicLabMP в Windows'}, {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}]
+
+                    .video.videoModal_js(data-src="../media/video_1.mp4")
+                        .video__top
+                            .video__img.img
+                                img(src="../../img/video_img_"+item.img+".jpg", alt="alt")
+                            .video__play
+                                i.icon_play
+                        .video__bottom
+                            span=item.title
+
+            .experiments__pagination
+                .pagination
+                    ul.page-numbers
+                        li
+                            a.page-numbers.prev(href="#")
+                                i.icon_arrow_left
+                        li
+                            span.page-numbers.current 1
+                        li
+                            a.page-numbers(href="#") 2
+                        li
+                            a.page-numbers(href="#") 3
+                        li
+                            span.page-numbers.dots ...
+                        li
+                            a.page-numbers(href="#") 18
+                        li
+                            a.page-numbers(href="#") 19
+                        li
+                            a.page-numbers(href="#") 20
+                        li
+                            a.page-numbers.next(href="#")
+                                i.icon_arrow_right
+
+
+
+
+    // end experiments

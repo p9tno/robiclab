@@ -468,6 +468,127 @@
                 }
             }
         }
+
+        &__row {
+            &:nth-child(2n) {
+                background-color: $color_black;
+
+            }
+        }
+
+    }
+
+    .row {
+        &__title {
+            span {
+                color: $color_white;
+            }
+        }
+
+        &__list {
+            i {
+                background-color: $color_dark_bg;
+                color: $color_dark_text;
+            }
+
+            a {
+                color: $color_dark_text;
+            }
+        }
+
+        &__slider {
+            .swiper__label {
+                span {
+                    color: $color_white;
+                }
+            }
+        }
+
+    }
+
+    .video {
+        &__bottom {
+            span {
+                color: $color_dark_text;
+            }
+        }
+    }
+
+    .collapse {
+        .section__content {
+            p {
+                color: $color_dark_text;
+            }
+        }
+        background-color: $color_dark_bg;
+
+        &__title {
+            span {
+                color: $color_dark_text;
+            }
+
+            &.open {
+                span {
+                    color: $color_white;
+                }
+
+                .collapse__button {
+                    &:after,
+                    &:before {
+                        background-color: $color_white;
+                    }
+                }
+            }
+        }
+
+        &__button {
+            &:after,
+            &:before {
+                background-color: $color_dark_text;
+            }
+
+        }
+
+    }
+
+    .documentation {
+        &__item {
+
+            border-color: rgba($color_dark_bg, 1);
+
+            &:first-child {
+                border-color: rgba($color_dark_bg, 1);
+            }
+        }
+
+        &__button {
+            .btn_transparent {
+                color: $color_white;
+            }
+        }
+    }
+
+    // ---------------------- pagination
+
+    .pagination {
+        a,
+        span {
+            color: $color_dark_text;
+
+            &:hover {
+                color: $color_white;
+
+                &.next,
+                &.prev {
+                    color: $color_white;
+                    border-color: $color_white;
+                }
+            }
+
+            &.current {
+                color: $color_white;
+            }
+        }
     }
 
 }

@@ -1,88 +1,124 @@
-.faq__content {
-    border-top: 0.125em solid $color_primary;
+.faq {
+    .row__title {
+        @media (min-width: 768px) {
+            margin-bottom: 3.125em;
+        }
+    }
+    margin-bottom: 3.125em;
+    @media (min-width: 768px) {
+        margin-bottom: 3.75em;
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            gap: 1.875em;
+
+            > * {
+                width: 50%;
+            }
+        }
+    }
+
 }
 
 .collapse {
-    border-bottom: 0.125em solid $color_primary;
-    margin: 1.5em 0;
+    .section__content {
+        margin-bottom: 0.9375em;
+    }
 
-    @media (min-width: 992px) {
-        margin: 2.5em 0;
+    background-color: $color_white;
+    border-radius: 1em;
+    box-shadow: 0 0.75em 0.8125em -1.0625em rgba(42, 51, 69, 0.15);
+    transition: 0.3s;
+    margin-bottom: 0.625em;
+    padding: 0.9375em 1.25em;
+    @media (min-width: 768px) {
+        padding: 2em;
+        margin-bottom: 1.875em;
     }
 
     &__title {
-        font-family: $second_font_family;
-        font-weight: 600;
-        line-height: 1;
-        margin-bottom: 2.5em;
         display: flex;
+        align-items: center;
         justify-content: space-between;
-        align-items: flex-start;
-
-        // @media (min-width: 992px) {
-        //     margin-bottom: 2.5em;
-        // }
+        margin-bottom: 0;
+        transition: 0.3s;
 
         span {
-            // width: 16em;
-            font-size: 1.125em;
-            line-height: 1.4;
+            text-decoration: none;
             cursor: pointer;
-
-            // @media (min-width: 992px) {
-            //     width: 40em;
-            //     font-size: 1.5em;
-            //     line-height: 1.4;
-            // }
-        }
-
-        &:after {
-            content: '\ea36';
-            font-family: 'icomoon';
-            font-size: 0.6667em;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 2.625em;
-            height: 2.625em;
-
-            border-radius: 50%;
-            color: $color_success;
-            background-color: #F1FBF6;
-            transform: rotate(0deg);
-
             transition: 0.3s;
-            cursor: pointer;
+            color: $main_color;
+            font-size: 1.125em;
+            @media (min-width: 768px) {
+                font-size: 1.5em;
 
+            }
         }
 
         &.open {
-            &:after {
+            margin-bottom: 1em;
+            @media (min-width: 768px) {
+                margin-bottom: 1.875em;
+
+            }
+
+            span {
+                color: $color_info;
+            }
+
+            .collapse__button {
                 transform: rotate(180deg);
-                color: $color_white;
-                background-color: $color_success;
+
+                &:before {
+                    width: 0;
+                }
             }
         }
+    }
+
+    &__button {
+        flex: none;
+
+        transform: rotate(0deg);
+        // border-radius: 50%;
+        transition: 0.4s cubic-bezier(0.2, 0.6, 0.3, 1.1);
+        cursor: pointer;
+
+        width: 1.125em;
+        height: 1.125em;
+        @media (min-width: 768px) {
+            width: 1.625em;
+            height: 1.625em;
+        }
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color_info;
+
+        }
+
+        &:before {
+            height: 100%;
+            width: 0.125em;
+        }
+
+        &:after {
+            height: 0.125em;
+            width: 100%;
+        }
+
     }
 
     &__body {
         display: none;
-        margin-top: -0.5em;
-        color: $color_info;
-
-        @media (min-width: 992px) {
-            margin-top: -1.5em;
-        }
-
-        p {
-            margin: 0 0 1.5em;
-            line-height: 1.5;
-
-            @media (min-width: 992px) {
-                margin: 0 0 2.5em;
-            }
-        }
 
         &.open {
             display: block;
