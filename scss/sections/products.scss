@@ -20,8 +20,6 @@
         padding-left: 1.75em;
         padding-top: 7.25em;
 
-        position: relative;
-
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 1.875em;
@@ -36,6 +34,8 @@
     }
 
     &__item {
+        position: relative;
+        z-index: 1;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -113,8 +113,9 @@
         height: 6.25em;
 
         @media (min-width: 768px) {
-            bottom: 8.75em;
-            right: -4.75em;
+            font-size: 1.375em;
+            bottom: 3.75em;
+            right: -11.75em;
             background-image: url("../img/products_hand.png");
             width: 27.25em;
             height: 16.25em;

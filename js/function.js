@@ -177,6 +177,7 @@ $(document).ready(function() {
     }
     initAnimationDevaice();
 
+
     function onVisible( selector, callback, playback, threshold=[0.5] ) {
         let options = {
             threshold: threshold
@@ -222,6 +223,31 @@ $(document).ready(function() {
         lottie.play('chart-mobile');
         lottie.play('chart-mobile-dark');
     }
+
+    function initAnimationButton() {
+        let cor = bodymovin.loadAnimation({
+            container: document.getElementById('cor'), // Required
+            path: '../json/cor.json', // Required
+            renderer: 'svg', // Required
+            loop: true, // Optional
+            autoplay: false, // Optional
+            // autoplay: true, // Optional
+            name: "chart-cor",
+        })
+    }
+
+    initAnimationButton();
+
+    function stopAnimateButton() {
+        console.log('stop');
+        lottie.stop('chart-cor');
+    }
+    function playAnimationButton() {
+        console.log('play');
+        lottie.play('chart-cor');
+    }
+    onVisible('.firstscreen',playAnimationButton,stopAnimateButton);
+
 
 
     function changeHeader() {
@@ -277,30 +303,42 @@ $(document).ready(function() {
     collapsed();
 
 
+    // function initTabs() {
+    //     $('.tabs-wrapper').each(function() {
+    //         let ths = $(this);
+    //         let danger = $('.tab_danger');
+    //         let wrap = $('.tabs');
+    //
+    //
+    //         ths.find('.tab__item').not(':first').hide();
+    //         ths.find('.tab').click(function() {
+    //             ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+    //             ths.find('.tab__item').hide().eq($(this).index()).fadeIn();
+    //
+    //             if (danger.hasClass('active')) {
+    //                 wrap.addClass('tabs_danger');
+    //             } else {
+    //                 wrap.removeClass('tabs_danger');
+    //             }
+    //
+    //         }).eq(0).addClass('active');
+    //
+    //
+    //     });
+    // }
+    // initTabs();
+
     function initTabs() {
-        $('.tabs__wrapper').each(function() {
-            let ths = $(this);
-            let danger = $('.tab_danger');
-            let wrap = $('.tabs');
-
-
-            ths.find('.tab__item').not(':first').hide();
-            ths.find('.tab').click(function() {
-                ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-                ths.find('.tab__item').hide().eq($(this).index()).fadeIn();
-
-                if (danger.hasClass('active')) {
-                    wrap.addClass('tabs_danger');
-                } else {
-                    wrap.removeClass('tabs_danger');
-                }
-
-            }).eq(0).addClass('active');
-
-
-        });
-    }
-    initTabs();
+      $('.tabs-wrapper').each(function() {
+          let ths = $(this);
+          ths.find('.tab-item').not(':first').hide();
+          ths.find('.tab').click(function() {
+              ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+              ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+          }).eq(0).addClass('active');
+      });
+  }
+  initTabs();
 
 
 

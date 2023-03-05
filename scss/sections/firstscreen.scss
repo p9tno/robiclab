@@ -3,27 +3,61 @@
     padding-bottom: 0!important;
     width: 100%;
     height: 100vh;
-    background: #fff url("../home/robot/images/Texture/BG_e.jpg") center bottom no-repeat;
     background-size: cover;
     position: relative;
+    // border: 1px solid red;
+
+    // background: #fff url("../home/robot/images/Texture/BG_e.jpg") center bottom no-repeat;
+
+    background-position: center 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../home/robot/images/Texture/robot_bg_m.webp");
+    @media (min-width: 768px) {
+        background-image: url("../home/robot/images/Texture/robot_bg.webp");
+    }
 
     &__content {
         position: absolute;
-        top: 50%;
-        transform: translateY(-45%);
-        left: 13.375em;
+
+        @media (max-width: 767px) {
+            bottom: 1em;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 6em;
+
+        }
+
+        @media (min-width: 768px) {
+            top: 50%;
+            transform: translateY(-45%);
+            left: 13.375em;
+
+        }
     }
 
     &__title {
         margin: 0;
         font-size: 1em;
         text-align: center;
-        margin-bottom: 2.5em;
+        @media (min-width: 768px) {
+            margin-bottom: 2.5em;
+
+        }
 
         span {
             color: #005EA8;
-            font-size: 4.0625em;
+            font-size: 2em;
             font-weight: 700;
+
+            @media (min-width: 768px) {
+                font-size: 4.0625em;
+
+            }
         }
     }
 
@@ -31,6 +65,12 @@
         position: relative;
         width: 33.125em;
         height: 33.125em;
+        left: -10em;
+        font-size: 0.425em;
+        @media (min-width: 768px) {
+            left: auto;
+            font-size: 1em;
+        }
 
         &__button {
             position: absolute;
@@ -56,7 +96,6 @@
             text-decoration: none;
 
             transform: scale(1);
-
             transition: 0.3s;
 
             // &:before {
@@ -112,7 +151,21 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%)scale(1);
-                background-image: url("../img/hexagon_bg_reverse.svg");
+                // background-image: url("../img/hexagon_bg_reverse.svg");
+                background-image: url("../img/hexagon_bg_reverse2.svg");
+
+                .hexagon__link {
+                    display: block;
+                    width: 8.5em;
+                    height: 8.5em;
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+
+                    }
+
+                }
 
                 .hexagon__icon {
                     color: $color_white;
@@ -168,30 +221,32 @@
 
             }
 
-            &:hover {
-                // &:before {
-                //     opacity: 1;
-                // }
+            @media (min-width: 768px) {
+                &:hover {
+                    // &:before {
+                    //     opacity: 1;
+                    // }
 
-                // .hexagon__icon {
-                //     color: $color_white;
-                // }
-                //
-                // .hexagon__label {
-                //     color: $color_white;
-                // }
-                transform: scale(1.2);
+                    // .hexagon__icon {
+                    //     color: $color_white;
+                    // }
+                    //
+                    // .hexagon__label {
+                    //     color: $color_white;
+                    // }
+                    transform: scale(1.2);
 
-                &:nth-child(2) {
-                    transform: translateX(-50%)scale(1.2);
-                }
+                    &:nth-child(2) {
+                        transform: translateX(-50%)scale(1.2);
+                    }
 
-                &:nth-child(5) {
-                    transform: translateX(-50%)scale(1.2);
-                }
+                    &:nth-child(5) {
+                        transform: translateX(-50%)scale(1.2);
+                    }
 
-                &:nth-child(7) {
-                    transform: translate(-50%,-50%)scale(1.2);
+                    &:nth-child(7) {
+                        transform: translate(-50%,-50%)scale(1.2);
+                    }
                 }
             }
 

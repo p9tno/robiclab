@@ -125,171 +125,29 @@
 
     // ---------------------- TABS
 
-    .tabs {
-        &:after {
-            @media (max-width: 767px) {
-                border-right: 0.125em solid rgba($color_white, 0.2);
-            }
-
+    .tabs-wrapper {
+        .tabs {
             @media (min-width: 768px) {
-                border-bottom: 0.125em solid rgba($color_white, 0.2);
-            }
-        }
-
-        &.tabs_danger {
-            &:after {
-
-                @media (max-width: 767px) {
-
-                    border-right: 0.125em solid rgba($color_danger, 0.2);
+                &:after {
+                    background-color: rgba($color_white, 0.4);
                 }
 
-                @media (min-width: 768px) {
+            }
 
-                    border-bottom: 0.125em solid rgba($color_danger, 0.2);
+            .tab {
+                color: rgba($color_white, 0.4);
+
+                &:after {
+                    border-bottom: 0.1875em solid rgba($color_white, 1);
+                }
+
+                &.active {
+                    color: rgba($color_white, 1);
                 }
             }
 
         }
-
     }
-
-    .tab {
-        color: rgba($color_white, 0.4);
-
-        @media (max-width:767px) {
-            &:before {
-                border-color: $color_white;
-            }
-
-            &:after {
-                border-color: $color_dark;
-            }
-        }
-
-        @media (min-width: 768px) {
-            &:before {
-                border-color: $color_white;
-            }
-
-            &:after {
-                border-color: $color_dark;
-            }
-
-        }
-
-        span {
-            @media (max-width: 767px) {
-                &:after,
-                &:before {
-                    border-bottom: 0.125em solid rgba($color_white, 0.2);
-                }
-            }
-
-            @media (min-width: 768px) {
-                &:after,
-                &:before {
-                    border-left: 0.125em solid rgba($color_white,0.2);
-                }
-
-            }
-
-        }
-
-        &.active {
-            color: $color_white;
-
-        }
-
-        @media (min-width: 768px) {
-            &:hover {
-                color: $color_white;
-            }
-        }
-
-    }
-
-    .tab_danger {
-
-        color: rgba($color_danger, 0.7);
-
-        @media (max-width: 767px) {
-            &:before {
-                border-color: $color_danger;
-            }
-
-            &:after {
-                border-color: $color_dark;
-            }
-        }
-
-        @media (min-width: 768px) {
-            &:before {
-                border-color: $color_danger;
-            }
-
-            &:after {
-                border-color: $color_dark;
-            }
-
-        }
-
-        span {
-            display: block;
-
-            @media (max-width: 767px) {
-                &:after,
-                &:before {
-                    border-bottom: 0.125em solid rgba($color_danger, 0.2);
-                }
-
-            }
-
-            @media (min-width: 768px) {
-                &:after,
-                &:before {
-                    border-left: 0.125em solid rgba($color_danger,0.2);
-                }
-            }
-
-        }
-
-        &.active {
-            color: $color_danger;
-
-        }
-
-        @media (min-width: 768px) {
-            &:hover {
-                color: $color_danger;
-            }
-        }
-
-    }
-
-    // .tabs-wrapper {
-    //     .tabs {
-    //         @media (min-width: 768px) {
-    //             &:after {
-    //                 background-color: rgba($color_white, 0.4);
-    //             }
-    //
-    //         }
-    //
-    //         .tab {
-    //             color: rgba($color_white, 0.4);
-    //
-    //             &:after {
-    //                 border-bottom: 0.1875em solid rgba($color_white, 1);
-    //             }
-    //
-    //             &.active {
-    //                 color: rgba($color_white, 1);
-    //             }
-    //         }
-    //
-    //     }
-    // }
 
     // ---------------------- breadcrumbs_dark
     .breadcrumbs_dark {

@@ -52,11 +52,13 @@ block content
                         .hexagon__label
                             span Физика
 
-                    button.hexagon__button(id="#")
-                        .hexagon__icon
-                            i.icon_arrow_right
-                        .hexagon__label
-                            span Смотреть все<br> предметы
+                    button.hexagon__button
+                        a(href="#")#cor.hexagon__link
+
+                        //- .hexagon__icon
+                        //-     i.icon_arrow_right
+                        //- .hexagon__label
+                        //-     span Смотреть все<br> предметы
 
 
         .following.desktop.following-js
@@ -99,6 +101,9 @@ block content
                                 .chart.chart-light#chartMobile
                                 .chart.chart-dark#chartMobileDark
 
+                    .digitalLab__label
+                        span * - PWA является способность трансформировать сайт в приложение. При этом выглядит оно как полноценный <br> mobile app, но имеет совсем небольшой размер, тратит меньше ресурсов, а загружается быстрее.
+
 
 
                 .digitalLab__right
@@ -139,8 +144,7 @@ block content
                             i.icon_arrow_right
 
 
-                .digitalLab__label.desktop
-                    span * - PWA является способность трансформировать сайт в приложение. При этом выглядит оно как полноценный <br> mobile app, но имеет совсем небольшой размер, тратит меньше ресурсов, а загружается быстрее.
+
 
         .following.desktop.following-js
             .following__btn
@@ -219,6 +223,11 @@ block content
                 .practical__left
                     .practical__hand.bg
                     .practical__flach.bg.animate-js(data-aos="zoom-in-up" data-aos-delay="300")
+                        //- video.practical__video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                        //-     source(src="../media/flach.mp4" type="video/mp4")
+                        //- source(src="media/main-video.webm" type="video/webm")
+
+
 
                 .practical__right
                     h2.section__title.animate-js(data-aos="fade-left")

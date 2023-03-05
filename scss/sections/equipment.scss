@@ -1,5 +1,8 @@
 .equipment {
-    padding: 7.5em 0;
+    @media (min-width: 768px) {
+        padding: 7.5em 0;
+
+    }
 
     &__wrap {
         position: relative;

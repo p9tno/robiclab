@@ -13,6 +13,7 @@
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
+            position: relative;
         }
     }
 
@@ -47,11 +48,11 @@
         .chart {
             width: 38.75em;
             height: 21.875em;
-            top: 10.3em;
+            // top: 10.3em;
             left: 8em;
+            top: 1.375em;
 
             @media (min-width: 768px) {
-                top: 1.375em;
                 left: 5.4375em;
 
             }
@@ -129,7 +130,7 @@
     }
 
     &__right {
-        margin-top: -4em;
+        margin-top: 1em;
         @media (min-width: 768px) {
             margin-top: 0;
             width: 40.875em;
@@ -137,17 +138,19 @@
     }
 
     &__label {
+        margin-top: -5em;
 
         @media (min-width: 768px) {
+            margin-top: 0;
             position: absolute;
-            right: 1em;
-            bottom: 0;
+            right: 0;
+            bottom: -10em;
 
-            span {
-                font-size: 0.75em;
-                color: rgba($color_white, 0.7);
-            }
+        }
 
+        span {
+            font-size: 0.75em;
+            color: rgba($color_white, 0.7);
         }
     }
 

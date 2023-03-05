@@ -193,7 +193,7 @@ function initRobotAnimations() {
         clips.forEach((anim, i) => {
             const {name} = anim;
             if (name !== 'Idle') {
-                console.log('Button ID =', name);
+                // console.log('Button ID =', name);
                 const btn = document.querySelector('#' + name);
                 const clip = THREE.AnimationClip.findByName(clips, name);
                 const clipAction = mixer.clipAction(clip);
@@ -319,10 +319,14 @@ function initRobotAnimations() {
 
     function setPositionOnResize() {
         if (window.innerWidth < 768 && window.innerWidth >= 480) {
-            camera.position.set(0, 4, 17);
+            // camera.position.set(0, 4, 17);
+            camera.position.set(4, 6, 21);
+
         }
         if (window.innerWidth < 480) {
-            camera.position.set(4, 6, 21);
+            // camera.position.set(4, 6, 21);
+            camera.position.set(3, 5, 19);
+
         }
         if (window.innerWidth >= 768) {
             camera.position.set(0, 4, 17);

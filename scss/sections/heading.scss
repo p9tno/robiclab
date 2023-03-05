@@ -3,7 +3,7 @@
     background-image: url("../img/heading_bg_m.svg");
     padding-top: 8em;
     @media (max-width: 767px) {
-        padding-bottom: 0;
+        padding-bottom: 2em;
     }
     @media (min-width: 768px) {
         background-image: url("../img/heading_bg.svg");
@@ -175,6 +175,22 @@
             bottom: 2em;
             font-size: 1em;
 
+        }
+    }
+
+    &__label {
+        position: absolute;
+        left: 1em;
+        bottom: 2em;
+        @media (min-width: 768px) {
+            left: 83em;
+            bottom: 4em;
+
+        }
+
+        span {
+            font-size: 0.75em;
+            color: rgba($color_white, 0.7);
         }
     }
 
