@@ -1,7 +1,7 @@
 extends ../layout/layout.pug
 block variable
     -var path = '../';
-    -var classHeader = 'header_primary';
+    -var classHeader = 'header_primary header_primary_active';
 
     //- -var classScroll = 'main_scroll';
     //- -var pageScroll = false;
@@ -59,7 +59,7 @@ block content
 
         //- start main
         .helpcenter__main
-            .tabs__wrapper
+            .tabs-wrapper
                 .container_center
                     .tabs
                         .tab
@@ -70,11 +70,11 @@ block content
                             span Планшет и телефон
 
 
-                .tabs__content
+                .tabs-content
                     each item in ['', '', '',]
 
 
-                        .tab__item
+                        .tab-item
 
                             each row in [ {titleImg : 'windows', title: 'Windows'}, {titleImg : 'linux', title: 'Linux'}, {titleImg : 'mac', title: 'Mac OS'} ]
                                 .helpcenter__row

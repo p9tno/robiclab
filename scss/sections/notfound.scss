@@ -1,8 +1,13 @@
 .notfound {
 
-    background-image: url("../img/notfound_bg.jpg");
+    // background-image: url("../img/notfound_bg.jpg");
     height: 100vh;
     text-align: center;
+
+    background-image: url("../home/robot/images/Texture/robot_bg_m.webp");
+    @media (min-width: 768px) {
+        background-image: url("../home/robot/images/Texture/robot_bg.webp");
+    }
 
     &__content {
         display: flex;

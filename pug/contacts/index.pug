@@ -1,7 +1,8 @@
 extends ../layout/layout.pug
 block variable
     -var path = '../';
-    -var classHeader = 'header_primary';
+    -var classHeader = 'header_primary header_primary_active';
+
 
     //- -var classScroll = 'main_scroll';
     //- -var pageScroll = false;
@@ -30,9 +31,11 @@ block content
             .communications__top
 
                 .communications__map
-                    .map
-                        .map__content
-                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5ea42b8e9045f6a4c6f1d418e7e30af3bb069ce2470e3f79df50a1b7117a8cb2&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                    .map#map
+
+                    //- .map
+                    //-     .map__content
+                    //-         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5ea42b8e9045f6a4c6f1d418e7e30af3bb069ce2470e3f79df50a1b7117a8cb2&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
 
 
 

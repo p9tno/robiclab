@@ -1,7 +1,7 @@
 extends ../layout/layout.pug
 block variable
     -var path = '../';
-    -var classHeader = 'header_primary';
+    //- -var classHeader = 'header_primary';
     //- -var classScroll = 'main_scroll';
     //- -var pageScroll = false;
 
@@ -99,7 +99,7 @@ block content
     // end heading
 
     // begin equipment
-    section#equipment.equipment.section.section_changeTheme
+    section#equipment.equipment.section.section_changeTheme.changeHeader_js
         .container_center
             .equipment__wrap
                 .equipment__box.bg
@@ -175,7 +175,7 @@ block content
 
 
                                         .equipment__action
-                                            a.btn(href="#") Оформить покупку
+                                            a.btn.show_js(href="#bargain") Оформить покупку
                                             a.equipment__link.show_js(href="#compare") Сравнить наборы
 
 

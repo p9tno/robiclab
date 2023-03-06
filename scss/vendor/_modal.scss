@@ -393,6 +393,103 @@
 
 }
 
+.bargain {
+    .modal-dialog {
+
+        @media (min-width: 768px) {
+            width: 65em;
+        }
+
+    }
+
+    .modal-content {}
+
+    .form__title {
+        @media (max-width: 767px) {
+            width: 17.5em;
+        }
+    }
+
+    .form {
+        &__row {
+            &:hover {
+                .form__label {
+                    span {
+                        color: rgba($main_color, 1);
+                    }
+                }
+            }
+        }
+
+        &__label {
+            background-color: $color_white;
+
+            span {
+                color: rgba($main_color, 0.7);
+            }
+        }
+
+        &__text {
+            span {
+                color: rgba($main_color, 0.7);
+            }
+
+            a {
+
+                color: rgba($main_color, 0.7);
+
+                &:after {
+                    border-color: rgba($main_color, 0.7);
+                }
+
+                &:hover {
+                    color: rgba($main_color, 1);
+
+                    &:after {
+                        border-color: rgba($main_color, 1);
+                    }
+                }
+
+            }
+        }
+
+        input:not([type]),
+        input[type=date],
+        input[type=email],
+        input[type=number],
+        input[type=password],
+        input[type=search],
+        input[type=tel],
+        input[type=text],
+        input[type=url],
+        textarea {
+
+            border-color: #D1D1D1;
+            color: #B7BABF;
+
+            &:hover {
+                border: 0.0625em solid rgba($main_color, 0.7);
+                color: rgba($main_color, 0.9);
+            }
+
+            &:focus {
+                border: 0.0625em solid rgba($main_color, 0.7);
+                color: rgba($main_color, 0.9);
+            }
+
+            &.invalid {
+                // background-color: rgba($color_white, 0.2);
+                border: 0.0625em solid $input_error_border_color;
+            }
+            // Placeholder for input +++++++++++++++
+            @include placeholder {
+                color: #B7BABF;
+            }
+        }
+    }
+
+}
+
 .modalVideo {
     .modal-dialog {
         position: relative;

@@ -58,22 +58,97 @@
 
     // ---------------------- HEADER
 
-    .header {
-        &__button {
+    .header_primary_active {
+        background: rgba(#31343D, 1);
+
+        // start switch
+        .switch {
+            &__label {
+                input {
+                    &:checked ~ span i {
+                        background-color: #01B5FE;
+
+                        &:after {
+                            color: $color_white;
+                        }
+                    }
+                }
+
+                span {
+                    border: 0.0625em solid $color_white;
+                    background-color: transparent;
+                }
+
+            }
+        }
+        // end switch
+
+        // start search
+        .search {
+            input[type=text] {
+                border-color: rgba($color_white, 0.35);
+                color: rgba($color_white, 0.7);
+
+                &:hover {
+                    background-color: transparent;
+                    border-color: rgba($color_white, 0.35);
+                }
+
+                &:focus {
+                    background-color: transparent;
+                    border-color: rgba($color_white, 0.35);
+                }
+
+                @include placeholder {
+                    color: rgba($color_white, 0.7);
+
+                }
+
+            }
+
+            .btn_search {
+                i {
+                    color: rgba($color_white, 0.7);
+                }
+            }
+
+        }
+        // end search
+
+        // start button
+        .header__button {
+
+            border: 0.0625em solid rgba($color_white, 0.35);
+
             > i {
-                color: $color_white;
+                color: rgba($color_white, 0.7);
             }
 
             &.active {
-                background-color: #01B5FE;
+                background-color: transparent;
 
                 > i {
+                    color: #00B5FF;
+                }
+            }
+
+        }
+        // end button
+
+        .toggle {
+            &__label {
+                span {
                     color: $color_white;
                 }
             }
+
+            &__toggle {
+                color: $color_white;
+            }
+
         }
 
-        &__content {
+        .header__content {
 
             background-color: $color_dark_bg;
 
@@ -85,7 +160,7 @@
 
         }
 
-        &__close {
+        .header__close {
             &:after {
                 color: rgba($color_dark_text, 0.5);
             }
@@ -97,13 +172,13 @@
             }
         }
 
-        &__title {
+        .header__title {
             span {
                 color: $color_white;
             }
         }
 
-        &__item {
+        .header__item {
             a,
             span {
                 color: $color_dark_text;
@@ -111,14 +186,14 @@
 
         }
 
-        &__icon {
+        .header__icon {
 
             background-color: #3A3D47;
             color: $color_dark_text;
 
         }
 
-        &__label {
+        .header__label {
             color: $color_dark_text;
         }
     }
@@ -146,6 +221,36 @@
                 }
             }
 
+        }
+    }
+
+    // ---------------------- cat-item
+    .cat-list {
+
+        @media (min-width: 768px) {
+            &:after {
+                background-color: rgba($color_white, 0.4);
+            }
+
+        }
+    }
+
+    .cat-item {
+        a {
+            color: rgba($color_white, 0.4);
+        }
+
+        &:after {
+
+            border-bottom: 0.1875em solid rgba($color_white, 1);
+
+        }
+
+        &.current-cat,
+        &:hover {
+            a {
+                color: rgba($color_white, 1);
+            }
         }
     }
 
@@ -329,7 +434,13 @@
 
         &__row {
             &:nth-child(2n) {
-                background-color: $color_black;
+                background-color: $color_dark_bg;
+
+                // $color_dark_bg
+
+                .swiper-scrollbar {
+                    background: $color_dark_text;
+                }
 
             }
         }

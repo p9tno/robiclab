@@ -47,6 +47,29 @@
 
 	}
 
+	&_grid2 {
+		@media (min-width: 768px) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 1.875em;
+			grid-row-gap: 2.1875em;
+
+			.form__row {
+				&:last-child {
+					grid-column-start: 1;
+					grid-column-end: 3;
+				}
+			}
+		}
+
+		.form__row {
+			&:last-child {
+				margin-top: -0.625em;
+			}
+		}
+
+	}
+
 	&__content {
 		position: relative;
 		background-image: url("../img/form_bg.svg");

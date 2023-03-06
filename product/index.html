@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="wrapper" id="wrapper">
-      <header class="header header_primary">
+      <header class="header">
         <div class="container_center">
           <div class="header__row">
             <div class="header__col"><a class="logo" href="/"><img class="close_nav_js active" src="/img/logo.svg" alt="logo"/><img class="open_nav_js" src="/img/logo_w.svg" alt="logo"/></a></div>
@@ -245,7 +245,7 @@
         </section>
         <!-- end heading-->
         <!-- begin equipment-->
-        <section class="equipment section section_changeTheme" id="equipment">
+        <section class="equipment section section_changeTheme changeHeader_js" id="equipment">
           <div class="container_center">
             <div class="equipment__wrap">
               <div class="equipment__box bg"></div>
@@ -309,7 +309,7 @@
                           </ul>
                         </div>
                         <!-- end equipment__row-->
-                        <div class="equipment__action"><a class="btn" href="#">Оформить покупку</a><a class="equipment__link show_js" href="#compare">Сравнить наборы</a></div>
+                        <div class="equipment__action"><a class="btn show_js" href="#bargain">Оформить покупку</a><a class="equipment__link show_js" href="#compare">Сравнить наборы</a></div>
                       </div>
                     </div>
                     <div class="tab-item">
@@ -367,7 +367,7 @@
                           </ul>
                         </div>
                         <!-- end equipment__row-->
-                        <div class="equipment__action"><a class="btn" href="#">Оформить покупку</a><a class="equipment__link show_js" href="#compare">Сравнить наборы</a></div>
+                        <div class="equipment__action"><a class="btn show_js" href="#bargain">Оформить покупку</a><a class="equipment__link show_js" href="#compare">Сравнить наборы</a></div>
                       </div>
                     </div>
                     <div class="tab-item">
@@ -425,7 +425,7 @@
                           </ul>
                         </div>
                         <!-- end equipment__row-->
-                        <div class="equipment__action"><a class="btn" href="#">Оформить покупку</a><a class="equipment__link show_js" href="#compare">Сравнить наборы</a></div>
+                        <div class="equipment__action"><a class="btn show_js" href="#bargain">Оформить покупку</a><a class="equipment__link show_js" href="#compare">Сравнить наборы</a></div>
                       </div>
                     </div>
                     <div class="tab-item">
@@ -483,7 +483,7 @@
                           </ul>
                         </div>
                         <!-- end equipment__row-->
-                        <div class="equipment__action"><a class="btn" href="#">Оформить покупку</a><a class="equipment__link show_js" href="#compare">Сравнить наборы</a></div>
+                        <div class="equipment__action"><a class="btn show_js" href="#bargain">Оформить покупку</a><a class="equipment__link show_js" href="#compare">Сравнить наборы</a></div>
                       </div>
                     </div>
                   </div>
@@ -710,6 +710,42 @@
         </div>
       </div>
       <!-- End modal modalVideo-->
+      <!-- Begin Modal bargain-->
+      <div class="modal fade bargain" id="bargain">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <!-- begin form-->
+            <div class="form__title"><span>Покупка лаборатории по математике</span></div>
+            <div class="form__subtitle"><span>Для заказа оборудования заполните форму обратной связи, и мы ответим Вам в кратчайшее время. Наши специалисты помогут в оформлении заказа и, если необходимо, окажут помощь в составлении аукционной (тендерной) документации.</span></div>
+            <form class="form form_grid2" action="send.php">
+              <input type="hidden" name="subject" value="форма в футоре"/>
+              <input type="hidden" name="notspam" value=""/>
+              <div class="form__row">
+                <div class="form__label"><span>Ваше имя*</span></div>
+                <input type="text" required="required" placeholder="Ввведите ваше имя"/>
+              </div>
+              <div class="form__row">
+                <div class="form__label"><span>Телефон*</span></div>
+                <input class="tel" type="text" required="required" placeholder="+7 000 000 000"/>
+              </div>
+              <div class="form__row">
+                <div class="form__label"><span>Ваша почта*</span></div>
+                <input type="email" required="required" placeholder="Ввведите ваш email"/>
+              </div>
+              <div class="form__row">
+                <div class="button">
+                  <button class="btn" type="submit"><span>Отправить</span></button>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__text"><span>Нажимая кнопку «Отправить» вы соглашаетесь с обработой ваших персональных данных и принимаете <a href="#">политику конфендициальности</a></span></div>
+              </div>
+            </form>
+            <!-- end form-->
+          </div>
+        </div>
+      </div>
+      <!-- End modal bargain-->
       <script src="../js/jquery.js"></script>
       <script src="../js/modal.js"></script>
       <script src="../js/swiper-bundle.min.js"></script>
@@ -718,7 +754,8 @@
       <script src="../js/aos.js"></script>
       <script src="../js/jquery.event.move.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie_svg.min.js"></script>
-      <script src="https://cdnjs.com/libraries/bodymovin"></script>
+      <script src="https://cdnjs.com/libraries/bodymovin"></script><script src="https://api-maps.yandex.ru/2.1/?lang=ru_ru&apikey=*7494e3e7-008f-4e03-bd72-31a4650591f7" type="text/javascript"></script>
+      <script src="../js/map.js"></script>
       <script src="../js/function.js"></script>
     </div>
   </body>

@@ -83,7 +83,11 @@ $(document).ready(function() {
             $('.toggle__toggle').toggleClass('active');
             $('.header__nav').toggleClass('active');
             $('.header').toggleClass('nav-active');
-            // $( 'body' ).toggleClass( 'nav-open' );
+            $( 'body' ).toggleClass( 'nav-open' );
+
+            if ($('header').hasClass('header_primary')) {
+                $( 'header' ).toggleClass( 'header_primary_active' );
+            }
 
             $('.close_nav_js').toggleClass('active');
             $('.open_nav_js').toggleClass('active');
@@ -180,7 +184,8 @@ $(document).ready(function() {
 
     function onVisible( selector, callback, playback, threshold=[0.5] ) {
         let options = {
-            threshold: threshold
+            threshold: threshold,
+             rootMargin: "-1px",
         };
         let observer = new IntersectionObserver( onEntry, options );
         let elements = document.querySelectorAll( selector );
@@ -239,39 +244,41 @@ $(document).ready(function() {
     initAnimationButton();
 
     function stopAnimateButton() {
-        console.log('stop');
+        // console.log('stop');
         lottie.stop('chart-cor');
     }
     function playAnimationButton() {
-        console.log('play');
+        // console.log('play');
         lottie.play('chart-cor');
     }
     onVisible('.firstscreen',playAnimationButton,stopAnimateButton);
 
 
 
-    function changeHeader() {
-        const header = document.querySelector('.header');
-
-        gsap.to(header, {
-            scrollTrigger: {
-                start: '-10px top',
-                // end: 'bottom 3em',
-                trigger: '.section_changeTheme',
-                markers: true,
-                onUpdate: ({ progress }) => {
-                    // console.log(progress);
-                    if (progress > 0 && progress < 1) {
-                        header.classList.add('header_dark');
-                    } else {
-                        header.classList.remove('header_dark');
-                    }
-                }
-
-            }
-        });
-    }
+    // function changeHeader() {
+    //     const header = document.querySelector('.header');
+    //
+    //     gsap.to(header, {
+    //         scrollTrigger: {
+    //             start: '-10px top',
+    //             // end: 'bottom 3em',
+    //             trigger: '.section_changeTheme',
+    //             markers: true,
+    //             onUpdate: ({ progress }) => {
+    //                 // console.log(progress);
+    //                 if (progress > 0 && progress < 1) {
+    //                     header.classList.add('header_dark');
+    //                 } else {
+    //                     header.classList.remove('header_dark');
+    //                 }
+    //             }
+    //
+    //         }
+    //     });
+    // }
     // changeHeader();
+
+
 
 
     function collapsed() {

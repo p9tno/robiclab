@@ -1,7 +1,7 @@
 extends ../layout/layout.pug
 block variable
     -var path = '../';
-    -var classHeader = 'header_primary';
+    -var classHeader = 'header_primary header_primary_active';
 
     //- -var classScroll = 'main_scroll';
     //- -var pageScroll = false;
@@ -27,16 +27,16 @@ block content
         .container_center
             h1.section__title.section__title_black
                 span Примеры опытов и экспериментов
-            .tabs__wrapper
-                .tabs
-                    .tab
-                        span Все эксперименты
-                    .tab
-                        span Эксперименты по Физике
-                    .tab
-                        span Эксперименты по Биологии
-                    .tab
-                        span Эксперименты по Химии
+
+            ul.cat-list
+                li.cat-item
+                    a(href="#") Все эксперименты
+                li.cat-item
+                    a(href="#") Эксперименты по Физике
+                li.cat-item.current-cat
+                    a(href="#") Эксперименты по Биологии
+                li.cat-item
+                    a(href="#") Эксперименты по Химии
 
             .experiments__grid
                 each item in [ {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}, {img: '5', title: 'Установка и запуск приложения RobicLabMP в Windows'}, {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}, {img: '5', title: 'Установка и запуск приложения RobicLabMP в Windows'}, {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}, {img: '5', title: 'Установка и запуск приложения RobicLabMP в Windows'}, {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}, {img: '5', title: 'Установка и запуск приложения RobicLabMP в Windows'}, {img: '1', title: 'Установка и запуск приложения RobicLabMP в Mac OS'}, {img: '2', title: 'Как включить Bluetooth на Mac OS'}, {img: '3', title: 'Как настроить доступ к камере и микрофону'}, {img: '4', title: 'Установка драйверов для работы датчика по usb'}]

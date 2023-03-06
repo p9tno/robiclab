@@ -52,9 +52,9 @@
             transition: 0.3s;
             color: $main_color;
             font-size: 1.125em;
+            margin-right: 1em;
             @media (min-width: 768px) {
                 font-size: 1.5em;
-
             }
         }
 
@@ -90,6 +90,7 @@
         width: 1.125em;
         height: 1.125em;
         @media (min-width: 768px) {
+            padding: 1.5em;
             width: 1.625em;
             height: 1.625em;
         }
