@@ -36,7 +36,6 @@
     }
 
     &__hand {
-        // border: 1px solid #000;
         background-image: url("../img/practical_hand.png");
         width: 41.375em;
         height: 47.25em;
@@ -55,13 +54,17 @@
 
     &__flach {
         // border: 1px solid #000;
-        background-image: url("../img/flach.png");
+        // background-image: url("../img/flach.png");
         width: 28em;
         height: 23.25em;
 
         position: absolute;
-        top: 1em;
         left: 18em;
+        top: -2em;
+        @media (min-width: 768px) {
+            top: 1em;
+
+        }
     }
 
     // .bg {

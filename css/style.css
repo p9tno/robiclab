@@ -679,6 +679,7 @@ body {
 @media (max-width: 767px) {
   .main_scroll {
     background-image: url("../img/main_scroll_bg_m.svg");
+    background-image: url("../img/main_scroll_bg_m.webp");
     background-position-y: 54%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -2025,12 +2026,16 @@ body {
   }
 }
 .practical__flach {
-  background-image: url("../img/flach.png");
   width: 28em;
   height: 23.25em;
   position: absolute;
-  top: 1em;
   left: 18em;
+  top: -2em;
+}
+@media (min-width: 768px) {
+  .practical__flach {
+    top: 1em;
+  }
 }
 
 .robotics {
@@ -2244,7 +2249,7 @@ body {
 /* end home page */
 .products {
   overflow: hidden;
-  background-image: url("../img/products_bg_m.svg");
+  background-image: url("../img/products_bg_m.webp");
   padding-top: 7.5em;
   padding-bottom: 3.75em;
 }
@@ -2388,7 +2393,7 @@ body {
 
 .heading {
   position: relative;
-  background-image: url("../img/heading_bg_m.svg");
+  background-image: url("../img/heading_bg_m.webp");
   padding-top: 8em;
 }
 @media (max-width: 767px) {
@@ -2525,14 +2530,14 @@ body {
   width: 27.5em;
   height: 16.25em;
   font-size: 0.41em;
-  margin: 0 auto 30em;
+  margin: 0 auto 30em 3em;
 }
 @media (min-width: 768px) {
   .heading__img {
     font-size: 1em;
     margin: 0;
     position: absolute;
-    top: 2em;
+    top: 6em;
     right: 30em;
   }
 }
@@ -4860,7 +4865,7 @@ input[type=number] {
   overflow: hidden;
   transition: 0.3s;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
-  background-image: url("../img/nav_bg.svg");
+  background-color: #005EA8;
   opacity: 0;
   visibility: hidden;
   overflow-y: auto;
@@ -4869,6 +4874,7 @@ input[type=number] {
 }
 @media (min-width: 768px) {
   .header__nav {
+    background-image: url("../img/nav_bg.webp");
     padding-top: 12.5em;
     padding-bottom: 0;
   }

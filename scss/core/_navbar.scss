@@ -9,7 +9,7 @@
         overflow: hidden;
         transition: 0.3s;
         box-shadow: 0 0 1em rgba(#000, .1);
-        background-image: url("../img/nav_bg.svg");
+        background-color: #005EA8;
         opacity: 0;
 
         visibility: hidden;
@@ -17,7 +17,9 @@
 
         padding-top: 5em;
         padding-bottom: 5em;
+        // background-image: url("../img/nav_bg_m.webp");
         @media (min-width: 768px) {
+            background-image: url("../img/nav_bg.webp");
             padding-top: 12.5em;
             padding-bottom: 0;
 

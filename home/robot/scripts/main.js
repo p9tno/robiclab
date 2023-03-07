@@ -353,6 +353,8 @@ function initRobotAnimations() {
         setPositionOnResize();
     });
 
+    // console.log('init');
+    //
     // window.onload = function() {
     //     console.log('window onload');
     //     function onVisible( selector, callback, playback, threshold=[0.5] ) {

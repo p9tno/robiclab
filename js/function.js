@@ -32,8 +32,28 @@ function isTouch() {
 } // for touch device
 
 
+window.onload = function() {
+    console.log('wonload');
+    function preloader() {
+        $(()=>{
+            setTimeout( () => {
+                let p = $('#preloader');
+                p.addClass('hide');
+
+                setTimeout( () => {
+                    p.remove()
+                },1000);
+
+            },1000);
+        });
+    }
+    preloader();
+    // setTimeout( ()=> preloader(),15000 )
+}
+
 // https://github.com/peachananr/onepage-scroll/blob/master/README.md
 $(document).ready(function() {
+    console.log('ready');
 
     function toggleContent() {
         $('.header__button').click(function() {
@@ -61,21 +81,7 @@ $(document).ready(function() {
         }
     });
 
-    function preloader() {
-        $(()=>{
-            setTimeout( () => {
-                let p = $('#preloader');
-                p.addClass('hide');
 
-                setTimeout( () => {
-                    p.remove()
-                },1000);
-
-            },1000);
-        });
-    }
-    preloader();
-    // setTimeout( ()=> preloader(),15000 )
 
     function openMobileNav() {
         $('.toggle').click(function(event) {
@@ -137,6 +143,7 @@ $(document).ready(function() {
             $('input[name=themeCheckbox]').prop('checked', true);
             // body.className += " dark-theme";
             $( 'body' ).toggleClass('dark_theme');
+            $( 'html' ).toggleClass('dark_theme');
         }
     }
     changeTheme();
@@ -186,7 +193,7 @@ $(document).ready(function() {
     function onVisible( selector, callback, playback, threshold=[0.5] ) {
         let options = {
             threshold: threshold,
-             rootMargin: "-1px",
+             // rootMargin: "-1px",
         };
         let observer = new IntersectionObserver( onEntry, options );
         let elements = document.querySelectorAll( selector );

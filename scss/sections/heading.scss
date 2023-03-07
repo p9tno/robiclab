@@ -1,6 +1,6 @@
 .heading {
     position: relative;
-    background-image: url("../img/heading_bg_m.svg");
+    background-image: url("../img/heading_bg_m.webp");
     padding-top: 8em;
     @media (max-width: 767px) {
         padding-bottom: 2em;
@@ -146,16 +146,17 @@
     }
 
     &__img {
+        // border: 1px solid #000;
         width: 27.5em;
         height: 16.25em;
         font-size: 0.41em;
-        margin: 0 auto 30em;
+        margin: 0 auto 30em 3em;
 
         @media (min-width: 768px) {
             font-size: 1em;
             margin: 0;
             position: absolute;
-            top: 2em;
+            top: 6em;
             right: 30em;
         }
     }
