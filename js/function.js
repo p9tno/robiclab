@@ -74,7 +74,7 @@ $(document).ready(function() {
             },1000);
         });
     }
-    // preloader();
+    preloader();
     // setTimeout( ()=> preloader(),15000 )
 
     function openMobileNav() {
@@ -130,6 +130,7 @@ $(document).ready(function() {
                 // lottie.play('chart-Desctop');
             }
             $( 'body' ).toggleClass('dark_theme');
+            $( 'html' ).toggleClass('dark_theme');
         });
 
         if (localStorage.getItem("theme") == "night") {
@@ -232,7 +233,7 @@ $(document).ready(function() {
     function initAnimationButton() {
         let cor = bodymovin.loadAnimation({
             container: document.getElementById('cor'), // Required
-            path: '../json/cor.json', // Required
+            path: '../json/cor1.json', // Required
             renderer: 'svg', // Required
             loop: true, // Optional
             autoplay: false, // Optional
