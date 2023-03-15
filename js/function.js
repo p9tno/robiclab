@@ -31,9 +31,44 @@ function isTouch() {
     return app.touchDevice();
 } // for touch device
 
+if (isLgWidth()) {
+    console.log('isLgWidth');
+}
+
+
+// window.addEventListener('resize', () => {
+//     // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
+//     if (app.resized == screen.width) { return; }
+//     app.resized = screen.width;
+//
+//     console.log('resize');
+//
+//     checkOnResize();
+// });
+//
+// function checkOnResize() {
+//     // используем так
+//     // if (isLgWidth()) {
+//     //     console.log('isLgWidth');
+//     // } else {
+//     //     console.log('isLgWidth else');
+//     // }
+//
+//     // или создаем функцию
+//     test();
+//
+// }
+//
+// function test() {
+//     if (isLgWidth()) {
+//         console.log('isLgWidth');
+//     } else {
+//         console.log('isLgWidth else');
+//     }
+// }
 
 window.onload = function() {
-    console.log('wonload');
+    // console.log('wonload');
     function preloader() {
         $(()=>{
             setTimeout( () => {
@@ -53,7 +88,7 @@ window.onload = function() {
 
 // https://github.com/peachananr/onepage-scroll/blob/master/README.md
 $(document).ready(function() {
-    console.log('ready');
+    // console.log('ready');
 
     function toggleContent() {
         $('.header__button').click(function() {

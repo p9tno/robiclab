@@ -28,15 +28,25 @@
 
     &__laboratory {
         max-width: 75em;
-        height: 42em;
         /* 1200/16 */
         margin: 0 auto;
         font-size: 1.176em;
+
+        height: 26em;
+        @media (min-width: 768px) {
+            height: 42em;
+
+        }
     }
 
 }
 
 .laboratory {
+    font-size: 0.56em;
+    @media (min-width: 768px) {
+        font-size: 1em;
+
+    }
 
     height: 100%;
 
@@ -48,13 +58,17 @@
     }
 
     &__header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1.25em 1.875em;
         background-color: $color_white;
         border-bottom: 0.125em solid #CECECE;
-        /* 2/16 */
+        padding: 0.75em 1em;
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25em 1.875em;
+
+        }
+
     }
 
     &__subject {
@@ -67,7 +81,6 @@
 
     &__step {
         font-size: 0.875em;
-        /* 14/16 */
         color: #383E47;
     }
 
@@ -75,7 +88,7 @@
         flex-grow: 1;
 
         background: #fcfcfc;
-        background-image: linear-gradient(rgba(206, 206, 206, 0.55), transparent 1px), linear-gradient(90deg, rgba(206, 206, 206, 0.55), transparent 1px);
+        background-image: linear-gradient(rgba(206, 206, 206, 0.55), transparent 0.0625em), linear-gradient(90deg, rgba(206, 206, 206, 0.55), transparent 0.0625em);
         background-size: 0.6em 0.6em;
         background-position: center center;
         padding: 1em 1.875em 0;
@@ -137,13 +150,13 @@
         margin-bottom: 0.4em;
         font-size: 1.6em;
         font-weight: 800;
-        border-left: solid 4px #00B5FF;
+        border-left: solid 0.25em #00B5FF;
         text-transform: lowercase;
     }
 
     &__desc {
         background: transparent;
-        border: solid 2px #00B5FF;
+        border: solid 0.125em #00B5FF;
         font-size: 1.4em;
         font-weight: 500;
         padding: 0.2em;
@@ -167,7 +180,6 @@
 
     &__footer {
         padding: 0.875em 1.875em 0.75em;
-        /* 14/16 */
         position: relative;
         background-color: $color_white;
     }
@@ -179,7 +191,7 @@
         width: 100%;
         height: 0.125em;
         background-color: #CECECE;
-        /* 2/16 */
+
         &_bg {
             background-color: #00B5FF;
             height: 100%;
@@ -248,13 +260,11 @@
     }
 
     &__col {
-        // border: 1px solid #000;
-        // height: 100%;
 
         @media (min-width: 768px) {
             &:first-child {
                 padding-right: 1.85em;
-                border-right: 1px solid #00B5FF;
+                border-right: 0.0625em solid #00B5FF;
             }
 
             &:last-child {
@@ -267,6 +277,11 @@
         width: 31.25em;
         height: 33.75em;
 
+        font-size: 0.75em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
+
         &_full {
             width: 100%;
             height: 30em;
@@ -275,8 +290,6 @@
         .preview {
             width: 100%;
             height: 100%;
-            border: 0.0625em solid red;
-            /* 1/16 */
         }
     }
 
@@ -316,13 +329,17 @@
     table {
         border-collapse: collapse;
         width: 100%;
-        border: 1px solid #00B5FF;
+        border: 0.0625em solid #00B5FF;
         border-radius: 0.125em;
         color: #444754;
         background: #F6F8F8;
+        font-size: 0.5em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
 
         tr {
-            border-bottom: 1px solid #00B5FF;
+            border-bottom: 0.0625em solid #00B5FF;
 
             &:last-child {
                 border-bottom: 0;
@@ -341,7 +358,7 @@
             padding: 0.5625em 1.25em;
 
             &:nth-child(n+2) {
-                border-left: 1px solid #00B5FF;
+                border-left: 0.0625em solid #00B5FF;
 
             }
         }

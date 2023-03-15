@@ -221,6 +221,20 @@
                 }
             }
 
+            .tab_danger {
+                color: rgba($color_danger, 0.5);
+
+                &:after {
+                    border-bottom: 0.1875em solid rgba($color_danger, 0.75);
+
+                }
+
+                &.active,
+                &:hover {
+                    color: rgba($color_danger, 0.75);
+                }
+            }
+
         }
     }
 

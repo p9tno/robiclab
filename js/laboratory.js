@@ -1,9 +1,6 @@
 
 $(document).ready(function() {
 
-    console.log('laboratory');
-
-
     function initLabImage() {
         let preview1 = bodymovin.loadAnimation({
             container: document.getElementById('preview1'), // Required
@@ -82,11 +79,6 @@ $(document).ready(function() {
     let lineStep = 100 / total;
     let line;
     let pageNumber = 1;
-
-    console.log('total: ', total);
-    console.log('pageNumber: ', pageNumber);
-
-    // lineWidth();
 
     $('.laboratory__arrow_next').click(function() {
 

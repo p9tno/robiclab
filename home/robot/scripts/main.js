@@ -45,6 +45,10 @@ function initRobotAnimations() {
     const planetDTex = new THREE.TextureLoader().load('robot/images/Texture/PlanetDiff2.png');
     const planetMTex = new THREE.TextureLoader().load('robot/images/Texture/PlanetMask2.png');
 
+    // обновляемые элементы
+    const bookDTex = new THREE.TextureLoader().load('robot/images/Texture/Book.jpg');
+    const countDTex = new THREE.TextureLoader().load('robot/images/Texture/Count.jpg');
+
     // Текстура окружения
     let r = "robot/images/Texture/Env/";
     let urls = [
@@ -138,6 +142,30 @@ function initRobotAnimations() {
         color: 0xff00ff,
     });
 
+
+    // обновляемые элементы
+    // const book_mt = new THREE.MeshBasicMaterial({
+    //     map: bookDTex,
+    //     side: THREE.DoubleSide
+    // });
+    //
+    // const count_mt = new THREE.MeshBasicMaterial({
+    //     map: countDTex,
+    //     roughness: 0.2
+    // });
+
+    const book_mt = new THREE.MeshStandardMaterial({
+        map: bookDTex,
+        roughness: 0.5,
+        metalness: 0.6,
+        side: THREE.DoubleSide
+    });
+    const count_mt = new THREE.MeshStandardMaterial({
+        map: countDTex,
+        roughness: 0.2,
+        metalness: 0.5
+    });
+
     // PlaneShadow----------------------------------------------------------------------------------------/
     const shadowTex = new THREE.TextureLoader().load('robot/images/Texture/shadow.png');
     const shadowColorTex = new THREE.TextureLoader().load('robot/images/Texture/shadowColor.png');
@@ -161,7 +189,7 @@ function initRobotAnimations() {
     let mixer, action, idle = false;
     // let mixer, globusAction, idleAction;
 
-
+    // загрузка робота
     loader.load('robot/models/Robik.glb', function (obj) {
 
         // console.log(obj);
@@ -180,7 +208,7 @@ function initRobotAnimations() {
 
         // анимация
         const clips = obj.animations;
-        // console.log(clips);
+        console.log(clips);
         mixer = new THREE.AnimationMixer(robot);
 
         // console.log(mixer);
@@ -197,6 +225,9 @@ function initRobotAnimations() {
                 const btn = document.querySelector('#' + name);
                 const clip = THREE.AnimationClip.findByName(clips, name);
                 const clipAction = mixer.clipAction(clip);
+
+                let deley = 6440;
+
                 clip.loop = THREE.LoopOnce;
                 // запуск анимации по клику
                 btn.addEventListener('click', ev => {
@@ -207,10 +238,12 @@ function initRobotAnimations() {
                     idleAction.fadeOut(0.25);
                     clipAction.fadeIn(0.25);
                     clearTimeout(timer);
+
+
                     timer = setTimeout(function () {
                         idleLoop();
                         btns.forEach(btn => btn.disabled = false);
-                    }, 6440);
+                    }, deley);
                 });
             }
         });
@@ -261,6 +294,13 @@ function initRobotAnimations() {
         //bottle
         robot.getObjectByName('bottleGeo').material = bottle_mt;
         robot.getObjectByName('bottleHimGeo').material = chime_mt;
+
+        // обновляемые элементы
+        //book
+        robot.getObjectByName('Book_geo').material = book_mt;
+        robot.getObjectByName('Papper_geo').material = book_mt;
+        //Counter
+        robot.getObjectByName('Count_geo').material = count_mt;
 
         // window.addEventListener('scroll', ev => {
         //     if (window.scrollY > sceneWrapper.offsetHeight) {

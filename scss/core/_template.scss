@@ -190,13 +190,14 @@ body {
 	@media (max-width: 767px) {
 
 		// background-color: $color_info;
-		background-image: url("../img/main_scroll_bg_m.svg");
+		// background-image: url("../img/main_scroll_bg_m.svg");
 		background-image: url("../img/main_scroll_bg_m.webp");
 		background-position-y: 54%;
 		background-size: contain;
 		background-repeat: no-repeat;
 
 	}
+	// touch-action: none;
 }
 
 .section_scrool {

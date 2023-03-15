@@ -9,7 +9,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        // transition: 0.3s;
+        transition: 0.3s;
         opacity: 1;
 
         &.hide {
@@ -22,79 +22,201 @@
         }
     }
 
-    width: 3.75em;
-    height: 3.125em;
-    text-align: center;
-    font-size: 1em;
-
-    > div {
-        height: 100%;
-        width: 0.5em;
-        display: inline-block;
-        float: left;
-        margin-left: 0.125em;
-        -webkit-animation: delay 0.8s infinite ease-in-out;
-        animation: delay 0.8s infinite ease-in-out;
-    }
-
-    .bar1 {
-        background-color: #754fa0;
-    }
-
-    .bar2 {
-        background-color: #09b7bf;
-        -webkit-animation-delay: -0.7s;
-        animation-delay: -0.7s;
-    }
-
-    .bar3 {
-        background-color: #90d36b;
-        -webkit-animation-delay: -0.6s;
-        animation-delay: -0.6s;
-    }
-
-    .bar4 {
-        background-color: #f2d40d;
-        -webkit-animation-delay: -0.5s;
-        animation-delay: -0.5s;
-    }
-
-    .bar5 {
-        background-color: #fcb12b;
-        -webkit-animation-delay: -0.4s;
-        animation-delay: -0.4s;
-    }
-
-    .bar6 {
-        background-color: #ed1b72;
-        -webkit-animation-delay: -0.3s;
-        animation-delay: -0.3s;
-    }
+    // width: 3.75em;
+    // height: 3.125em;
+    // text-align: center;
+    // font-size: 1em;
+    //
+    // > div {
+    //     height: 100%;
+    //     width: 0.5em;
+    //     display: inline-block;
+    //     float: left;
+    //     margin-left: 0.125em;
+    //     -webkit-animation: delay 0.8s infinite ease-in-out;
+    //     animation: delay 0.8s infinite ease-in-out;
+    // }
+    //
+    // .bar1 {
+    //     background-color: #754fa0;
+    // }
+    //
+    // .bar2 {
+    //     background-color: #09b7bf;
+    //     -webkit-animation-delay: -0.7s;
+    //     animation-delay: -0.7s;
+    // }
+    //
+    // .bar3 {
+    //     background-color: #90d36b;
+    //     -webkit-animation-delay: -0.6s;
+    //     animation-delay: -0.6s;
+    // }
+    //
+    // .bar4 {
+    //     background-color: #f2d40d;
+    //     -webkit-animation-delay: -0.5s;
+    //     animation-delay: -0.5s;
+    // }
+    //
+    // .bar5 {
+    //     background-color: #fcb12b;
+    //     -webkit-animation-delay: -0.4s;
+    //     animation-delay: -0.4s;
+    // }
+    //
+    // .bar6 {
+    //     background-color: #ed1b72;
+    //     -webkit-animation-delay: -0.3s;
+    //     animation-delay: -0.3s;
+    // }
 
 }
 
-@-webkit-keyframes delay {
-    0%,
-    100%,
-    40% {
-        -webkit-transform: scaleY(0.05);
-    }
+// @-webkit-keyframes delay {
+//     0%,
+//     100%,
+//     40% {
+//         -webkit-transform: scaleY(0.05);
+//     }
+//
+//     20% {
+//         -webkit-transform: scaleY(1.0);
+//     }
+// }
+//
+// @keyframes delay {
+//     0%,
+//     100%,
+//     40% {
+//         transform: scaleY(0.05);
+//         -webkit-transform: scaleY(0.05);
+//     }
+//
+//     20% {
+//         transform: scaleY(1.0);
+//         -webkit-transform: scaleY(1.0);
+//     }
+// }
 
-    20% {
-        -webkit-transform: scaleY(1.0);
-    }
-}
+.content {
+    .loading {
+        width: 5em;
+        height: 3.125em;
+        position: relative;
 
-@keyframes delay {
-    0%,
-    100%,
-    40% {
-        transform: scaleY(0.05);
-        -webkit-transform: scaleY(0.05);
-    }
+        p {
+            top: 0;
+            padding: 0;
+            margin: 0;
+            color: $main_color;
+            animation: text 3.5s ease both infinite;
+            font-size: 0.75em;
+            letter-spacing: 0.0625em;
 
-    20% {
-        transform: scaleY(1.0);
-        -webkit-transform: scaleY(1.0);
+            @keyframes text {
+                0% {
+                    letter-spacing: 0.0625em;
+                    transform: translateX(0);
+                }
+
+                40% {
+                    letter-spacing: 0.125em;
+                    transform: translateX(1.625em);
+                }
+
+                80% {
+                    letter-spacing: 0.0625em;
+                    transform: translateX(2em);
+                }
+
+                90% {
+                    letter-spacing: 0.125em;
+                    transform: translateX(0);
+                }
+
+                100% {
+                    letter-spacing: 0.0625em;
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        span {
+            background-color: rgba($color_info,0.5);
+            border-radius: 50px;
+            display: block;
+            height: 16px;
+            width: 16px;
+            bottom: 0;
+            position: absolute;
+            transform: translateX(4em);
+            animation: loading 3.5s ease both infinite;
+
+            &:before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color_info,0.75);
+                border-radius: inherit;
+                animation: loading2 3.5s ease both infinite;
+            }
+
+            @keyframes loading {
+                0% {
+                    width: 1em;
+                    transform: translateX(0);
+                }
+
+                40% {
+                    width: 100%;
+                    transform: translateX(0);
+                }
+
+                80% {
+                    width: 1em;
+                    transform: translateX(4em);
+                    /* 64/16 */
+                }
+
+                90% {
+                    width: 100%;
+                    transform: translateX(0);
+                }
+
+                100% {
+                    width: 1em;
+                    transform: translateX(0);
+                }
+            }
+            @keyframes loading2 {
+                0% {
+                    transform: translateX(0);
+                    width: 1em;
+                }
+
+                40% {
+                    transform: translateX(0);
+                    width: 80%;
+                }
+
+                80% {
+                    width: 100%;
+                    transform: translateX(0);
+                }
+
+                90% {
+                    width: 80%;
+                    transform: translateX(0.9375em);
+                    /* 15/16 */
+                }
+
+                100% {
+                    transform: translateX(0);
+                    width: 1em;
+                }
+            }
+        }
     }
 }
